@@ -147,4 +147,8 @@ p {
 	display: flex;
 	flex-direction: row;
 	width: 100vw;
+
+	.app-container {
+		width: auto;
+	}
 }

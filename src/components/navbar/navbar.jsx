@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect } from "react";
 import "./navbar.scss";
 import { useState } from "react";
 import { SlMenu } from "react-icons/sl";
@@ -42,7 +41,7 @@ export const Navbar = () => {
 
 				<div className="right">
 					{" "}
-					<AccountMenu />{" "}
+					<AccountMenu />
 				</div>
 			</div>
 		</nav>

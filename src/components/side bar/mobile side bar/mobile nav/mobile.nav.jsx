@@ -4,17 +4,16 @@ import { agents, chatBot, first, general, vps } from "./../../links";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import MobileNavLinks from "../mobile nav links/mobile.nav.links";
 
-export const MobileNav = ({ handleMobileSidebarToggle }) => {
+export const MobileNav = ({ handleMobileSidebarToggle, mobileSideBar }) => {
 	return (
-		<div className="mobile-side-bar-container">
-			<div className="mobile-side-bar-title">
-				<div className="mobile-side-bar-toggle">
-					<BsArrowLeftCircle
-						className="close-icon"
-						onClick={handleMobileSidebarToggle}
-					/>
-				</div>
-			</div>
+		<div className="mobile-nav-container">
+			{mobileSideBar && (
+				<BsArrowLeftCircle
+					className="close-icon"
+					onClick={handleMobileSidebarToggle}
+				/>
+			)}
+
 			<div className="mobile-side-bar-wrapper">
 				{first.map((item, index) => (
 					<MobileNavLinks

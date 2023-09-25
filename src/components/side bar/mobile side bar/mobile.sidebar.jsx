@@ -16,7 +16,10 @@ const MobileSideBarNav = ({ mobileSideBar, handleMobileSidebarToggle }) => {
 					: "mobile-side-bar-container"
 			}
 		>
-			<MobileNav handleMobileSidebarToggle={handleMobileSidebarToggle} />
+			<MobileNav
+				handleMobileSidebarToggle={handleMobileSidebarToggle}
+				mobileSideBar={mobileSideBar}
+			/>
 		</div>
 	);
 };

@@ -35,9 +35,8 @@ export default function RootLayout({ children }) {
 				<ThemeProvider2 serverDarkMode={darkMode}>
 					<div className="apps">
 						<SideBar />
-						<div>
+						<div className="app-container">
 							<Navbar />
-
 							<div className="all-apps">{children}</div>
 						</div>
 					</div>
