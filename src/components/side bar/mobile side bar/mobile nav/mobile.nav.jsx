@@ -3,6 +3,7 @@ import "./mobile.nav.scss";
 import Navigations from "./../../navigation/navigations";
 import { agents, chatBot, first, general, vps } from "./../../links";
 import { BsArrowLeftCircle } from "react-icons/bs";
+import MobileNavLinks from "../mobile nav links/mobile.nav.links";
 
 export const MobileNav = ({ handleMobileSidebarToggle }) => {
 	return (
@@ -17,12 +18,11 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 			</div>
 			<div className="mobile-side-bar-wrapper">
 				{first.map((item, index) => (
-					<Navigations
+					<MobileNavLinks
 						key={index}
 						icon={item.icon}
 						text={item.text}
 						link={item.link}
-						sideBar={sideBar}
 						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
@@ -34,12 +34,11 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 				)}
 
 				{chatBot.map((item, index) => (
-					<Navigations
+					<MobileNavLinks
 						key={index}
 						icon={item.icon}
 						text={item.text}
 						link={item.link}
-						sideBar={sideBar}
 						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
@@ -51,12 +50,11 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 				)}
 
 				{agents.map((item, index) => (
-					<Navigations
+					<MobileNavLinks
 						key={index}
 						icon={item.icon}
 						text={item.text}
 						link={item.link}
-						sideBar={sideBar}
 						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
@@ -68,12 +66,11 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 				)}
 
 				{vps.map((item, index) => (
-					<Navigations
+					<MobileNavLinks
 						key={index}
 						icon={item.icon}
 						text={item.text}
 						link={item.link}
-						sideBar={sideBar}
 						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
@@ -85,12 +82,11 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 				)}
 
 				{general.map((item, index) => (
-					<Navigations
+					<MobileNavLinks
 						key={index}
 						icon={item.icon}
 						text={item.text}
 						link={item.link}
-						sideBar={sideBar}
 						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}

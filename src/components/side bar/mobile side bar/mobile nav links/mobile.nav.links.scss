@@ -1,0 +1,37 @@
+@import "./../../../../theme/theme.scss";
+
+.mobile-general-links {
+	@include themify($themes) {
+		background-color: transparent;
+		border: none;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 15px;
+		border-radius: 3px;
+		padding: 3px 4px;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:active {
+			background-color: themed("border");
+		}
+
+		&:hover {
+			background-color: themed("hover");
+		}
+
+		.mobile-side-bar-icon {
+			font-size: 19px;
+			color: themed("icon");
+			transition: all 0.3s;
+
+			padding: 4px 7px;
+		}
+
+		.h5text {
+			font-size: 15px;
+		}
+	}
+}
