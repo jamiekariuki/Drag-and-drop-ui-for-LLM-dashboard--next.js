@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import "./mobile.sidebar.scss";
-import { SideBar } from "../sidebar";
+import { MobileNav } from "./mobile nav/mobile.nav";
 
 const MobileSideBarNav = ({ mobileSideBar, handleMobileSidebarToggle }) => {
 	useEffect(() => {
@@ -16,7 +16,7 @@ const MobileSideBarNav = ({ mobileSideBar, handleMobileSidebarToggle }) => {
 					: "mobile-side-bar-container"
 			}
 		>
-			<SideBar handleMobileSidebarToggle={handleMobileSidebarToggle} />
+			<MobileNav handleMobileSidebarToggle={handleMobileSidebarToggle} />
 		</div>
 	);
 };
