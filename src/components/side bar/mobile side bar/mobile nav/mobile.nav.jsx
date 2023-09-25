@@ -1,34 +1,21 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
-import "./sidebar.scss";
-import { SlMenu } from "react-icons/sl";
-import Navigations from "./navigation/navigations";
-import { agents, chatBot, first, general, vps } from "./links";
+import "./mobile.nav.scss";
+import Navigations from "./../../navigation/navigations";
+import { agents, chatBot, first, general, vps } from "./../../links";
+import { BsArrowLeftCircle } from "react-icons/bs";
 
-export const SideBar = () => {
-	const [sideBar, setSideBar] = useState(false);
-
-	const handleSidebarToggle = () => {
-		setSideBar(!sideBar);
-	};
-
+export const MobileNav = ({ handleMobileSidebarToggle }) => {
 	return (
-		<div
-			className={
-				sideBar
-					? "side-bar-container side-bar-collapse"
-					: "side-bar-container"
-			}
-		>
-			<div className="side-bar-title">
-				<div className="side-bar-toggle">
-					<SlMenu
-						className="open-icon"
-						onClick={handleSidebarToggle}
+		<div className="mobile-side-bar-container">
+			<div className="mobile-side-bar-title">
+				<div className="mobile-side-bar-toggle">
+					<BsArrowLeftCircle
+						className="close-icon"
+						onClick={handleMobileSidebarToggle}
 					/>
 				</div>
 			</div>
-			<div className="side-bar-wrapper">
+			<div className="mobile-side-bar-wrapper">
 				{first.map((item, index) => (
 					<Navigations
 						key={index}
@@ -36,11 +23,12 @@ export const SideBar = () => {
 						text={item.text}
 						link={item.link}
 						sideBar={sideBar}
+						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
 
 				{!sideBar && (
-					<div className="side-bar-heading ">
+					<div className="mobile-side-bar-heading ">
 						<p>Chat Bot</p>
 					</div>
 				)}
@@ -52,11 +40,12 @@ export const SideBar = () => {
 						text={item.text}
 						link={item.link}
 						sideBar={sideBar}
+						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
 
 				{!sideBar && (
-					<div className="side-bar-heading ">
+					<div className="mobile-side-bar-heading ">
 						<p>Agents</p>
 					</div>
 				)}
@@ -68,11 +57,12 @@ export const SideBar = () => {
 						text={item.text}
 						link={item.link}
 						sideBar={sideBar}
+						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
 
 				{!sideBar && (
-					<div className="side-bar-heading ">
+					<div className="mobile-side-bar-heading ">
 						<p>VPS</p>
 					</div>
 				)}
@@ -84,11 +74,12 @@ export const SideBar = () => {
 						text={item.text}
 						link={item.link}
 						sideBar={sideBar}
+						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
 
 				{!sideBar && (
-					<div className="side-bar-heading ">
+					<div className="mobile-side-bar-heading ">
 						<p>General</p>
 					</div>
 				)}
@@ -100,6 +91,7 @@ export const SideBar = () => {
 						text={item.text}
 						link={item.link}
 						sideBar={sideBar}
+						handleMobileSidebarToggle={handleMobileSidebarToggle}
 					/>
 				))}
 			</div>

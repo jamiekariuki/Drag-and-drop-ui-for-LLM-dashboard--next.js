@@ -1,6 +1,6 @@
-@import "../../theme/theme.scss";
+@import "../../../../theme/theme.scss";
 
-.side-bar-container {
+.mobile-side-bar-container {
 	@include themify($themes) {
 		p {
 			font-size: 13px;
@@ -8,31 +8,27 @@
 		}
 
 		height: 100vh;
-		width: 180px;
+		width: 100%;
 		background-color: themed("background");
 		transition: all 0.3s;
 		overflow-y: scroll;
 		padding: 5px 10px 5px 10px;
 		overflow-x: hidden;
 
-		@media (max-width: 700px) {
-			display: none;
-		}
-
-		&.side-bar-collapse {
-			width: 65px;
-		}
-
-		.side-bar-title {
+		.mobile-side-bar-title {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 
-			.side-bar-toggle {
+			@media (max-width: 700px) {
+				align-items: flex-end;
+			}
+
+			.mobile-side-bar-toggle {
 				width: 100%;
 				margin-left: 10px;
 
-				.open-icon {
+				.close-icon {
 					font-size: 22px;
 					color: themed("icon");
 					cursor: pointer;
@@ -40,15 +36,15 @@
 			}
 		}
 
-		.side-bar-wrapper {
+		.mobile-side-bar-wrapper {
 			margin-top: 20px;
 			width: 100%;
 
-			.side-bar-heading {
+			.mobile-side-bar-heading {
 				margin: 5px;
 			}
 
-			.side-bar-general {
+			.mobile-side-bar-general {
 				display: flex;
 				flex-direction: column;
 				gap: 4px;
