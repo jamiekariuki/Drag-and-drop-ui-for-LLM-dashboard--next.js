@@ -1,0 +1,79 @@
+@import "../../../theme/theme.scss";
+
+.theme-light {
+	.mode {
+		cursor: pointer;
+		.dark {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+
+			.dark-icon {
+				color: rgb(59, 62, 93);
+				font-size: 21px;
+			}
+			h6 {
+				color: $titlesLight;
+				font-size: 16px;
+				font-family: sans-serif;
+				font-weight: 500;
+			}
+		}
+
+		.light {
+			display: none;
+			gap: 15px;
+			align-items: center;
+
+			.light-icon {
+				color: rgb(255, 224, 21);
+				font-size: 21px;
+			}
+			h6 {
+				color: $titlesDark;
+				font-size: 16px;
+				font-family: sans-serif;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.theme-dark {
+	.mode {
+		cursor: pointer;
+		.dark {
+			display: none;
+			align-items: center;
+			gap: 15px;
+
+			.dark-icon {
+				color: rgb(59, 62, 93);
+				font-size: 21px;
+			}
+			h6 {
+				color: $titlesLight;
+				font-size: 16px;
+				font-family: sans-serif;
+				font-weight: 500;
+			}
+		}
+
+		.light {
+			display: flex;
+			gap: 15px;
+			align-items: center;
+
+			.light-icon {
+				color: rgb(255, 224, 21);
+				font-size: 21px;
+			}
+			h6 {
+				color: $titlesDark;
+				font-size: 16px;
+				font-family: sans-serif;
+				font-weight: 500;
+			}
+		}
+	}
+}

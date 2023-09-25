@@ -1,0 +1,73 @@
+@import "../../theme/theme.scss";
+
+nav {
+	@include themify($themes) {
+		background-color: themed("background");
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		z-index: 100;
+		top: 0;
+		width: 100%;
+		position: fixed;
+		border-bottom: 0.5px solid themed("border2");
+
+		//transition: all ease-in-out 0.5s;
+
+		@media (max-width: 650px) {
+			height: 45px;
+		}
+
+		.side-bar-background {
+			position: fixed;
+			top: 0;
+			left: -110vw;
+			right: 110vw;
+			bottom: 0;
+			z-index: 1000;
+			background-color: rgba(0, 0, 0, 0.612);
+
+			&.side-bar-background-open {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		.container {
+			width: 100%;
+			height: 41px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 5px 25px;
+
+			@media (max-width: 500px) {
+				padding: 4px 10px;
+			}
+
+			.left {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 6px;
+
+				.mobile-nav {
+					align-items: center;
+					justify-content: center;
+
+					@media (min-width: 700px) {
+						display: none;
+					}
+
+					.menu-icon {
+						font-size: 20px;
+						color: themed("icon");
+					}
+				}
+			}
+		}
+	}
+}

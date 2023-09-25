@@ -1,0 +1,21 @@
+.custom-menu {
+	--sb-track-color: #e4e4e400;
+	--sb-thumb-color: #b12f9c;
+	--sb-size: 10px;
+
+	scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+.custom-menu::-webkit-scrollbar {
+	width: var(--sb-size);
+}
+
+.custom-menu::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 10px;
+}
+
+.custom-menu::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 10px;
+}

@@ -1,0 +1,44 @@
+@import "./../../../theme/theme.scss";
+
+.accordion {
+	width: 100%;
+}
+
+.accordion-item {
+	//margin-bottom: 10px;
+}
+
+.accordion-header {
+	width: 100%;
+	background-color: transparent;
+	//border: 1px solid #ddd;
+	//padding: 10px;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+	//transition: background-color 0.3s;
+}
+
+.accordion-header.active {
+	//	background-color: #ddd;
+}
+
+.accordion-content {
+	display: none;
+	padding: 5px 0px 0px 45px;
+	//border: 1px solid #ddd;
+	//background-color: #f9f9f9;
+	cursor: pointer;
+	transition: max-height 0.3s ease;
+
+	h5 {
+		&:hover {
+			color: $main;
+		}
+	}
+}
+
+.accordion-content.open {
+	display: block;
+	max-height: 200px;
+}
