@@ -41,7 +41,7 @@ export const Navbar = () => {
 
 				<div className="right">
 					{" "}
-					<AccountMenu />
+					<AccountMenu />{" "}
 				</div>
 			</div>
 		</nav>

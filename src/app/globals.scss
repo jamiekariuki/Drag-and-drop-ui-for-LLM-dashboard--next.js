@@ -85,7 +85,7 @@ $darkText: rgb(179, 179, 179);
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 14px);
+		font-size: clamp(12px, 2vw, 13px);
 		font-weight: 400;
 		color: $lightText;
 	}
@@ -124,7 +124,7 @@ $darkText: rgb(179, 179, 179);
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 14px);
+		font-size: clamp(12px, 2vw, 13px);
 		font-weight: 400;
 		color: $darkText;
 	}
@@ -147,8 +147,12 @@ p {
 	display: flex;
 	flex-direction: row;
 	width: 100vw;
+	overflow-x: hidden;
 
 	.app-container {
-		width: auto;
+		width: 100%;
+		height: 100vh;
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 }

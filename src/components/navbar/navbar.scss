@@ -7,9 +7,8 @@ nav {
 		align-items: center;
 		flex-direction: column;
 		z-index: 100;
-		top: 0;
-		width: 100%;
-		position: fixed;
+
+		//width: 100%;
 		border-bottom: 0.5px solid themed("border2");
 
 		//transition: all ease-in-out 0.5s;

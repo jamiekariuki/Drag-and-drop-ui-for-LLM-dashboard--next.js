@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./sidebar.scss";
 import { SlMenu } from "react-icons/sl";
 import Navigations from "./navigation/navigations";
