@@ -1,6 +1,5 @@
 "use client";
 import "./mobile.nav.scss";
-import Navigations from "./../../navigation/navigations";
 import { agents, chatBot, first, general, vps } from "./../../links";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import MobileNavLinks from "../mobile nav links/mobile.nav.links";
@@ -27,11 +26,9 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 					/>
 				))}
 
-				{!sideBar && (
-					<div className="mobile-side-bar-heading ">
-						<p>Chat Bot</p>
-					</div>
-				)}
+				<div className="mobile-side-bar-heading ">
+					<p>Chat Bot</p>
+				</div>
 
 				{chatBot.map((item, index) => (
 					<MobileNavLinks
@@ -43,11 +40,9 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 					/>
 				))}
 
-				{!sideBar && (
-					<div className="mobile-side-bar-heading ">
-						<p>Agents</p>
-					</div>
-				)}
+				<div className="mobile-side-bar-heading ">
+					<p>Agents</p>
+				</div>
 
 				{agents.map((item, index) => (
 					<MobileNavLinks
@@ -59,11 +54,9 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 					/>
 				))}
 
-				{!sideBar && (
-					<div className="mobile-side-bar-heading ">
-						<p>VPS</p>
-					</div>
-				)}
+				<div className="mobile-side-bar-heading ">
+					<p>VPS</p>
+				</div>
 
 				{vps.map((item, index) => (
 					<MobileNavLinks
@@ -75,11 +68,9 @@ export const MobileNav = ({ handleMobileSidebarToggle }) => {
 					/>
 				))}
 
-				{!sideBar && (
-					<div className="mobile-side-bar-heading ">
-						<p>General</p>
-					</div>
-				)}
+				<div className="mobile-side-bar-heading ">
+					<p>General</p>
+				</div>
 
 				{general.map((item, index) => (
 					<MobileNavLinks
