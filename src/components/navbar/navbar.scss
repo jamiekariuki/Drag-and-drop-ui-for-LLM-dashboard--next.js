@@ -2,7 +2,8 @@
 
 nav {
 	@include themify($themes) {
-		background-color: themed("background");
+		background-color: transparent;
+		border-bottom: 1px solid themed("hover");
 		display: flex;
 		align-items: center;
 		flex-direction: column;
