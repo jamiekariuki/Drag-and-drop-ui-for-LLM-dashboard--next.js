@@ -17,7 +17,7 @@ const ProductTable = () => {
 			{requestedProducts.map((item, index) => (
 				<div className="table-container" key={index}>
 					<p> {item.product}</p>
-					<p> {item.requests}</p>
+					<p className="requests"> {item.requests}</p>
 				</div>
 			))}
 		</div>

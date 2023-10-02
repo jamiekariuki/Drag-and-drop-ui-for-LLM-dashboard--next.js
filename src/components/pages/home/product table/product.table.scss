@@ -17,6 +17,10 @@
 			border-top: 1px solid themed("hover");
 			padding: 3px 15px;
 
+			.requests {
+				color: $main;
+			}
+
 			p {
 				font-size: 11px;
 			}

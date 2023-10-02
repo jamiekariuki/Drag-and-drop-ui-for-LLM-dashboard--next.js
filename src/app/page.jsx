@@ -6,6 +6,8 @@ import ProductTable from "@/components/pages/home/product table/product.table";
 import SummaryChatCustomer from "@/components/pages/home/summary chart/summary.chat.customers";
 import SummaryChatTokens from "@/components/pages/home/summary chart/summary.chat.tokens";
 import SummaryChatTask from "@/components/pages/home/summary chart/summary.chat.task";
+import UpcomingEvents from "@/components/pages/home/upcoming events/upcoming.events";
+import AgentBarChart from "@/components/pages/home/agents bar chart/agents.bar.chart";
 
 const Home = () => {
 	const customer = {
@@ -59,8 +61,12 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="dashboard-left-bottom-container">
-					<div className="summary2"></div>
-					<div className="summary2"></div>
+					<div className="dashboard-left-left-bottom-container">
+						<UpcomingEvents />
+					</div>
+					<div className="dashboard-left-right-bottom-container">
+						<AgentBarChart />
+					</div>
 				</div>
 			</div>
 			<div className="dashboard-right-container">

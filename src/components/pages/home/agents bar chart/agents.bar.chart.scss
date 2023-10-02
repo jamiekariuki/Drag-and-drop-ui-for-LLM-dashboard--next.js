@@ -1,0 +1,59 @@
+@import "./../../../../theme/theme.scss";
+
+.line-chart {
+	@include themify($themes) {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 5px;
+
+		.line-chart-title {
+			margin-bottom: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@media (max-width: 330px) {
+				flex-direction: column;
+				gap: 3px;
+			}
+
+			.period-selector {
+				width: 40%;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				gap: 3px;
+
+				@media (max-width: 480px) {
+					width: 60%;
+				}
+
+				.period-container {
+					border-radius: 5px;
+					border: 1px solid themed("hover");
+					padding: 1px 4px;
+					cursor: pointer;
+
+					&:hover {
+						background-color: rgba(153, 0, 255, 0.183);
+					}
+
+					h6 {
+						font-size: 11px;
+					}
+				}
+			}
+		}
+
+		.line-chart-container {
+			height: 500px;
+			width: 100%;
+
+			@media (max-width: 500px) {
+				height: 50vh;
+			}
+		}
+	}
+}
