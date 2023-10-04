@@ -101,7 +101,7 @@ const AgentBarChart = () => {
 					<BarChart data={data}>
 						<CartesianGrid
 							vertical={false}
-							stroke="rgba(133, 133, 133, 0.524)"
+							stroke="rgba(133, 133, 133, 0.324)"
 							strokeDasharray="1"
 						/>
 						<XAxis dataKey="name" tick={{ fontSize: 10 }} />
@@ -112,10 +112,11 @@ const AgentBarChart = () => {
 								angle: -90,
 								position: "insideLeft",
 							}}
+							axisLine={{ stroke: "transparent" }}
 						/>
 						<Tooltip
 							contentStyle={{
-								background: "rgba(137, 138, 138, 0.903)",
+								background: "rgba(137, 138, 138, 0.9) ",
 								borderRadius: "5px",
 								border: "none",
 								height: "120px",
@@ -125,6 +126,7 @@ const AgentBarChart = () => {
 								justifyContent: "center",
 								fontSize: "15px",
 							}}
+							cursor={{ fill: "rgba(90, 90, 90, 0.2)" }}
 						/>
 						<Legend />
 						<Bar
@@ -134,16 +136,12 @@ const AgentBarChart = () => {
 						<Bar
 							dataKey="marketingAgent"
 							fill="rgba(102, 46, 134, 0.774)"
-							borderRadius="5px"
 						/>
 						<Bar
 							dataKey="researchAgent"
-							fill="rgba(131, 134, 46, 0.774)"
+							fill="rgba(255, 166, 0, 0.648)"
 						/>
-						<Bar
-							dataKey="VAagent"
-							fill="rgba(134, 46, 46, 0.774)"
-						/>
+						<Bar dataKey="VAagent" fill="rgba(255, 0, 0, 0.413)" />
 					</BarChart>
 				</ResponsiveContainer>
 			</div>

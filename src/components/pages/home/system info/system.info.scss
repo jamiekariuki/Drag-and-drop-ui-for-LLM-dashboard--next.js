@@ -1,0 +1,31 @@
+@import "./../../../../theme/theme.scss";
+
+.system-info {
+	@include themify($themes) {
+		display: flex;
+		padding: 5px;
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 7px;
+
+		.system-info-container {
+			padding: 5px 12px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+
+			.info-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				p {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}

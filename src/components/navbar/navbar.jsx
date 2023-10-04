@@ -41,7 +41,6 @@ export const Navbar = () => {
 				</div>
 
 				<div className="right">
-					{" "}
 					<AccountMenu /> {/* <DarkMode /> */}
 				</div>
 			</div>

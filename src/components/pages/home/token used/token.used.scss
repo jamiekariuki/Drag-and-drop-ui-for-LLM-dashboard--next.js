@@ -1,0 +1,155 @@
+@import "./../../../../theme/theme.scss";
+
+.token-used {
+	@include themify($themes) {
+		width: 100%;
+		height: 100%;
+		padding: 5px;
+		display: flex;
+		gap: 15px;
+
+		@media (max-width: 1100px) {
+			flex-direction: column;
+		}
+
+		.token-left-container {
+			flex: 1;
+			height: 100px;
+			display: flex;
+			gap: 10px;
+
+			@media (max-width: 600px) {
+				flex-direction: column;
+			}
+
+			.token-info {
+				flex: 3;
+				height: 100px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.token-title {
+					p {
+						font-size: 15px;
+					}
+				}
+
+				.token-info-container {
+					display: flex;
+					flex-direction: column;
+					margin-left: 15px;
+					justify-content: space-between;
+
+					.token-platform {
+						display: flex;
+						gap: 10px;
+						align-items: center;
+					}
+
+					button {
+						border: none;
+						background-color: transparent;
+						color: $main;
+						padding: 4px 2px;
+						transition: all 0.3s;
+						border-radius: 4px;
+						width: 150px;
+						cursor: pointer;
+
+						&:hover {
+							background-color: #b12f9b2b;
+						}
+					}
+				}
+			}
+
+			.token-usage {
+				flex: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: flex-end;
+				border-right: 1px solid themed("hover");
+				border-left: 1px solid themed("hover");
+				padding: 5px 2%;
+
+				@media (max-width: 1100px) {
+					border-right: none;
+				}
+
+				@media (max-width: 600px) {
+					align-items: center;
+					border-left: none;
+					border-top: 1px solid themed("hover");
+					border-bottom: 1px solid themed("hover");
+				}
+
+				.tokens-counter {
+					display: flex;
+					align-items: center;
+					gap: 7px;
+
+					h6 {
+						font-size: 30px;
+						color: $main;
+					}
+				}
+			}
+		}
+
+		.token-chart {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+
+			@media (max-width: 1100px) {
+				height: 100px;
+				flex: none;
+			}
+
+			.token-line-chart {
+				border-radius: 10px;
+				height: 8px;
+				width: 96%;
+				display: flex;
+				justify-content: space-between;
+				overflow: hidden;
+				gap: 2px;
+
+				.line-container {
+					height: 100%;
+				}
+			}
+
+			.token-keys {
+				display: flex;
+				gap: 10px;
+
+				.key-container {
+					display: flex;
+					gap: 10px;
+					flex-wrap: wrap;
+
+					.key-wrapper {
+						display: flex;
+						align-items: center;
+						gap: 3px;
+
+						.token-key-color {
+							height: 10px;
+							width: 10px;
+							border-radius: 50%;
+						}
+
+						h6 {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

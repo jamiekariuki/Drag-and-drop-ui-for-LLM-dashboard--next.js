@@ -1,5 +1,10 @@
 @import "./../../../../theme/theme.scss";
 
+.recharts-legend-item-text {
+	font-size: 11px;
+	font-family: var(--font-poppins) !important;
+}
+
 .line-chart {
 	@include themify($themes) {
 		width: 100%;
