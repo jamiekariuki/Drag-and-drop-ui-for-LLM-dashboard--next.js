@@ -8,7 +8,7 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import BuildIcon from "@mui/icons-material/Build";
 import AppRegistrationSharpIcon from "@mui/icons-material/AppRegistrationSharp";
-import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
+import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import SpeedIcon from "@mui/icons-material/Speed";
 import StorageIcon from "@mui/icons-material/Storage";
 import FolderCopyIcon from "@mui/icons-material/FolderCopy";
@@ -112,7 +112,7 @@ export const agents = [
 		link: "/agents-overview",
 	},
 	{
-		icon: <PlaylistAddCheckIcon className="nav-icons" />,
+		icon: <PendingActionsIcon className="nav-icons" />,
 		text: "Task Queues",
 		link: "/agents-task-queues",
 	},

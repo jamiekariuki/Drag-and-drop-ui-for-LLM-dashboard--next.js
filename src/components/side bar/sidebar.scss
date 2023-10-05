@@ -46,10 +46,20 @@
 
 			.side-bar-heading {
 				margin: 5px;
+				display: flex;
+				align-items: center;
+				gap: 5px;
 
 				p {
 					color: themed("paragraphColor");
 					font-weight: 300;
+					font-size: 11px;
+				}
+
+				.nav-divider {
+					height: 1px;
+					width: 100%;
+					background-color: themed("hover");
 				}
 			}
 

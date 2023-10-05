@@ -42,6 +42,7 @@ export const SideBar = () => {
 				{!sideBar && (
 					<div className="side-bar-heading ">
 						<p>Chat Bot</p>
+						<div className="nav-divider" />
 					</div>
 				)}
 
