@@ -59,6 +59,7 @@ export const SideBar = () => {
 				{!sideBar && (
 					<div className="side-bar-heading ">
 						<p>Agents</p>
+						<div className="nav-divider" />
 					</div>
 				)}
 
@@ -75,6 +76,7 @@ export const SideBar = () => {
 				{!sideBar && (
 					<div className="side-bar-heading ">
 						<p>VPS</p>
+						<div className="nav-divider" />
 					</div>
 				)}
 
@@ -91,6 +93,7 @@ export const SideBar = () => {
 				{!sideBar && (
 					<div className="side-bar-heading ">
 						<p>General</p>
+						<div className="nav-divider" />
 					</div>
 				)}
 
