@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import "./navigations.scss";
+import Link from "next/link";
 
 const Navigations = ({
 	icon,
@@ -11,18 +12,20 @@ const Navigations = ({
 }) => {
 	return (
 		<button className="general-links" onClick={handleMobileSidebarToggle}>
-			<div
-				className={
-					sideBar
-						? "side-bar-icon side-bar-icon-collapse"
-						: "side-bar-icon"
-				}
-			>
-				{" "}
-				{icon}
-			</div>
+			<Link href={link}>
+				<div
+					className={
+						sideBar
+							? "side-bar-icon side-bar-icon-collapse"
+							: "side-bar-icon"
+					}
+				>
+					{" "}
+					{icon}
+				</div>
 
-			{!sideBar && <h5 className="h5text">{text}</h5>}
+				{!sideBar && <h5 className="h5text">{text}</h5>}
+			</Link>
 		</button>
 	);
 };

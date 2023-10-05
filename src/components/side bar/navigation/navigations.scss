@@ -23,13 +23,9 @@
 		}
 
 		.side-bar-icon {
-			font-size: 15px;
+			font-size: 13px;
 			color: themed("icon");
 			transition: all 0.3s;
-
-			@media (max-width: 700px) {
-				font-size: 19px;
-			}
 
 			&.side-bar-icon-collapse {
 				font-size: 20px;
@@ -39,10 +35,7 @@
 
 		.h5text {
 			transition: all 0.3s;
-
-			@media (max-width: 700px) {
-				font-size: 15px;
-			}
+			font-size: 12px;
 		}
 
 		.arrrow-up {

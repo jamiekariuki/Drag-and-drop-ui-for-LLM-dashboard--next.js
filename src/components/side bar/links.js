@@ -1,60 +1,55 @@
-import { IoSettingsSharp } from "react-icons/io5";
-import { LuHelpCircle } from "react-icons/lu";
-import { BiSolidMessageDetail } from "react-icons/bi";
-import { RiLogoutBoxLine } from "react-icons/ri";
-import { LuPieChart } from "react-icons/lu";
-import { AiOutlineUsergroupAdd } from "react-icons/ai";
-import { PiShareNetwork } from "react-icons/pi";
-import { RiDonutChartLine } from "react-icons/ri";
-import { AiOutlineBarChart } from "react-icons/ai";
-import { GoWorkflow } from "react-icons/go";
-import { MdOutlineInventory } from "react-icons/md";
-import { LuLayoutList } from "react-icons/lu";
-import { AiOutlineTool } from "react-icons/ai";
-import { AiOutlineAppstoreAdd } from "react-icons/ai";
-import { LiaTasksSolid } from "react-icons/lia";
-import { GoServer } from "react-icons/go";
-import { BiTachometer } from "react-icons/bi";
-import { VscFileSubmodule } from "react-icons/vsc";
-import { FaUserCircle } from "react-icons/fa";
-import { MdOutlineLogout } from "react-icons/md";
-//import { BiUser } from "react-icons/bi";
+import PieChartIcon from "@mui/icons-material/PieChart";
+import PeopleIcon from "@mui/icons-material/People";
+import EqualizerIcon from "@mui/icons-material/Equalizer";
+import BubbleChartIcon from "@mui/icons-material/BubbleChart";
+import DataSaverOffIcon from "@mui/icons-material/DataSaverOff";
+import PolylineIcon from "@mui/icons-material/Polyline";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import ViewListIcon from "@mui/icons-material/ViewList";
+import BuildIcon from "@mui/icons-material/Build";
+import AppRegistrationSharpIcon from "@mui/icons-material/AppRegistrationSharp";
+import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
+import SpeedIcon from "@mui/icons-material/Speed";
+import StorageIcon from "@mui/icons-material/Storage";
+import FolderCopyIcon from "@mui/icons-material/FolderCopy";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 //----dashboard
 export const first = [
 	{
-		icon: <LuPieChart />,
+		icon: <PieChartIcon />,
 		text: "Dashboard",
-		link: "/dashboard",
+		link: "/",
 	},
 	{
-		icon: <AiOutlineUsergroupAdd />,
+		icon: <PeopleIcon />,
 		text: "Users",
 		link: "/users",
 	},
 	{
-		icon: <AiOutlineBarChart />,
+		icon: <EqualizerIcon />,
 		text: "Daily Activity",
 		link: "/daily-activity",
 	},
 	{
-		icon: <PiShareNetwork />,
+		icon: <BubbleChartIcon />,
 		text: "Business insight",
 		link: "/busines-insight",
 	},
 	{
-		icon: <RiDonutChartLine />,
+		icon: <DataSaverOffIcon />,
 		text: "CRM",
 		link: "/crm",
 	},
-
 	{
-		icon: <GoWorkflow />,
+		icon: <PolylineIcon />,
 		text: "Work Flow",
 		link: "/work-flow",
 	},
 	{
-		icon: <MdOutlineInventory />,
+		icon: <InventoryIcon />,
 		text: "Inventory",
 		link: "/inventory",
 	},
@@ -63,18 +58,18 @@ export const first = [
 //----chat bot
 export const chatBot = [
 	{
-		icon: <LuLayoutList />,
+		icon: <ViewListIcon />,
 		text: "Overview",
 		link: "/chatbot-overview",
 	},
 
 	{
-		icon: <AiOutlineTool />,
+		icon: <BuildIcon />,
 		text: "Manage",
 		link: "/chatbot-manage",
 	},
 	{
-		icon: <AiOutlineAppstoreAdd />,
+		icon: <AppRegistrationSharpIcon />,
 		text: "Platforms",
 		link: "/chatbot-platform",
 	},
@@ -82,7 +77,7 @@ export const chatBot = [
 
 export const chatBotPlatform = [
 	{
-		icon: <RiLogoutBoxLine />,
+		icon: <AppRegistrationSharpIcon />,
 		text: "Platforms",
 		list: [
 			{
@@ -112,17 +107,17 @@ export const chatBotPlatform = [
 //-----agents
 export const agents = [
 	{
-		icon: <LuLayoutList />,
+		icon: <ViewListIcon />,
 		text: "Overview",
 		link: "/agents-overview",
 	},
 	{
-		icon: <LiaTasksSolid />,
+		icon: <PlaylistAddCheckIcon />,
 		text: "Task Queues",
 		link: "/agents-task-queues",
 	},
 	{
-		icon: <AiOutlineTool />,
+		icon: <BuildIcon />,
 		text: "Manage",
 		link: "/agents-contact",
 	},
@@ -130,22 +125,22 @@ export const agents = [
 //------VPS
 export const vps = [
 	{
-		icon: <BiTachometer />,
+		icon: <SpeedIcon />,
 		text: "Performance ",
 		link: "/vps-performance-metric",
 	},
 	{
-		icon: <GoServer />,
+		icon: <StorageIcon />,
 		text: "Resource ",
 		link: "/vps-Resource Allocation",
 	},
 	{
-		icon: <VscFileSubmodule />,
+		icon: <FolderCopyIcon />,
 		text: "File managment",
 		link: "/vps-file-managment",
 	},
 	{
-		icon: <AiOutlineTool />,
+		icon: <BuildIcon />,
 		text: "manage",
 		link: "/vps-manage",
 	},
@@ -154,17 +149,17 @@ export const vps = [
 //--------general
 export const general = [
 	{
-		icon: <FaUserCircle />,
+		icon: <AccountCircleIcon />,
 		text: "Profile",
 		link: "/profile",
 	},
 	{
-		icon: <IoSettingsSharp />,
+		icon: <SettingsIcon />,
 		text: "Settings",
 		link: "/settings",
 	},
 	{
-		icon: <MdOutlineLogout />,
+		icon: <LogoutIcon />,
 		text: "Logout",
 		link: "/logout",
 	},
