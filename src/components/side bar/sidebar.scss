@@ -46,6 +46,10 @@
 
 			.side-bar-heading {
 				margin: 5px;
+
+				p {
+					color: themed("paragraphColor");
+				}
 			}
 
 			.side-bar-general {

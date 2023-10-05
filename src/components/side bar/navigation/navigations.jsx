@@ -11,8 +11,11 @@ const Navigations = ({
 	handleMobileSidebarToggle,
 }) => {
 	return (
-		<button className="general-links" onClick={handleMobileSidebarToggle}>
-			<Link href={link}>
+		<Link href={link}>
+			<button
+				className="general-links"
+				onClick={handleMobileSidebarToggle}
+			>
 				<div
 					className={
 						sideBar
@@ -24,8 +27,8 @@ const Navigations = ({
 				</div>
 
 				{!sideBar && <h5 className="h5text">{text}</h5>}
-			</Link>
-		</button>
+			</button>
+		</Link>
 	);
 };
 
