@@ -20,7 +20,6 @@ const Navigations = ({
 							: "side-bar-icon"
 					}
 				>
-					{" "}
 					{icon}
 				</div>
 

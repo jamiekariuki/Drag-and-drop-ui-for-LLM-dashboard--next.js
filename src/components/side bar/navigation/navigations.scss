@@ -27,9 +27,19 @@
 			color: themed("icon");
 			transition: all 0.3s;
 
+			.nav-icons {
+				font-size: 13px;
+				color: themed("icon");
+				transition: all 0.3s;
+			}
+
 			&.side-bar-icon-collapse {
 				font-size: 20px;
 				padding: 4px 7px;
+
+				.nav-icons {
+					font-size: 20px;
+				}
 			}
 		}
 
