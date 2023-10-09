@@ -1,0 +1,66 @@
+@import "./../../../../theme/theme.scss";
+
+.users-overview {
+	@include themify($themes) {
+		width: 100%;
+		display: flex;
+		padding: 8px;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: 850px) {
+			flex-direction: column;
+			gap: 20px;
+			padding: 10px;
+		}
+
+		.users-count-data {
+			display: flex;
+			justify-content: flex-start;
+			gap: 30px;
+
+			@media (max-width: 600px) {
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.totals {
+				align-items: flex-end;
+				display: flex;
+				flex-direction: column;
+				border-right: 1px solid themed("hover");
+				padding-right: 10px;
+
+				@media (max-width: 600px) {
+					padding-left: 13px;
+					align-items: flex-start;
+					border: none;
+					border-bottom: 1px solid themed("hover");
+				}
+
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.users-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 7px;
+
+			@media (max-width: 850px) {
+				flex-direction: row;
+			}
+
+			.user-h6 {
+				font-size: 11px;
+			}
+
+			.user-p {
+				color: white;
+				font-size: 11px;
+			}
+		}
+	}
+}

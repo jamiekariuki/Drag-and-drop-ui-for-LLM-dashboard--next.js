@@ -1,0 +1,23 @@
+@import "./../../../theme/theme.scss";
+
+.users {
+	@include themify($themes) {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.users-chart {
+			width: 100%;
+			border-radius: 6px;
+			background-color: themed("background");
+
+			position: relative;
+		}
+
+		.users-table {
+			width: 100%;
+			border-radius: 6px;
+			background-color: themed("background");
+		}
+	}
+}
