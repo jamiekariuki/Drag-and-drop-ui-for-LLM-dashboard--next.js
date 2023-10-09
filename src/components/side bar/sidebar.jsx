@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import "./sidebar.scss";
 import { SlMenu } from "react-icons/sl";
-//import Navigations from "./navigation/navigations";
-//import { agents, chatBot, first, general, vps } from "./links";
+import Navigations from "./navigation/navigations";
+import { agents, chatBot, first, general, vps } from "./links";
 
 export const SideBar = () => {
 	const [sideBar, setSideBar] = useState(false);
@@ -28,7 +28,7 @@ export const SideBar = () => {
 					/>
 				</div>
 			</div>
-			{/* <div className="side-bar-wrapper">
+			<div className="side-bar-wrapper">
 				{first.map((item, index) => (
 					<Navigations
 						key={index}
@@ -106,7 +106,7 @@ export const SideBar = () => {
 						sideBar={sideBar}
 					/>
 				))}
-			</div> */}
+			</div>
 		</div>
 	);
 };
