@@ -69,7 +69,7 @@ const columns = [
 		headerName: "Edit",
 		width: 150,
 
-		renderCell: (EditCell = (params) => {
+		renderCell: function EditingAction(params) {
 			const [open, setOpen] = useState(false);
 			const onClose = () => {
 				setOpen(false);
@@ -97,14 +97,14 @@ const columns = [
 					/>
 				</>
 			);
-		}),
+		},
 	},
 
 	{
 		field: "delete",
 		headerName: "Delete",
 		width: 150,
-		renderCell: (DeleteCell = (params) => {
+		renderCell: function DeletingAction(params) {
 			const [open, setOpen] = useState(false);
 			const onClose = () => {
 				setOpen(false);
@@ -130,7 +130,7 @@ const columns = [
 					/>
 				</>
 			);
-		}),
+		},
 	},
 ];
 
