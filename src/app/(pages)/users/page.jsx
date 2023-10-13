@@ -1,17 +1,18 @@
 import React from "react";
-import "./user.page.scss";
-import UsersOverview from "@/components/pages/users/users overview/users.overview";
-import UsersTable from "@/components/pages/users/users table/users.table";
+//import "./page.user.scss";
+//import UsersOverview from "@/components/pages/users/users overview/users.overview";
+//import UsersTable from "@/components/pages/users/users table/users.table";
 
 const Users = () => {
 	return (
 		<div className="users">
-			<div className="users-chart">
+			users
+			{/* <div className="users-chart">
 				<UsersOverview />
 			</div>
 			<div className="users-table">
-				<UsersTable />{" "}
-			</div>
+				<UsersTable />
+			</div> */}
 		</div>
 	);
 };

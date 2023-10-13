@@ -30,8 +30,8 @@ export const first = [
 	},
 	{
 		icon: <EqualizerIcon className="nav-icons" />,
-		text: "Daily Activity",
-		link: "/daily-activity",
+		text: "Daily Activities",
+		link: "/daily-activities",
 	},
 	{
 		icon: <BubbleChartIcon className="nav-icons" />,
@@ -43,11 +43,7 @@ export const first = [
 		text: "CRM",
 		link: "/crm",
 	},
-	{
-		icon: <PolylineIcon className="nav-icons" />,
-		text: "Work Flow",
-		link: "/work-flow",
-	},
+
 	{
 		icon: <InventoryIcon className="nav-icons" />,
 		text: "Inventory",
@@ -115,6 +111,11 @@ export const agents = [
 		icon: <PendingActionsIcon className="nav-icons" />,
 		text: "Task Queues",
 		link: "/agents-task-queues",
+	},
+	{
+		icon: <PolylineIcon className="nav-icons" />,
+		text: "Work Flow",
+		link: "/work-flow",
 	},
 	{
 		icon: <BuildIcon className="nav-icons" />,

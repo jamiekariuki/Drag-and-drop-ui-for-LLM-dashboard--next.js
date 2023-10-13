@@ -1,17 +1,20 @@
 "use client";
 import React from "react";
 import "./mobile.nav.links.scss";
+import Link from "next/link";
 
-const MobileNavLinks = ({ icon, text, handleMobileSidebarToggle }) => {
+const MobileNavLinks = ({ icon, text, handleMobileSidebarToggle, link }) => {
 	return (
-		<button
-			className="mobile-general-links"
-			onClick={handleMobileSidebarToggle}
-		>
-			<div className="mobile-side-bar-icon"> {icon}</div>
+		<Link href={link}>
+			<button
+				className="mobile-general-links"
+				onClick={handleMobileSidebarToggle}
+			>
+				<div className="mobile-side-bar-icon"> {icon}</div>
 
-			<h5 className="mobile-h5text">{text}</h5>
-		</button>
+				<h5 className="mobile-h5text">{text}</h5>
+			</button>
+		</Link>
 	);
 };
 

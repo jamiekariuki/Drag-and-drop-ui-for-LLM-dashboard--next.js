@@ -28,7 +28,7 @@ ul li {
 	list-style-type: none;
 }
 
-$lightText: rgba(30, 30, 30, 0.709);
+$lightText: rgba(30, 30, 30, 0.826);
 $darkText: rgb(179, 179, 179);
 
 .theme-light {
@@ -46,7 +46,7 @@ $darkText: rgb(179, 179, 179);
 
 	h3,
 	h4 {
-		font-size: clamp(14px, 3vw, 17px);
+		font-size: clamp(13px, 3vw, 15px);
 		color: black;
 	}
 
@@ -86,7 +86,7 @@ $darkText: rgb(179, 179, 179);
 
 	h3,
 	h4 {
-		font-size: clamp(14px, 3vw, 17px);
+		font-size: clamp(13px, 3vw, 15px);
 		color: white;
 	}
 	h4 {
