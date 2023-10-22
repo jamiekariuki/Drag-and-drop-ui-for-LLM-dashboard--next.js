@@ -1,7 +1,6 @@
 import PieChartIcon from "@mui/icons-material/PieChart";
 import PeopleIcon from "@mui/icons-material/People";
 import EqualizerIcon from "@mui/icons-material/Equalizer";
-import BubbleChartIcon from "@mui/icons-material/BubbleChart";
 import DataSaverOffIcon from "@mui/icons-material/DataSaverOff";
 import PolylineIcon from "@mui/icons-material/Polyline";
 import InventoryIcon from "@mui/icons-material/Inventory";
@@ -33,11 +32,7 @@ export const first = [
 		text: "Daily Activities",
 		link: "/daily-activities",
 	},
-	{
-		icon: <BubbleChartIcon className="nav-icons" />,
-		text: "Business insight",
-		link: "/busines-insight",
-	},
+
 	{
 		icon: <DataSaverOffIcon className="nav-icons" />,
 		text: "CRM",
@@ -64,6 +59,7 @@ export const chatBot = [
 		text: "Manage",
 		link: "/chatbot-manage",
 	},
+
 	{
 		icon: <AppRegistrationSharpIcon className="nav-icons" />,
 		text: "Platforms",

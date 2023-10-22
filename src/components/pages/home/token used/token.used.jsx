@@ -51,7 +51,7 @@ const TokenUsed = () => {
 					</div>
 					<div className="token-info-container">
 						<div className="token-platform">
-							<h4>LLM Platform:</h4>
+							<h4>Model:</h4>
 							<p>OpenAI's ChatGPT</p>
 						</div>
 

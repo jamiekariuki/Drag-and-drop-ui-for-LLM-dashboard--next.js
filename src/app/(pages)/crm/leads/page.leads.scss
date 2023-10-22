@@ -1,0 +1,10 @@
+@import "./../../../../theme/theme.scss";
+
+.page-leads {
+	@include themify($themes) {
+		width: 100%;
+		background-color: themed("background");
+		border-radius: 6px;
+		min-height: 81vh;
+	}
+}

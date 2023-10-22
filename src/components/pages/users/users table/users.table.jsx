@@ -57,9 +57,7 @@ const columns = [
 							: "user-table"
 					}`}
 				>
-					{params.row.role === "super admin" && <p>super admin</p>}
-					{params.row.role === "admin" && <p>admin</p>}
-					{params.row.role === "user" && <p>user</p>}
+					<p>{params.row.role}</p>
 				</div>
 			);
 		},

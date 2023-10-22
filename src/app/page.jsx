@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./page.scss";
-import SystemInfo from "@/components/pages/home/system info/system.info";
+/* import SystemInfo from "@/components/pages/home/system info/system.info";
 import DiskStorage from "@/components/pages/home/disk storage/disk.storage";
 import ServerLocation from "@/components/pages/home/server location/server.location";
 import SummaryPieChart from "@/components/pages/home/pie chart/pie.chart";
@@ -12,7 +12,7 @@ import SummaryChatTask from "@/components/pages/home/summary chart/summary.chat.
 import UpcomingEvents from "@/components/pages/home/upcoming events/upcoming.events";
 import AgentBarChart from "@/components/pages/home/agents bar chart/agents.bar.chart";
 import TokenUsed from "@/components/pages/home/token used/token.used";
-
+ */
 const Home = () => {
 	const customer = {
 		title: "Customers Served",
@@ -37,8 +37,7 @@ const Home = () => {
 
 	return (
 		<div className="dashboard-container">
-			home
-			<div className="dashboard">
+			{/* <div className="dashboard">
 				<div className="dashboard-left-container">
 					<div className="dashboard-left-top-container">
 						<div className="summary">
@@ -99,7 +98,7 @@ const Home = () => {
 				<div className="dashboard-lower-right">
 					<ServerLocation />
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

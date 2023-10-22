@@ -6,16 +6,19 @@
 	margin: 0;
 }
 
+//-------
+
 ::-webkit-scrollbar {
 	width: 3px;
+	height: 6px;
 }
 ::-webkit-scrollbar-track {
 	background: transparent;
-	border-radius: 8px;
+	border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
 	background: rgba(114, 114, 114, 0.605);
-	border-radius: 8px;
+	border-radius: 5px;
 }
 
 a {
