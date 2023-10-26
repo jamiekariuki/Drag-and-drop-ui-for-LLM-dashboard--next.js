@@ -1,0 +1,254 @@
+@import "./../../../../../../theme/theme.scss";
+
+.leads-message {
+	@include themify($themes) {
+		margin-top: 10px;
+		width: 99%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 15px;
+
+		.leads-message-container {
+			height: auto;
+			width: 90%;
+			border: 1px solid themed("hover");
+			background-color: themed("glass");
+			border-radius: 7px;
+			padding: 7px;
+			transition: all 0.4s;
+
+			@media (max-width: 700px) {
+				width: 100%;
+			}
+
+			.lead-message-title {
+				cursor: pointer;
+
+				h4 {
+					text-align: start;
+				}
+
+				p {
+					text-align: start;
+					margin-left: 15px;
+					font-size: 12px;
+					transition: all 0.4s;
+				}
+			}
+
+			&:hover {
+				background-color: themed("hover");
+			}
+
+			.lead-inner-container {
+				width: 100%;
+				transition: 0.4s;
+				position: relative;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.lead-close-btn {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					cursor: pointer;
+					background-color: transparent;
+					border: 0;
+					transition: all 0.3s;
+
+					&:hover {
+						p {
+							text-decoration: underline;
+						}
+					}
+
+					p {
+						color: $main;
+						font-size: 11px;
+					}
+				}
+
+				.message-wrapper {
+					display: flex;
+					flex-direction: column;
+					width: 70%;
+					gap: 40px;
+					padding: 40px 5px;
+					align-items: center;
+
+					@media (max-width: 1230px) {
+						width: 80%;
+					}
+
+					@media (max-width: 1100px) {
+						width: 100%;
+					}
+
+					.recivers-info {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 20px;
+						flex-wrap: wrap;
+
+						.recivers-info-profile {
+							position: relative;
+							height: 80px;
+							width: 80px;
+							border-radius: 50%;
+							overflow: hidden;
+
+							.recivers-info-pic {
+								height: 100%;
+								width: 100%;
+								object-fit: cover;
+							}
+						}
+
+						.recivers-info-details {
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 10px;
+
+							h5 {
+								font-size: 14px;
+								text-align: start;
+
+								@media (max-width: 500px) {
+									font-size: 13px;
+								}
+
+								span {
+									font-size: 13px;
+									border: 1px solid themed("hover");
+									padding: 0 5px;
+									border-radius: 4px;
+									background-color: themed("glass");
+									margin: 0 5px;
+									white-space: nowrap;
+								}
+							}
+						}
+					}
+
+					.message-input-container {
+						height: auto;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: relative;
+						min-height: 25px;
+						max-height: 100px;
+						width: 100%;
+
+						textarea {
+							border-radius: 5px;
+							border: 1px solid themed("hover");
+							height: 100%;
+							max-height: 100px;
+							padding: 2px 78px 2px 5px;
+							resize: none;
+							width: 100% !important;
+							font-size: 13px;
+							font-family: var(--font-poppins);
+							color: themed("softParagraphColor");
+							background-color: transparent;
+
+							@media (max-width: 500px) {
+								font-size: 12px;
+								padding-right: 65px;
+							}
+
+							&:focus {
+								outline: none !important;
+								border-color: $main;
+							}
+						}
+
+						.send-btn {
+							height: 100%;
+							border-radius: 0 5px 5px 0;
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							right: 0;
+
+							@media (max-width: 500px) {
+								width: 50px;
+							}
+
+							p {
+								color: themed("border");
+								text-transform: lowercase;
+							}
+						}
+					}
+
+					.ai-note-wrapper {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 5px;
+
+						.ai-note {
+							padding: 7px;
+							background-color: themed("glass");
+							border: 1px solid themed("hover");
+							border-radius: 5px;
+
+							p {
+								text-align: start;
+
+								span {
+									font-size: 14px;
+									text-decoration: underline;
+									font-weight: 600;
+								}
+							}
+						}
+
+						.agent-btn {
+							background-color: #b12f9b21;
+							border: 0;
+							display: flex;
+							align-items: center;
+							gap: 5px;
+							padding: 3px 5px;
+							border-radius: 5px;
+							cursor: pointer;
+							transition: all 0 3s;
+
+							&:hover {
+								background-color: #b12f9b3a;
+							}
+
+							p {
+								color: $main;
+								font-size: 12px;
+							}
+
+							.agent-btn-icon {
+								font-size: 13px;
+								color: $main;
+							}
+						}
+					}
+
+					.send-ai-btn {
+						p {
+							font-size: 12px;
+							color: white;
+							//	text-transform: lowercase;
+						}
+					}
+				}
+			}
+		}
+	}
+}

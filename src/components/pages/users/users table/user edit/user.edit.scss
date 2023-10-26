@@ -81,7 +81,8 @@
 					color: themed("paragraphColor");
 
 					&:focus {
-						border: 1px solid $main !important;
+						outline: none !important;
+						border-color: $main;
 					}
 				}
 			}

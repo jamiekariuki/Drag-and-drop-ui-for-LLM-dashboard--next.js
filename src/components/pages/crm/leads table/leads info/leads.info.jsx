@@ -5,9 +5,11 @@ import Modal from "@/components/styled components/modals/modal";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import InfoIcon from "@mui/icons-material/Info";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
+import LeadsMessage from "./leads message/leads.message";
 import LeadsMoreInfo from "./leads more info/leads.more.info";
+import LeadsEdit from "./leads edit/leads.edit";
 
-const LeadsInfo = ({ open, onClose }) => {
+const LeadsInfo = ({ open, onClose, userData }) => {
 	const [activeTab, setActiveTab] = useState("info");
 
 	const handleTabClick = (tab) => {
@@ -85,9 +87,13 @@ const LeadsInfo = ({ open, onClose }) => {
 				</div>
 
 				<div className="leads-container">
-					{activeTab === "info" && <LeadsMoreInfo />}
-					{activeTab === "edit" && <h1>edit</h1>}
-					{activeTab === "message" && <h1>message</h1>}
+					{activeTab === "info" && (
+						<LeadsMoreInfo userData={userData} />
+					)}
+					{activeTab === "edit" && <LeadsEdit leadData={userData} />}
+					{activeTab === "message" && (
+						<LeadsMessage userData={userData} />
+					)}
 				</div>
 			</div>
 		</Modal>

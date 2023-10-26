@@ -8,6 +8,7 @@ import Image from "next/image";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
+import LeadsInfo from "./leads info/leads.info";
 
 const columns = [
 	{ field: "id", headerName: "ID", width: 100 },
@@ -18,31 +19,28 @@ const columns = [
 		width: 90,
 
 		renderCell: function EditingAction(params) {
-			/* const [open, setOpen] = useState(false);
+			const [open, setOpen] = useState(false);
 			const onClose = () => {
 				setOpen(false);
-			}; */
+			};
 
 			return (
 				<>
 					<IconButton
 						aria-label="edit"
 						size="small"
-						/* onClick={() => {
+						onClick={() => {
 							setOpen(true);
-						}} */
+						}}
 					>
 						<UnfoldMoreIcon fontSize="small" />
 					</IconButton>
 
-					{/* <UserEdit
+					<LeadsInfo
 						open={open}
 						onClose={onClose}
-						profile={params.row.profile}
-						username={params.row.name}
-						email={params.row.email}
-						role={params.row.role}
-					/> */}
+						userData={params.row}
+					/>
 				</>
 			);
 		},
@@ -73,7 +71,7 @@ const columns = [
 
 	/* {
 		field: "contact",
-		headerName: "Contacts",
+		headerName: "Contacts", 
 		width: 250,
 		flex: 1,
 		editable: false,

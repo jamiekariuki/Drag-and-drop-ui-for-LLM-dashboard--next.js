@@ -1,51 +1,80 @@
-@import "./../../../../../theme/theme.scss";
+@import "./../../../../../../theme/theme.scss";
 
-.user-edit {
+.leads-user-edit {
 	@include themify($themes) {
-		height: 68vh;
-		width: 300px;
+		height: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: auto;
 
-		@media (max-width: 600px) {
-			height: 60vh;
-		}
-
-		@media (max-width: 400px) {
-			width: 70vw;
-			height: 60vh;
-		}
-
-		@media (max-width: 290px) {
-			width: 60vw;
-		}
-
 		form {
 			height: 100%;
-			width: 100%;
+			width: 60%;
+			padding-top: 10px;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			justify-content: space-around;
+			justify-content: space-between;
+			position: relative;
+			gap: 2px;
+
+			@media (max-width: 1000px) {
+				width: 70%;
+			}
+
+			@media (max-width: 700px) {
+				width: 100%;
+			}
+
+			.label-wrapper {
+				width: 80px;
+				display: flex;
+				justify-content: flex-start;
+
+				@media (max-width: 600px) {
+					width: 65px;
+					p {
+						font-size: 11px;
+					}
+				}
+			}
 
 			.form-group {
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 2px;
+				align-items: center;
+				gap: 10px;
 				width: 100%;
+				justify-content: flex-start;
+
+				@media (max-width: 600px) {
+					gap: 0;
+				}
 
 				.role-radio {
 					display: flex;
 					gap: 9px;
 					align-items: center;
+					flex-wrap: wrap;
+
+					@media (max-width: 500px) {
+						gap: 5px;
+					}
 
 					.role-radio-input {
+						height: 15px;
 						display: flex;
 						gap: 3px;
 						align-items: center;
+
+						h6 {
+							font-size: 12px;
+
+							@media (max-width: 500px) {
+								font-size: 11px;
+							}
+						}
 
 						.radio-area {
 							cursor: pointer;
@@ -56,8 +85,8 @@
 						appearance: none;
 						-webkit-appearance: none;
 						-moz-appearance: none;
-						width: 12px;
-						height: 12px;
+						width: 10px;
+						height: 10px;
 						border: 1px solid $main;
 						border-radius: 50%;
 						padding: 2px;
@@ -70,19 +99,23 @@
 				}
 
 				.text-area {
-					width: 100%;
-					height: 30px;
+					width: 85%;
+					height: 28px;
 					border: 1px solid themed("border");
 					border-radius: 6px;
 					padding: 0 5px;
 					background-color: themed("background");
-					font-size: 13px;
+					font-size: 12px;
 					font-family: var(--font-poppins);
 					color: themed("paragraphColor");
 
 					&:focus {
 						outline: none !important;
 						border-color: $main;
+					}
+
+					@media (max-width: 600px) {
+						height: 25px;
 					}
 				}
 			}
@@ -95,14 +128,19 @@
 
 				.profile-wrapper-input {
 					position: relative;
-					height: 120px;
-					width: 120px;
+					height: 110px;
+					width: 110px;
 					border-radius: 50%;
 					overflow: hidden;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					cursor: pointer;
+
+					@media (max-width: 600px) {
+						height: 100px;
+						width: 100px;
+					}
 
 					.profile-image-input {
 						object-fit: cover;
@@ -144,22 +182,37 @@
 				}
 			}
 
-			button {
-				margin-top: 20px;
+			.button-wrapper {
 				width: 100%;
-				height: 34px;
-				background-color: $main;
-				border: 0;
-				border-radius: 7px;
-				cursor: pointer;
-				transition: all 0.4s;
+				display: flex;
+				justify-content: flex-end;
 
-				&:hover {
-					background-color: $mainLight;
-				}
+				button {
+					width: 100px;
+					height: 34px;
+					background-color: $main;
+					border: 0;
+					border-radius: 5px;
+					cursor: pointer;
+					transition: all 0.4s;
 
-				p {
-					color: white;
+					@media (max-width: 600px) {
+						height: 30px;
+						width: 80px;
+					}
+
+					&:hover {
+						background-color: $mainLight;
+					}
+
+					p {
+						color: white;
+						font-size: 12px;
+
+						@media (max-width: 600px) {
+							font-size: 10px;
+						}
+					}
 				}
 			}
 		}
@@ -184,12 +237,12 @@
 			width: 100%;
 			height: auto;
 			.decline-p {
-				font-size: 18px;
+				font-size: 19px;
 				font-weight: 300;
 				text-align: start;
 
 				@media (max-width: 600px) {
-					font-size: 17px;
+					font-size: 18px;
 				}
 			}
 		}
@@ -203,7 +256,7 @@
 			button {
 				margin-top: 20px;
 				width: 90px;
-				height: 33px;
+				height: 32px;
 				background-color: $main;
 				border: 0;
 				border-radius: 7px;

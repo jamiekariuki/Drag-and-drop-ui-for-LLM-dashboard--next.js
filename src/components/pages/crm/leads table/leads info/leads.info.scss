@@ -2,13 +2,30 @@
 
 .leads-info {
 	@include themify($themes) {
-		height: 88vh;
+		height: 85vh;
 		width: 60vw;
 		padding-top: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		//overflow-y: scroll;
+
+		p,
+		h6,
+		h4,
+		h3,
+		h5,
+		h1,
+		h2 {
+			white-space: wrap;
+		}
+
+		@media (max-width: 600px) {
+			width: 75vw;
+		}
+
+		@media (max-width: 500px) {
+			width: 80vw;
+		}
 
 		.leads-tab {
 			display: flex;
