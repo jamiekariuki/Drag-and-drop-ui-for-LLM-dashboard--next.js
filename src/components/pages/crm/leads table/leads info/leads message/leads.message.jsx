@@ -103,6 +103,9 @@ const LeadsMessage = ({ userData }) => {
 								placeholder="Type your message..."
 								value={message}
 								onChange={handleInputChange}
+								onKeyDown={(event) => {
+									event.stopPropagation();
+								}}
 							/>
 							<Button
 								disabled={message.trim() === ""}
