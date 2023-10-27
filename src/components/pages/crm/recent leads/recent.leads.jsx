@@ -52,7 +52,7 @@ const RecentLeads = () => {
 	return (
 		<div className="recent-leads">
 			<div className="recent-leads-title">
-				<h4>Todays events</h4>
+				<h4>Recent leads</h4>
 			</div>
 
 			<div className="recent-leads-container">

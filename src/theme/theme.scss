@@ -25,13 +25,11 @@ $titleSoftDark: rgb(217, 217, 217);
 //borders
 //light mode
 $lightBorder: rgba(144, 144, 144, 0.707); //will be used as hover too
-$lightBorder2: rgba(187, 187, 187, 0.585); //will be used as hover too
 
 //dark mode
 $darkBorder: rgba(137, 137, 137, 0.493); //will be used as hover too
-$darkBorder2: rgba(89, 89, 89, 0.597); //will be used as hover too
 
-$minBackground: rgba(119, 119, 119, 0.082);
+$minBackground: rgba(119, 119, 119, 0.019);
 
 $themes: (
 	light: (
@@ -44,9 +42,8 @@ $themes: (
 
 		background: $lightBackround,
 		softBackground: $softLightBackground,
-		verySoftBackground: rgba(238, 238, 238, 0.331),
+		sb: rgba(147, 147, 147, 0.122),
 		border: $lightBorder,
-		border2: $lightBorder2,
 
 		icon: rgba(38, 38, 38, 0.672),
 		shadow: rgba(75, 75, 75, 0.389),
@@ -66,9 +63,8 @@ $themes: (
 
 		background: $darkBackround,
 		softBackground: $softDarkBackground,
-		verySoftBackground: rgba(18, 18, 18, 0.903),
+		sb: rgba(93, 93, 93, 0.102),
 		border: $darkBorder,
-		border2: $darkBorder2,
 
 		icon: rgba(236, 236, 236, 0.755),
 		shadow: rgba(65, 65, 65, 0.263),
