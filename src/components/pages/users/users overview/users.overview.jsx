@@ -22,7 +22,7 @@ const UsersOverview = () => {
 		<div className="users-overview">
 			<div className="totals">
 				<div className="totals-title">
-					<h4>Total users</h4>
+					<h4>Total users:</h4>
 				</div>
 				<div className="totals-data">
 					<h3>10</h3>
