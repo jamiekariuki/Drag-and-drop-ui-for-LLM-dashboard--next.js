@@ -4,20 +4,25 @@
 	@include themify($themes) {
 		width: 100%;
 		display: flex;
-		padding: 8px;
+		padding: 10px 7px 0 7px;
 		align-items: center;
 		justify-content: space-between;
 
 		@media (max-width: 850px) {
 			flex-direction: column;
-			gap: 20px;
+			gap: 15px;
 			padding: 10px;
 		}
 
 		.totals {
 			display: flex;
 			gap: 15px;
-			align-items: flex-start;
+			align-items: center;
+			justify-content: flex-start;
+
+			@media (max-width: 850px) {
+				width: 100%;
+			}
 
 			.totals-data {
 				h3 {
@@ -32,6 +37,7 @@
 			flex-direction: row;
 
 			@media (max-width: 850px) {
+				width: 100%;
 				justify-content: space-between;
 			}
 
