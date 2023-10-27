@@ -36,6 +36,9 @@ const LeadsEdit = ({ leadData }) => {
 									fill={true}
 								/>
 								<input
+									onKeyDown={(event) => {
+										event.stopPropagation();
+									}}
 									type="file"
 									id="profilePicture"
 									name="profilePicture"
@@ -58,6 +61,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>Name</p>{" "}
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="text"
 							id="name"
 							name="name"
@@ -72,6 +78,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>Contact</p>{" "}
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="text"
 							id="contact"
 							name="contact"
@@ -86,6 +95,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>Source</p>{" "}
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="text"
 							id="source"
 							name="source"
@@ -100,6 +112,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>Industry</p>{" "}
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="text"
 							id="industry"
 							name="industry"
@@ -114,6 +129,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>website</p>{" "}
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="text"
 							id="website"
 							name="website"
@@ -128,6 +146,9 @@ const LeadsEdit = ({ leadData }) => {
 							<p>Email</p>
 						</label>
 						<input
+							onKeyDown={(event) => {
+								event.stopPropagation();
+							}}
 							type="email"
 							id="email"
 							name="email"

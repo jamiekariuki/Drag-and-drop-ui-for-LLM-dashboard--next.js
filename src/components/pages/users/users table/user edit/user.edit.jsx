@@ -76,6 +76,9 @@ const UserEdit = ({
 								<p>Username</p>{" "}
 							</label>
 							<input
+								onKeyDown={(event) => {
+									event.stopPropagation();
+								}}
 								type="text"
 								id="username"
 								name="username"
@@ -90,6 +93,9 @@ const UserEdit = ({
 								<p>Email</p>
 							</label>
 							<input
+								onKeyDown={(event) => {
+									event.stopPropagation();
+								}}
 								type="email"
 								id="email"
 								name="email"
@@ -147,6 +153,9 @@ const UserEdit = ({
 								<p>IP Address</p>
 							</label>
 							<input
+								onKeyDown={(event) => {
+									event.stopPropagation();
+								}}
 								type="text"
 								id="ipAddress"
 								name="ipAddress"
