@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import "./page.scss";
 import SystemInfo from "@/components/pages/home/system info/system.info";

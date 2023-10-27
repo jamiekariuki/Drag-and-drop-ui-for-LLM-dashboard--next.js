@@ -219,6 +219,12 @@ export default function UsersTable() {
 							pageSize: 8,
 						},
 					},
+					columns: {
+						...LeadsData.initialState?.columns,
+						columnVisibilityModel: {
+							id: false,
+						},
+					},
 				}}
 				slots={{ toolbar: GridToolbar }}
 				slotProps={{

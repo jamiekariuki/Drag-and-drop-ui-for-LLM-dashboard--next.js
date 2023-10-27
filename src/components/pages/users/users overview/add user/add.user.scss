@@ -3,7 +3,7 @@
 .user-edit {
 	@include themify($themes) {
 		height: 68vh;
-		width: 300px;
+		width: 450px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -13,9 +13,12 @@
 			height: 60vh;
 		}
 
+		@media (max-width: 500px) {
+			width: 80vw;
+		}
+
 		@media (max-width: 400px) {
-			width: 70vw;
-			height: 60vh;
+			width: 85vw;
 		}
 
 		@media (max-width: 290px) {
@@ -103,6 +106,11 @@
 					align-items: center;
 					justify-content: center;
 					cursor: pointer;
+
+					@media (max-width: 500px) {
+						height: 90px;
+						width: 90px;
+					}
 
 					.profile-image-input {
 						object-fit: cover;

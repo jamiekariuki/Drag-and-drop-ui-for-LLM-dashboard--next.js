@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import "./page.daily.activities.scss";
 import TodaysEvents from "@/components/pages/daily activities/todays event/todays.event";

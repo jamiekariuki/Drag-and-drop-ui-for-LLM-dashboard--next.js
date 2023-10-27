@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./todays.summary.scss";
 import TokenIcon from "@mui/icons-material/Token";

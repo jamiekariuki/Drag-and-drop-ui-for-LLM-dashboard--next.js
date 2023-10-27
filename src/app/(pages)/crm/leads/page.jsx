@@ -1,6 +1,7 @@
 import React from "react";
 import "./page.leads.scss";
 //import LeadsInfo from "@/components/pages/crm/leads table/leads info/leads.info";
+//import { LeadsData } from "@/components/pages/crm/leads table/leads.data";
 import LeadsTable from "@/components/pages/crm/leads table/leads.table";
 
 const Leads = () => {
@@ -20,7 +21,7 @@ const Leads = () => {
 			>
 				<p>open</p>
 			</button>
-			<LeadsInfo open={open} onClose={onClose} /> */}
+			<LeadsInfo open={open} onClose={onClose} userData={LeadsData[0]} /> */}
 		</div>
 	);
 };

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./todays.summary.scss";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";

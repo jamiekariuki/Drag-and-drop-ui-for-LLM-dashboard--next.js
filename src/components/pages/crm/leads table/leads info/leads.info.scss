@@ -19,12 +19,17 @@
 			white-space: wrap;
 		}
 
+		@media (max-width: 1000px) {
+			height: 75vh;
+		}
+
 		@media (max-width: 600px) {
 			width: 75vw;
+			height: 65vh;
 		}
 
 		@media (max-width: 500px) {
-			width: 80vw;
+			width: 85vw;
 		}
 
 		.leads-tab {
