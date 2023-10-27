@@ -20,43 +20,15 @@ const UsersOverview = () => {
 
 	return (
 		<div className="users-overview">
-			<div className="users-count-data">
-				<div className="totals">
-					<div className="totals-title">
-						<p>Total all users</p>
-					</div>
-					<div className="totals-data">
-						<h3>10</h3>
-					</div>
+			<div className="totals">
+				<div className="totals-title">
+					<h4>Total users</h4>
 				</div>
-
-				<div className="totals">
-					<div className="totals-title">
-						<p>Total super admins</p>
-					</div>
-					<div className="totals-data">
-						<h3>2</h3>
-					</div>
-				</div>
-
-				<div className="totals">
-					<div className="totals-title">
-						<p>Total admins</p>
-					</div>
-					<div className="totals-data">
-						<h3>3</h3>
-					</div>
-				</div>
-
-				<div className="totals">
-					<div className="totals-title">
-						<p>Total users</p>
-					</div>
-					<div className="totals-data">
-						<h3>5</h3>
-					</div>
+				<div className="totals-data">
+					<h3>10</h3>
 				</div>
 			</div>
+
 			<div className="users-buttons">
 				<Button
 					variant="outlined"
@@ -72,6 +44,7 @@ const UsersOverview = () => {
 
 				<Button
 					variant="contained"
+					disableElevation
 					color="error"
 					size="small"
 					startIcon={<DeleteIcon />}

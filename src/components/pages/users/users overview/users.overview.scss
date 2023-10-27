@@ -14,30 +14,12 @@
 			padding: 10px;
 		}
 
-		.users-count-data {
+		.totals {
 			display: flex;
-			justify-content: flex-start;
-			gap: 30px;
+			gap: 15px;
+			align-items: center;
 
-			@media (max-width: 600px) {
-				flex-direction: column;
-				width: 100%;
-			}
-
-			.totals {
-				align-items: flex-end;
-				display: flex;
-				flex-direction: column;
-				border-right: 1px solid themed("hover");
-				padding-right: 10px;
-
-				@media (max-width: 600px) {
-					padding-left: 13px;
-					align-items: flex-start;
-					border: none;
-					border-bottom: 1px solid themed("hover");
-				}
-
+			.totals-data {
 				h3 {
 					font-size: 20px;
 				}
@@ -55,11 +37,13 @@
 
 			.user-h6 {
 				font-size: 11px;
+				text-transform: lowercase;
 			}
 
 			.user-p {
 				color: white;
 				font-size: 11px;
+				text-transform: lowercase;
 			}
 		}
 	}

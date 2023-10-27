@@ -4,19 +4,17 @@
 	@include themify($themes) {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: -2px;
 
 		.users-chart {
 			width: 100%;
-			border-radius: 6px;
+			border-radius: 6px 6px 0 0;
 			background-color: themed("background");
-
-			position: relative;
 		}
 
 		.users-table {
 			width: 100%;
-			border-radius: 6px;
+			border-radius: 0 0 6px 6px;
 			background-color: themed("background");
 		}
 	}
