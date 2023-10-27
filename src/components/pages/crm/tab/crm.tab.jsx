@@ -56,7 +56,7 @@ const CrmTab = () => {
 					</button>
 				</Link>
 			</div>
-			<div className="tab-container">
+			{/* <div className="tab-container">
 				<Link href={"/campaigns"}>
 					<button>
 						<h6
@@ -69,7 +69,7 @@ const CrmTab = () => {
 						</h6>
 					</button>
 				</Link>
-			</div>
+			</div> */}
 		</div>
 	);
 };

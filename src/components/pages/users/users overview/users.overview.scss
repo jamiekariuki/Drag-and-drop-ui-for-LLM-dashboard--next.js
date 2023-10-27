@@ -17,7 +17,7 @@
 		.totals {
 			display: flex;
 			gap: 15px;
-			align-items: center;
+			align-items: flex-start;
 
 			.totals-data {
 				h3 {
@@ -30,6 +30,10 @@
 			display: flex;
 			gap: 7px;
 			flex-direction: row;
+
+			@media (max-width: 850px) {
+				justify-content: space-between;
+			}
 
 			.user-h6 {
 				font-size: 11px;
