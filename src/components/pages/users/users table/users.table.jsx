@@ -220,7 +220,7 @@ export default function UsersTable() {
 						},
 					},
 					columns: {
-						...LeadsData.initialState?.columns,
+						...rows.initialState?.columns,
 						columnVisibilityModel: {
 							id: false,
 						},
