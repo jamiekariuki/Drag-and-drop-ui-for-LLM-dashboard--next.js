@@ -40,7 +40,7 @@ $darkText: rgb(179, 179, 179);
 
 	h1,
 	h2 {
-		font-size: clamp(17px, 3vw, 21px);
+		font-size: clamp(17px, 3vw, 20px);
 		color: black;
 	}
 	h2 {
@@ -49,7 +49,7 @@ $darkText: rgb(179, 179, 179);
 
 	h3,
 	h4 {
-		font-size: clamp(13px, 3vw, 15px);
+		font-size: clamp(13px, 3vw, 14px);
 		color: black;
 	}
 
@@ -59,13 +59,13 @@ $darkText: rgb(179, 179, 179);
 
 	h5 {
 		color: rgb(27, 27, 27);
-		font-size: clamp(10px, 2vw, 12px);
+		font-size: clamp(10px, 2vw, 11px);
 		font-weight: 500;
 	}
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 13px);
+		font-size: clamp(12px, 2vw, 12px);
 		font-weight: 500;
 		color: $lightText;
 	}
@@ -80,7 +80,7 @@ $darkText: rgb(179, 179, 179);
 
 	h1,
 	h2 {
-		font-size: clamp(17px, 3vw, 21px);
+		font-size: clamp(17px, 3vw, 20px);
 		color: white;
 	}
 	h2 {
@@ -89,7 +89,7 @@ $darkText: rgb(179, 179, 179);
 
 	h3,
 	h4 {
-		font-size: clamp(13px, 3vw, 15px);
+		font-size: clamp(13px, 3vw, 14px);
 		color: white;
 	}
 	h4 {
@@ -98,13 +98,13 @@ $darkText: rgb(179, 179, 179);
 
 	h5 {
 		color: white;
-		font-size: clamp(10px, 2vw, 12px);
+		font-size: clamp(10px, 2vw, 11px);
 		font-weight: 500;
 	}
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 13px);
+		font-size: clamp(12px, 2vw, 12px);
 		font-weight: 400;
 		color: $darkText;
 	}

@@ -6,8 +6,8 @@
 		height: auto;
 		width: 100%;
 		display: grid;
-		grid-auto-rows: minmax(160px, auto);
-		grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+		grid-auto-rows: minmax(150px, auto);
+		grid-template-columns: repeat(auto-fit, minmax(225px, 320px));
 		gap: 20px 20px;
 		justify-content: flex-start;
 		align-content: flex-start;
@@ -123,7 +123,7 @@
 		}
 
 		.tool-box-add {
-			border: 2px dashed themed("border");
+			border: 1px dashed themed("border");
 			border-radius: 10px;
 			display: flex;
 			align-items: center;
