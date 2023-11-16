@@ -32,7 +32,7 @@ ul li {
 }
 
 $lightText: rgba(50, 50, 50, 0.759);
-$darkText: rgb(179, 179, 179);
+$darkText: rgb(181, 181, 181);
 
 .theme-light {
 	background-color: $softLightBackground;
@@ -41,7 +41,7 @@ $darkText: rgb(179, 179, 179);
 	h1,
 	h2 {
 		font-size: clamp(17px, 3vw, 20px);
-		color: black;
+		color: rgb(32, 32, 32);
 	}
 	h2 {
 		color: $lightText;
@@ -50,7 +50,7 @@ $darkText: rgb(179, 179, 179);
 	h3,
 	h4 {
 		font-size: clamp(13px, 3vw, 14px);
-		color: black;
+		color: rgb(32, 32, 32);
 	}
 
 	h4 {
@@ -58,7 +58,7 @@ $darkText: rgb(179, 179, 179);
 	}
 
 	h5 {
-		color: rgb(27, 27, 27);
+		color: rgb(32, 32, 32);
 		font-size: clamp(10px, 2vw, 11px);
 		font-weight: 500;
 	}
