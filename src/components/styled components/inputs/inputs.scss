@@ -1,0 +1,86 @@
+@import "./../../../theme/theme.scss";
+
+.inputs {
+	@include themify($themes) {
+		width: 100%;
+		height: 35px;
+		position: relative;
+		//	background-color: aqua;
+
+		label {
+			position: absolute;
+			background-color: themed("background");
+			padding: 0px 5px;
+			top: 50%;
+			left: 10px;
+			transform: translateY(-50%);
+			transition: all 0.08s;
+
+			p {
+				font-size: 14px;
+				color: themed("border");
+				line-height: 1;
+			}
+		}
+
+		input:focus + label {
+			top: -4%;
+			scale: 0.8;
+		}
+
+		.input-field:not(:placeholder-shown) + label {
+			top: -4%;
+			scale: 0.8;
+		}
+
+		.input-error {
+			font-size: 11px;
+			position: absolute;
+			background-color: themed("background");
+			top: 83%;
+			left: 3%;
+			padding: 0 3px;
+			color: rgba(255, 0, 0, 0.937);
+			line-height: 1;
+		}
+
+		input {
+			width: 100%;
+			height: 100%;
+			border: 1px solid themed("border");
+			outline: none;
+			padding: 3px 7px;
+			border-radius: 5px;
+			background-color: transparent;
+			color: themed("text");
+			transition: 0.3s ease;
+			font-family: var(--font-poppins);
+		}
+	}
+}
+
+.inputs-ta {
+	@include themify($themes) {
+		width: 100%;
+		height: 100px;
+		position: relative;
+		//	background-color: aqua;
+
+		textarea {
+			border-radius: 5px;
+			border: 1px solid themed("border");
+			max-height: 150px;
+			padding: 7px;
+			resize: none;
+			width: 100%;
+			font-family: var(--font-poppins);
+			color: themed("text");
+			background-color: transparent;
+			outline: none;
+
+			&::placeholder {
+				color: themed(border);
+			}
+		}
+	}
+}

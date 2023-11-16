@@ -21,7 +21,7 @@ const Leads = () => {
 			>
 				<p>open</p>
 			</button>
-			<LeadsInfo open={open} onClose={onClose} userData={LeadsData[0]} /> */}
+			<LeadsInfo open={open} onClose={onClose} userData={LeadsData[0]} />  */}
 		</div>
 	);
 };

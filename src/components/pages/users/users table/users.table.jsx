@@ -38,14 +38,16 @@ const columns = [
 	{
 		field: "email",
 		headerName: "Email",
-		width: 250,
+		minWidth: 250,
+		flex: 1,
 		editable: false,
 	},
 
 	{
 		field: "role",
 		headerName: "Role",
-		width: 190,
+		minWidth: 150,
+		flex: 1,
 		renderCell: (params) => {
 			return (
 				<div
@@ -65,7 +67,7 @@ const columns = [
 	{
 		field: "edit",
 		headerName: "Edit",
-		width: 150,
+		width: 100,
 
 		renderCell: function EditingAction(params) {
 			const [open, setOpen] = useState(false);
@@ -101,7 +103,7 @@ const columns = [
 	{
 		field: "delete",
 		headerName: "Delete",
-		width: 150,
+		width: 100,
 		renderCell: function DeletingAction(params) {
 			const [open, setOpen] = useState(false);
 			const onClose = () => {

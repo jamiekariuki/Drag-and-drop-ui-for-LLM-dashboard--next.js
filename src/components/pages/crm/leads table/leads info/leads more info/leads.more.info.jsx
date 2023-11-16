@@ -81,7 +81,7 @@ const LeadsMoreInfo = ({ userData }) => {
 					<div className="lead-information">
 						<CalendarMonthIcon className="lead-info-icon" />
 						<h6>Date Added:</h6>
-						<p>{Date.now()}</p>
+						<p>{userData.dateAdded}</p>
 					</div>
 				</div>
 			</div>

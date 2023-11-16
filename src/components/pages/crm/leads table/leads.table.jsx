@@ -14,9 +14,17 @@ const columns = [
 	{ field: "id", headerName: "ID", width: 100 },
 
 	{
+		field: "name",
+		headerName: "Name",
+		minWidth: 125,
+		flex: 1,
+		editable: false,
+	},
+
+	{
 		field: "more",
 		headerName: "More info",
-		width: 90,
+		width: 100,
 
 		renderCell: function EditingAction(params) {
 			const [open, setOpen] = useState(false);
@@ -47,9 +55,9 @@ const columns = [
 	},
 
 	{
-		field: "name",
-		headerName: "Name",
-		minWidth: 125,
+		field: "type",
+		headerName: "Type",
+		minWidth: 100,
 		flex: 1,
 		editable: false,
 	},
@@ -68,14 +76,6 @@ const columns = [
 		minWidth: 270,
 		editable: false,
 	},
-
-	/* {
-		field: "contact",
-		headerName: "Contacts", 
-		width: 250,
-		flex: 1,
-		editable: false,
-	}, */
 
 	{
 		field: "status",
@@ -121,28 +121,6 @@ const columns = [
 			);
 		},
 	},
-	/* {
-		field: "industry",
-		headerName: "Industry",
-		width: 250,
-		flex: 1,
-		editable: false,
-	},
-
-	{
-		field: "company",
-		headerName: "Company",
-		width: 250,
-		flex: 1,
-		editable: false,
-	},
-	{
-		field: "website",
-		headerName: "Website",
-		width: 250,
-		flex: 1,
-		editable: false,
-	}, */
 
 	{
 		field: "dateAdded",

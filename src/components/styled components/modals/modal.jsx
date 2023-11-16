@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
 
-const Modal = ({ open, onClose, children }) => {
+/* const Modal = ({ open, onClose, children }) => {
 	const ref = useRef(null);
 
 	useLayoutEffect(() => {
@@ -57,6 +57,37 @@ const Modal = ({ open, onClose, children }) => {
 			{children}
 		</dialog>
 	);
+};
+
+Modal.propTypes = {
+	open: PropTypes.bool.isRequired,
+	onClose: PropTypes.func.isRequired,
+	children: PropTypes.node.isRequired,
+};
+
+export default Modal;
+ */
+
+const Modal = ({ open, onClose, children }) => {
+	if (open) {
+		return (
+			<div className="modal-backdrop">
+				<div className="modal ">
+					<IconButton
+						aria-label="close"
+						size="medium"
+						className="close-button"
+						onClick={onClose}
+					>
+						<CloseIcon fontSize="inherit" />
+					</IconButton>
+					{children}
+				</div>
+			</div>
+		);
+	} else {
+		return null;
+	}
 };
 
 Modal.propTypes = {

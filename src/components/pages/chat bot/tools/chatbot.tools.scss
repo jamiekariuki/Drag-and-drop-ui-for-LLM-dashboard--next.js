@@ -1,0 +1,150 @@
+@import "./../../../../theme/theme.scss";
+
+.cb-tools {
+	@include themify($themes) {
+		margin: 20px;
+		height: auto;
+		width: 100%;
+		display: grid;
+		grid-auto-rows: minmax(160px, auto);
+		grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+		gap: 20px 20px;
+		justify-content: flex-start;
+		align-content: flex-start;
+
+		@media (max-width: 400px) {
+			margin: 20px 5px;
+		}
+
+		&.cb-tools2 {
+			justify-content: center;
+		}
+
+		.tool-box {
+			border-radius: 10px;
+			background-color: themed("glass");
+			border: 1px solid themed("hover");
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h5 {
+				font-size: 13px;
+			}
+
+			.tool-box-title {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				border-bottom: 1px solid themed("hover");
+				height: 45px;
+				padding: 5px 10px;
+
+				.tb-left {
+					display: flex;
+					height: 100%;
+					align-items: center;
+					gap: 5px;
+
+					.tb-left-icon-container {
+						height: 35px;
+						width: 35px;
+						border-radius: 50%;
+						background-color: themed("background");
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border: 1px solid themed("hover");
+
+						.tb-icon {
+							color: themed("icon");
+							font-size: 18px;
+						}
+					}
+
+					.tb-left-info {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						height: 100%;
+						padding-top: 4px;
+
+						h4 {
+							line-height: 0.7;
+						}
+					}
+				}
+
+				.tb-right {
+					.tb-delete {
+						font-size: 19px;
+						color: themed("icon");
+					}
+				}
+			}
+
+			.tool-box-info {
+				p {
+					font-size: 12px;
+				}
+
+				padding: 6px;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+
+				.tb-info {
+					display: flex;
+					gap: 5px;
+					align-items: flex-start;
+				}
+			}
+
+			.tool-box-btn-container {
+				padding: 7px 14px;
+				.tbc {
+					display: flex;
+					gap: 10px;
+					align-items: center;
+					justify-content: flex-end;
+
+					.tool-box-btn {
+						height: 26px;
+
+						p {
+							color: white;
+							font-size: 12px;
+							text-transform: lowercase;
+						}
+					}
+				}
+			}
+		}
+
+		.tool-box-add {
+			border: 2px dashed themed("border");
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			.tb-add {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				h4 {
+					font-size: 20px;
+					color: themed("border");
+				}
+
+				.tb-add {
+					color: themed(border);
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}

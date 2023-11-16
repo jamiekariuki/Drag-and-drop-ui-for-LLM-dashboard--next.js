@@ -23,47 +23,40 @@ export const first = [
 		link: "/",
 	},
 	{
-		icon: <PeopleIcon className="nav-icons" />,
-		text: "Users",
-		link: "/users",
-	},
-	{
 		icon: <EqualizerIcon className="nav-icons" />,
 		text: "Daily Activities",
 		link: "/daily-activities",
 	},
-
 	{
 		icon: <DataSaverOffIcon className="nav-icons" />,
 		text: "CRM",
 		link: "/crm",
 	},
-
 	{
+		icon: <PeopleIcon className="nav-icons" />,
+		text: "Users",
+		link: "/users",
+	},
+
+	/* {
 		icon: <InventoryIcon className="nav-icons" />,
 		text: "Inventory",
 		link: "/inventory",
-	},
+	}, */
 ];
 
 //----chat bot
 export const chatBot = [
 	{
-		icon: <ViewListIcon className="nav-icons" />,
-		text: "Overview",
-		link: "/chatbot-overview",
-	},
-
-	{
 		icon: <BuildIcon className="nav-icons" />,
-		text: "Manage",
-		link: "/chatbot-manage",
+		text: "Tools",
+		link: "/chat-bot/tools",
 	},
 
 	{
 		icon: <AppRegistrationSharpIcon className="nav-icons" />,
 		text: "Platforms",
-		link: "/chatbot-platform",
+		link: "/chat-bot/platform",
 	},
 ];
 
@@ -98,11 +91,6 @@ export const chatBotPlatform = [
 
 //-----agents
 export const agents = [
-	{
-		icon: <ViewListIcon className="nav-icons" />,
-		text: "Overview",
-		link: "/agents-overview",
-	},
 	{
 		icon: <PendingActionsIcon className="nav-icons" />,
 		text: "Task Queues",

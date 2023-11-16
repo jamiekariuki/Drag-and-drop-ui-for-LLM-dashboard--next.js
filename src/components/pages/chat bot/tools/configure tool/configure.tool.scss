@@ -1,0 +1,116 @@
+@import "./../../../../../theme/theme.scss";
+
+.configure-tool {
+	@include themify($themes) {
+		height: 80vh;
+		width: 450px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width: 600px) {
+			width: 90vw;
+			height: 70vh;
+		}
+
+		.configure-tool-title {
+			width: 100%;
+			border-bottom: 1px solid themed("glass");
+
+			h2 {
+				text-align: center;
+			}
+		}
+
+		.configure-tool-container {
+			width: 100%;
+			height: 100%;
+			overflow-y: scroll;
+
+			.configure-tool-wrapper {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 13px;
+				margin-top: 15px;
+				padding: 0 5px;
+
+				.ct-input-doc {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 5px;
+					margin-bottom: 10px;
+
+					.ct-upload-doc {
+						width: 60%;
+						height: 150px;
+						border-radius: 10px;
+						border: 2px dashed themed("border");
+						margin: 3px 20%;
+						background-color: themed("glass");
+						cursor: pointer;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+
+						.upload-icon {
+							font-size: 35px;
+							color: themed("icon");
+						}
+
+						p {
+							font-size: 12px;
+						}
+					}
+				}
+
+				.ct-input {
+					width: 95%;
+					display: flex;
+					flex-direction: column;
+					gap: 4px;
+
+					.ct-info {
+						width: 100%;
+						display: flex;
+						align-items: flex-start;
+						justify-content: flex-start;
+						gap: 5px;
+						padding: 5px;
+						background-color: themed("info");
+						margin-bottom: 5px;
+						border-radius: 5px;
+
+						.ct-info-icon {
+							font-size: 15px;
+							color: themed("icon");
+						}
+
+						p {
+							font-size: 11px;
+						}
+					}
+				}
+			}
+		}
+
+		.configure-tool-footer {
+			height: 40px;
+			width: 100%;
+			border-top: 1px solid themed("glass");
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			.ct-submit-btn {
+				p {
+					color: white;
+				}
+			}
+		}
+	}
+}

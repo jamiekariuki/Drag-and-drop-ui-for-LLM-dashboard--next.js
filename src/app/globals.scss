@@ -31,7 +31,7 @@ ul li {
 	list-style-type: none;
 }
 
-$lightText: rgba(30, 30, 30, 0.826);
+$lightText: rgba(50, 50, 50, 0.759);
 $darkText: rgb(179, 179, 179);
 
 .theme-light {
@@ -60,13 +60,13 @@ $darkText: rgb(179, 179, 179);
 	h5 {
 		color: black;
 		font-size: clamp(10px, 2vw, 12px);
-		font-weight: 400;
+		font-weight: 500;
 	}
 
 	h6,
 	p {
 		font-size: clamp(12px, 2vw, 13px);
-		font-weight: 400;
+		font-weight: 500;
 		color: $lightText;
 	}
 	h6 {
@@ -99,7 +99,7 @@ $darkText: rgb(179, 179, 179);
 	h5 {
 		color: white;
 		font-size: clamp(10px, 2vw, 12px);
-		font-weight: 400;
+		font-weight: 500;
 	}
 
 	h6,
@@ -135,6 +135,8 @@ p {
 		overflow-y: scroll;
 		overflow-x: hidden;
 		padding: 5px 20px 20px 20px;
+
+		position: relative;
 
 		@media (max-width: 700px) {
 			padding: 2px 10px 1px 10px;
