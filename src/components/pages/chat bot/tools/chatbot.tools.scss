@@ -78,7 +78,7 @@
 
 				.tb-right {
 					.tb-delete {
-						font-size: 19px;
+						font-size: 18px;
 						color: themed("icon");
 					}
 				}
@@ -86,13 +86,13 @@
 
 			.tool-box-info {
 				p {
-					font-size: 12px;
+					font-size: 11px;
 				}
 
 				padding: 6px;
 				display: flex;
 				flex-direction: column;
-				gap: 5px;
+				gap: 4px;
 
 				.tb-info {
 					display: flex;

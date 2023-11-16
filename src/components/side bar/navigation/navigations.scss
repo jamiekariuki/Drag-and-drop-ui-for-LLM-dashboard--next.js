@@ -23,22 +23,22 @@
 		}
 
 		.side-bar-icon {
-			font-size: 15px;
-			color: themed("icon");
+			font-size: 14px;
+			color: themed("text");
 			transition: all 0.3s;
 
 			.nav-icons {
-				font-size: 15px;
-				color: themed("icon");
+				font-size: 14px;
+				color: themed("text");
 				transition: all 0.3s;
 			}
 
 			&.side-bar-icon-collapse {
-				font-size: 20px;
+				font-size: 19px;
 				padding: 4px 7px;
 
 				.nav-icons {
-					font-size: 20px;
+					font-size: 19px;
 				}
 			}
 		}
