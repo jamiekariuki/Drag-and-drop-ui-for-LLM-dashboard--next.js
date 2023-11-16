@@ -10,7 +10,6 @@
 		z-index: 1100;
 		background-color: themed("background");
 		transition: all 0.3s;
-		//background-color: aqua;
 		overflow-y: scroll;
 
 		@media (min-width: 700px) {
@@ -20,7 +19,6 @@
 		&.mobile-side-bar-open {
 			left: 0;
 			right: 20%;
-			//background-color: aqua;
 		}
 	}
 }
