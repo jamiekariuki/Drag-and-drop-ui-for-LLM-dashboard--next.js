@@ -1,6 +1,6 @@
 @import "./../../../theme/theme.scss";
 
-.modal {
+/* .modal {
 	@include themify($themes) {
 		border: 0;
 		background-color: themed("background");
@@ -51,9 +51,9 @@
 			}
 		}
 	}
-}
+} */
 
-/* .modal-backdrop {
+.modal-backdrop {
 	@include themify($themes) {
 		position: fixed;
 		inset: 0;
@@ -74,7 +74,6 @@
 			position: relative;
 			border-radius: 8px;
 			padding: 20px;
-
 			overflow: hidden;
 			animation: slideIn 0.3s ease-out;
 			z-index: 11000;
@@ -108,4 +107,4 @@
 			}
 		}
 	}
-} */
+}
