@@ -1,11 +1,11 @@
 @import "./../../../theme/theme.scss";
 
-/* .modal {
+.modal {
 	@include themify($themes) {
 		border: 0;
 		background-color: themed("background");
 		box-shadow: 0px 0px 10px themed("shadow");
-		border-radius: 10px;
+		border-radius: 7px;
 		padding: 20px;
 		text-align: center;
 		opacity: 0;
@@ -21,9 +21,10 @@
 		}
 
 		&::backdrop {
-			backdrop-filter: blur(2px) saturate(149%);
-			-webkit-backdrop-filter: blur(2px) saturate(149%);
-			background-color: rgba(89, 89, 89, 0.109);
+			//backdrop-filter: blur(2px) saturate(149%);
+			//-webkit-backdrop-filter: blur(2px) saturate(149%);
+			//background-color: rgba(89, 89, 89, 0.109);
+			background-color: rgba(0, 0, 0, 0.181);
 			animation: fadeInbackdrop 0.4s ease-in-out forwards;
 
 			@keyframes fadeInbackdrop {
@@ -42,9 +43,11 @@
 
 		@keyframes fadeIn {
 			from {
+				transform: translateY(30%);
 				opacity: 0;
 			}
 			to {
+				transform: translateY(0);
 				opacity: 1;
 			}
 		}
@@ -61,9 +64,9 @@
 			}
 		}
 	}
-} */
+}
 
-.modal-backdrop {
+/* .modal-backdrop {
 	@include themify($themes) {
 		position: fixed;
 		inset: 0;
@@ -118,4 +121,4 @@
 			}
 		}
 	}
-}
+} */
