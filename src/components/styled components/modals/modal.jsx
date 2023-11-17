@@ -4,6 +4,7 @@ import "./modal.scss";
 import PropTypes from "prop-types";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
+import ReactDOM from "react-dom";
 
 /* const Modal = ({ open, onClose, children }) => {
 	const ref = useRef(null);
@@ -70,7 +71,7 @@ export default Modal;
 
 const Modal = ({ open, onClose, children }) => {
 	if (open) {
-		return (
+		return ReactDOM.createPortal(
 			<div className="modal-backdrop">
 				<div className="modal ">
 					<IconButton
@@ -83,7 +84,8 @@ const Modal = ({ open, onClose, children }) => {
 					</IconButton>
 					{children}
 				</div>
-			</div>
+			</div>,
+			document.body
 		);
 	} else {
 		return null;

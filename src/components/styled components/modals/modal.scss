@@ -74,10 +74,10 @@
 		overflow-y: auto;
 		outline: none;
 		z-index: 10000;
-		//background-color: rgba(0, 0, 0, 0.181);
-		backdrop-filter: blur(2px) saturate(149%);
-		-webkit-backdrop-filter: blur(2px) saturate(149%);
-		background-color: rgba(89, 89, 89, 0.085);
+		background-color: rgba(0, 0, 0, 0.181);
+		//	backdrop-filter: blur(2px) saturate(149%);
+		//	-webkit-backdrop-filter: blur(2px) saturate(149%);
+		//	background-color: rgba(89, 89, 89, 0.085);
 
 		.modal {
 			background-color: themed("background");
