@@ -4,7 +4,6 @@
 	@include themify($themes) {
 		border: 0;
 		background-color: themed("background");
-		box-shadow: 0px 0px 10px themed("shadow");
 		border-radius: 7px;
 		padding: 20px;
 		text-align: center;
@@ -14,6 +13,19 @@
 		left: 50%;
 		transform: translate(-50%, -50%) !important;
 		overflow: hidden;
+		transform: translateY(30%);
+		animation: fadeIn 0.3s ease-in-out forwards;
+
+		@keyframes fadeIn {
+			from {
+				transform: translateY(30%);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
 
 		@media (max-width: 600px) {
 			padding: 8px;
@@ -25,31 +37,6 @@
 			//-webkit-backdrop-filter: blur(2px) saturate(149%);
 			//background-color: rgba(89, 89, 89, 0.109);
 			background-color: rgba(0, 0, 0, 0.181);
-			animation: fadeInbackdrop 0.4s ease-in-out forwards;
-
-			@keyframes fadeInbackdrop {
-				from {
-					opacity: 0;
-				}
-				to {
-					opacity: 1;
-				}
-			}
-		}
-
-		&.fade-in {
-			animation: fadeIn 0.3s ease-in-out forwards;
-		}
-
-		@keyframes fadeIn {
-			from {
-				transform: translateY(30%);
-				opacity: 0;
-			}
-			to {
-				transform: translateY(0);
-				opacity: 1;
-			}
 		}
 
 		.close-button {

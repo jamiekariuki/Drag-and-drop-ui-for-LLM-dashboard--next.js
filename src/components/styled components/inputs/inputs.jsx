@@ -11,6 +11,7 @@ const Inputs = ({
 	register,
 	required,
 	error,
+	inputHeight,
 }) => {
 	const [message, setMessage] = useState("");
 	const inputRef = useRef();
@@ -23,7 +24,7 @@ const Inputs = ({
 	const adjustInputHeight = () => {
 		const input = inputRef.current;
 		if (input) {
-			input.style.height = "100px";
+			input.style.height = inputHeight ? inputHeight : "100px";
 			input.style.height = input.scrollHeight + "px";
 		}
 	};
@@ -69,6 +70,7 @@ const Inputs = ({
 					id={id}
 					disabled={disabled}
 					/* {...register(id, { required })} */
+					style={{ height: inputHeight ? inputHeight : "100px" }}
 					type={type}
 					onChange={handleInputChange}
 				/>
