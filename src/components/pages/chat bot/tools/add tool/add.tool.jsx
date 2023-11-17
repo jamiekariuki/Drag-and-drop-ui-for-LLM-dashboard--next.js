@@ -9,7 +9,7 @@ const AddTool = ({ open, onClose }) => {
 		<Modal open={open} onClose={onClose}>
 			<div className="add-tool">
 				<div className="add-tool-title">
-					<h2>Add Tools</h2>
+					<h1>Add Tools</h1>
 				</div>
 				<div className="add-tool-container">
 					<div className="add-tool-wrapper">
@@ -21,8 +21,7 @@ const AddTool = ({ open, onClose }) => {
 							>
 								<div className="add-tool-top">
 									{item.icon}
-
-									<h4>{item.title}</h4>
+									<h3>{item.title}</h3>
 								</div>
 								<div className="add-tool-bottom">
 									<p>{item.description}</p>

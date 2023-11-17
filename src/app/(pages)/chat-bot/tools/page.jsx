@@ -1,6 +1,5 @@
 import React from "react";
 import "./page.tools.scss";
-import Inputs from "@/components/styled components/inputs/inputs";
 import ChatbotTools from "@/components/pages/chat bot/tools/chatbot.tools";
 
 const Tools = () => {
@@ -27,10 +26,13 @@ const Tools = () => {
 				</div>
 			</div>
 
-			<div className="tools-container">
-				<ChatbotTools />{" "}
+			<div className="chat-bot-heading">
+				<h1>ChatBot Tools</h1>
+				<p>Custom Tools: Personalize Features for Your Needs</p>
 			</div>
-			{/* <Inputs /> */}
+			<div className="tools-container">
+				<ChatbotTools />
+			</div>
 		</div>
 	);
 };

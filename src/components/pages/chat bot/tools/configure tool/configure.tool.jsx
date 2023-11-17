@@ -12,13 +12,13 @@ const ConfigureTool = ({ open, onClose }) => {
 		<Modal open={open} onClose={onClose}>
 			<div className="configure-tool">
 				<div className="configure-tool-title">
-					<h2>Configure Tool</h2>
+					<h1>Configure Tool</h1>
 				</div>
 
 				<div className="configure-tool-container">
 					<div className="configure-tool-wrapper">
 						<div className=" ct-input-doc">
-							<h4>Upload document</h4>
+							<h3>Upload document</h3>
 							<div className="ct-upload-doc">
 								<IoDocumentTextOutline className="upload-icon" />
 								<h6>Click or drag and Drop</h6>
@@ -27,12 +27,12 @@ const ConfigureTool = ({ open, onClose }) => {
 						</div>
 
 						<div className="ct-input">
-							<h4>Add a title for your project</h4>
+							<h3>Add a title for your project</h3>
 							<Inputs type={"text"} label={"Title"} />
 						</div>
 
 						<div className="ct-input">
-							<h4>Custom prompt</h4>
+							<h3>Custom prompt</h3>
 
 							<div className="ct-info">
 								<InfoIcon className="ct-info-icon" />

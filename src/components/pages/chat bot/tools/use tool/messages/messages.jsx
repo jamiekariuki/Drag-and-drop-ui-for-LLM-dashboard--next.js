@@ -60,7 +60,7 @@ const Messages = () => {
 						</div>
 					)}
 					<div className="message-container">
-						<h4>{item.name}</h4>
+						<h3>{item.name}</h3>
 						<p>{item.message}</p>
 					</div>
 				</div>

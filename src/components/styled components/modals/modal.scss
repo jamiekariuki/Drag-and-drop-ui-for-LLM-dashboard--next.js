@@ -53,39 +53,43 @@
 	}
 } */
 
-.modal-backdrop {
+.modal-wrapper {
 	@include themify($themes) {
-		position: fixed;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow-x: hidden;
-		overflow-y: auto;
-		outline: none;
-		z-index: 10000;
-		background-color: rgba(0, 0, 0, 0.181);
-		//	backdrop-filter: blur(2px) saturate(149%);
-		//	-webkit-backdrop-filter: blur(2px) saturate(149%);
-		//	background-color: rgba(89, 89, 89, 0.085);
-
+		.modal-backdrop {
+			position: fixed;
+			inset: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow-x: hidden;
+			overflow-y: auto;
+			outline: none;
+			z-index: 10000;
+			background-color: themed("backdrop");
+		}
 		.modal {
 			background-color: themed("background");
-			position: relative;
+			position: fixed;
 			border-radius: 8px;
 			padding: 20px;
 			overflow: hidden;
-			animation: slideIn 0.3s ease-out;
+			animation: slideIn 0.2s ease-out forwards;
 			z-index: 11000;
+			top: 50%;
+			left: 50%;
+			transform: translate(-62.5%, -40%);
+			scale: 0.8;
 
 			@keyframes slideIn {
 				from {
-					transform: translateY(30%);
+					transform: translate(-62.5%, -40%);
 					opacity: 0;
+					scale: 0.8;
 				}
 				to {
-					transform: translateY(0);
+					transform: translate(-50%, -50%);
 					opacity: 1;
+					scale: 1;
 				}
 			}
 

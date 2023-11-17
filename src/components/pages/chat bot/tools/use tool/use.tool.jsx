@@ -34,7 +34,7 @@ const UseTool = ({ urlTitle }) => {
 					<KeyboardBackspaceIcon className="ut-back-icon" />
 				</IconButton>
 
-				<h2>{urlTitle}</h2>
+				<h1>{urlTitle}</h1>
 				<Button
 					variant="contained"
 					startIcon={<TuneIcon />}
@@ -71,7 +71,7 @@ const UseTool = ({ urlTitle }) => {
 						>
 							<p>history</p>
 						</Button>
-						<h2>{urlTitle}</h2>
+						<h1>{urlTitle}</h1>
 					</div>
 
 					<div

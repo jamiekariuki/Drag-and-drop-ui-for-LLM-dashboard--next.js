@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
 							<div className="all-apps">{children}</div>
 						</div>
 					</div>
+					<div id="portal"></div>
 				</ThemeProvider2>
 			</body>
 		</html>

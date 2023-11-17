@@ -1,6 +1,6 @@
 import React from "react";
 import "./page.daily.activities.scss";
-import TodaysEvents from "@/components/pages/daily activities/todays event/todays.event";
+/* import TodaysEvents from "@/components/pages/daily activities/todays event/todays.event";
 import TodaysPlatformActivities from "@/components/pages/daily activities/todays platform activities/todays.platform.activities";
 import TodaysPlatformUpdates from "@/components/pages/daily activities/todays platform update/todays.platform.updates";
 import TodaysAgentActivity from "@/components/pages/daily activities/todays agent activity/todays.agent.activity";
@@ -8,11 +8,11 @@ import TodaysTasks from "@/components/pages/daily activities/todays tasks/todays
 import TodaysLeads from "@/components/pages/daily activities/todays leads/todays.leads";
 import TodaysSummaryTokens from "@/components/pages/daily activities/todays summary/todays.summary.tokens";
 import TodaysSummaryTasks from "@/components/pages/daily activities/todays summary/todays.summary.task";
-
+ */
 const DailyActivities = () => {
 	return (
 		<div className="daily-activities">
-			<div className="daily-activities-top">
+			{/* <div className="daily-activities-top">
 				<div className="daily-activities-top-left">
 					<TodaysTasks />
 				</div>
@@ -50,7 +50,7 @@ const DailyActivities = () => {
 				<div className="daily-activities-bottom-right">
 					<TodaysPlatformUpdates />
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

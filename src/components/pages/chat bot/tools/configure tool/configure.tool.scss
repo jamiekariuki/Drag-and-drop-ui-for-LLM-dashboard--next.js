@@ -15,10 +15,14 @@
 
 		.configure-tool-title {
 			width: 100%;
-			border-bottom: 1px solid themed("glass");
+			border-bottom: 1px solid themed("hover");
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			h2 {
+			h1 {
 				text-align: center;
+				padding-bottom: 3px;
 			}
 		}
 
@@ -35,7 +39,7 @@
 				align-items: center;
 				gap: 13px;
 				margin-top: 15px;
-				padding: 0 5px;
+				padding: 10px 5px;
 
 				.ct-input-doc {
 					width: 100%;
@@ -99,9 +103,10 @@
 		}
 
 		.configure-tool-footer {
+			padding-top: 6px;
 			height: 40px;
 			width: 100%;
-			border-top: 1px solid themed("glass");
+			border-top: 1px solid themed("hover");
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;

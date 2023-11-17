@@ -218,7 +218,7 @@ export default function UsersTable() {
 				initialState={{
 					pagination: {
 						paginationModel: {
-							pageSize: 8,
+							pageSize: 10,
 						},
 					},
 					columns: {
@@ -237,7 +237,7 @@ export default function UsersTable() {
 						},
 					},
 				}}
-				pageSizeOptions={[8]}
+				pageSizeOptions={[10]}
 				disablecheckboxSelection
 				disableRowSelectionOnClick
 				disableColumnSelector

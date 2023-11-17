@@ -10,7 +10,7 @@
 
 		.tools-nav {
 			height: 38px;
-			border-bottom: 1px solid themed("glass");
+			border-bottom: 1px solid themed("hover");
 
 			.tools-search {
 				.group {
@@ -80,6 +80,10 @@
 					}
 				}
 			}
+		}
+
+		.chat-bot-heading {
+			padding: 10px;
 		}
 
 		.tools-container {

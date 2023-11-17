@@ -73,7 +73,7 @@ const ChatbotTools = () => {
 								)}
 							</div>
 							<div className="tb-left-info">
-								<h4>{item.title}:</h4>
+								<h3>{item.title}:</h3>
 								<p>{item.name}</p>
 							</div>
 						</div>
