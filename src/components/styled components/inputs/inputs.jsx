@@ -12,6 +12,7 @@ const Inputs = ({
 	required,
 	error,
 	inputHeight,
+	value,
 }) => {
 	const [message, setMessage] = useState("");
 	const inputRef = useRef();
@@ -40,6 +41,7 @@ const Inputs = ({
 					id={id}
 					disabled={disabled}
 					/* {...register(id, { required })} */
+					value={value}
 					placeholder=" "
 					type={type}
 					className="input-field"

@@ -18,4 +18,15 @@ export const ChatBots = [
 		icon: <GoLaw className="add-tool-icon" />,
 		description: "Legal advisor based on submited legal documents or case",
 	},
+	{
+		title: "Research Assistant",
+		icon: <GoLaw className="add-tool-icon" />,
+		description:
+			"Research on any given topic(s) from the web and other platforms",
+	},
+	{
+		title: "Custom Tool",
+		icon: <GoLaw className="add-tool-icon" />,
+		description: "Customize this tool anyhow you like",
+	},
 ];

@@ -1,0 +1,10 @@
+@import "./../../../theme/theme.scss";
+
+.page-agents {
+	@include themify($themes) {
+		min-height: 80vh;
+		width: 100%;
+		background-color: themed("background");
+		border-radius: 6px;
+	}
+}

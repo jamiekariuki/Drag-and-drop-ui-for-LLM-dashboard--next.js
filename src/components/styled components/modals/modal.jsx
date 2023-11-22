@@ -70,7 +70,7 @@ Modal.propTypes = {
 export default Modal;
  */
 
-const Modal = ({ open, onClose, children }) => {
+const Modal = ({ open, onClose, children, title }) => {
 	if (open) {
 		return ReactDOM.createPortal(
 			<div className="modal-wrapper">
@@ -85,6 +85,13 @@ const Modal = ({ open, onClose, children }) => {
 					>
 						<CloseIcon fontSize="inherit" />
 					</IconButton>
+
+					{title && (
+						<div className="modal-title">
+							<h1>{title}</h1>
+						</div>
+					)}
+
 					{children}
 				</div>
 			</div>,

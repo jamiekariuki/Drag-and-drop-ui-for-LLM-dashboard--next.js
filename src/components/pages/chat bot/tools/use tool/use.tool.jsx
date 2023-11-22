@@ -37,7 +37,7 @@ const UseTool = ({ urlTitle }) => {
 				<h1>{urlTitle}</h1>
 				<Button
 					variant="contained"
-					startIcon={<TuneIcon />}
+					startIcon={<TuneIcon className="ut-add-icon" />}
 					size="small"
 					className="ut-add-btn "
 					disableElevation

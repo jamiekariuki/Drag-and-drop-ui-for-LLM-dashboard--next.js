@@ -55,8 +55,8 @@ export const chatBot = [
 
 	{
 		icon: <AppRegistrationSharpIcon className="nav-icons" />,
-		text: "Platforms",
-		link: "/chat-bot/platform",
+		text: "Plugins",
+		link: "/chat-bot/plugins",
 	},
 ];
 

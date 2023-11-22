@@ -1,0 +1,8 @@
+@import "../../../../../theme/theme.scss";
+
+.edit-agent {
+	@include themify($themes) {
+		width: 500px;
+		height: 500px;
+	}
+}

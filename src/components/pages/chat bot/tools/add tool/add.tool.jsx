@@ -5,15 +5,20 @@ import Modal from "@/components/styled components/modals/modal";
 import { ChatBots } from "./all.tools";
 
 const AddTool = ({ open, onClose }) => {
+	const SortedChatBots = ChatBots.slice().sort((a, b) =>
+		a.title.localeCompare(b.title)
+	);
+
 	return (
 		<Modal open={open} onClose={onClose}>
 			<div className="add-tool">
 				<div className="add-tool-title">
 					<h1>Add Tools</h1>
 				</div>
+
 				<div className="add-tool-container">
 					<div className="add-tool-wrapper">
-						{ChatBots.map((item, index) => (
+						{SortedChatBots.map((item, index) => (
 							<div
 								className="add-tool-box"
 								key={index}

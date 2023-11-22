@@ -2,6 +2,7 @@
 import { createContext, useEffect, useState, useMemo } from "react";
 import Cookies from "js-cookie";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { getDesignTokens } from "@/theme/mui.theme";
 
 export const ThemeContext = createContext({ toggleColorMode: () => {} });
 
@@ -57,34 +58,10 @@ export const ThemeProvider2 = ({ children, serverDarkMode }) => {
 
 	//-------------------------mui
 
-	const [mode, setMode] = useState("light");
-
-	const changeMode = () => {
-		if (darkMode !== null) {
-			return darkMode ? "dark" : "light";
-		} else {
-			return serverDarkMode ? "dark" : "light";
-		}
-	};
+	const [mode, setMode] = useState(serverDarkMode ? "dark" : "light");
 
 	const theme = useMemo(
-		() =>
-			createTheme({
-				palette: {
-					primary: {
-						main: "#b12f9c",
-					},
-					secondary: {
-						main: "#c353b0",
-					},
-
-					badge: {
-						main: "rgb(231, 45, 45)",
-					},
-
-					mode: changeMode(),
-				},
-			}),
+		() => createTheme(getDesignTokens(mode)),
 		[mode, serverDarkMode]
 	);
 

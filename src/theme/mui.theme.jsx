@@ -1,40 +1,33 @@
 "use client";
-import { createTheme } from "@mui/material/styles";
-import Cookies from "js-cookie";
 
-/* export const muiToogle = () => {
-	let mode = "";
-
-	const darkModeCookie = Cookies.get("darkMode");
-
-	if (!darkModeCookie) {
-		mode = "light";
-	} else {
-		if (darkModeCookie === "true") {
-			mode = "dark";
-		} else {
-			mode = "light";
-		}
-	}
-
-	return mode;
-}; */
-
-let mode = "dark";
-
-export const theme = createTheme({
+export const getDesignTokens = (mode) => ({
 	palette: {
-		primary: {
-			main: "#b12f9c",
-		},
-		secondary: {
-			main: "#c353b0",
-		},
+		mode,
+		...(mode === "light"
+			? {
+					primary: {
+						main: "#b12f9c",
+					},
+					secondary: {
+						main: "#c353b0",
+					},
 
-		badge: {
-			main: "rgb(231, 45, 45)",
-		},
-
-		mode: mode, 
+					background: {
+						default: "#fdfdfd",
+						paper: "#fdfdfd",
+					},
+			  }
+			: {
+					primary: {
+						main: "#b12f9c",
+					},
+					secondary: {
+						main: "#c353b0",
+					},
+					background: {
+						default: "rgb(0, 0, 0)",
+						paper: "rgb(0, 0, 0)",
+					},
+			  }),
 	},
 });

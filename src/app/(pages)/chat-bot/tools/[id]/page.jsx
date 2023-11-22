@@ -12,8 +12,8 @@ const Chat = ({ params }) => {
 
 	return (
 		<div className="chat">
-			{" "}
-			<UseTool urlTitle={urlTitle} />{" "}
+			{/* 	{" "}
+			<UseTool urlTitle={urlTitle} />{" "} */}
 		</div>
 	);
 };

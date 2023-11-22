@@ -110,11 +110,13 @@
 					justify-content: flex-end;
 
 					.tool-box-btn {
-						height: 26px;
+						.tool-box-icon {
+							font-size: 15px;
+						}
 
 						p {
 							color: white;
-							font-size: 12px;
+							font-size: 11px;
 							text-transform: lowercase;
 						}
 					}

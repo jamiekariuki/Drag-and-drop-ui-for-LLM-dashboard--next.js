@@ -38,7 +38,12 @@ const ChatbotTools = () => {
 		},
 	];
 
+	const [indexIt, setIndexIt] = useState(null);
+
 	const [open, setOpen] = useState(false);
+	const onOpen = (i) => {
+		setOpen(true);
+	};
 	const onClose = () => {
 		setOpen(false);
 	};
@@ -49,6 +54,9 @@ const ChatbotTools = () => {
 	};
 
 	const [openConfigure, setOpenConfigure] = useState(false);
+	const onOpenConfigure = () => {
+		setOpenConfigure(true);
+	};
 	const onCloseConfigure = () => {
 		setOpenConfigure(false);
 	};
@@ -83,13 +91,15 @@ const ChatbotTools = () => {
 								aria-label="delete"
 								size="small"
 								onClick={() => {
-									setOpen(true);
+									onOpen(index);
 								}}
 							>
 								<DeleteIcon className="tb-delete" />
 							</IconButton>
 
-							<DeleteTool open={open} onClose={onClose} />
+							{open && indexIt === index && (
+								<DeleteTool open={open} onClose={onClose} />
+							)}
 						</div>
 					</div>
 
@@ -108,20 +118,25 @@ const ChatbotTools = () => {
 						<div className="tbc">
 							<Button
 								variant="contained"
-								startIcon={<TuneIcon />}
+								startIcon={
+									<TuneIcon className="tool-box-icon" />
+								}
 								size="small"
 								className="tool-box-btn "
 								disableElevation
 								onClick={() => {
-									setOpenConfigure(true);
+									onOpenConfigure(index);
 								}}
 							>
 								<p>configure</p>
 							</Button>
-							<ConfigureTool
-								open={openConfigure}
-								onClose={onCloseConfigure}
-							/>
+
+							{openConfigure && indexIt === index && (
+								<ConfigureTool
+									open={openConfigure}
+									onClose={onCloseConfigure}
+								/>
+							)}
 							<Link
 								href={`/chat-bot/tools/${item.title
 									.toLowerCase()
@@ -130,7 +145,9 @@ const ChatbotTools = () => {
 							>
 								<Button
 									variant="contained"
-									endIcon={<ArrowForwardIcon />}
+									endIcon={
+										<ArrowForwardIcon className="tool-box-icon" />
+									}
 									size="small"
 									className="tool-box-btn "
 									disableElevation
