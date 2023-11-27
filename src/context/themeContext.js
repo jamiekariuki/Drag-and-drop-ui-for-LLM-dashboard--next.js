@@ -3,6 +3,7 @@ import { createContext, useEffect, useState, useMemo } from "react";
 import Cookies from "js-cookie";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { getDesignTokens } from "@/theme/mui.theme";
+import CssBaseline from "@mui/material/CssBaseline";
 
 export const ThemeContext = createContext({ toggleColorMode: () => {} });
 
@@ -68,6 +69,7 @@ export const ThemeProvider2 = ({ children, serverDarkMode }) => {
 	return (
 		<ThemeContext.Provider value={{ toggle, darkMode }}>
 			<ThemeProvider theme={theme}>
+				<CssBaseline />
 				<div
 					className={`theme-${
 						darkMode === null

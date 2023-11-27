@@ -1,10 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "./agents.search.scss";
 import Button from "@mui/material/Button";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import AddTemplateAgent from "../add template agent/add.template.agent";
 
 const AgentsSearch = () => {
+	const [openTemplate, setOpenTemplate] = useState(false);
+	const onCloseTemplate = () => {
+		setOpenTemplate(false);
+	};
+
 	return (
 		<div className="agents-search">
 			<div className="tools-search">
@@ -30,9 +36,13 @@ const AgentsSearch = () => {
 				size="small"
 				className="agent-search-btn "
 				disableElevation
+				onClick={() => {
+					setOpenTemplate(true);
+				}}
 			>
 				<p>templates</p>
 			</Button>
+			<AddTemplateAgent open={openTemplate} onClose={onCloseTemplate} />
 		</div>
 	);
 };

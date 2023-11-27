@@ -55,10 +55,16 @@ $themes: (
 		//----filters
 		a2: rgba(226, 87, 217, 0.645),
 		backdrop: rgba(0, 0, 0, 0.181),
+		//---
+		workflow: #dfdfdf,
+
+		tooltip: rgb(219, 219, 219),
+		childnode: rgba(224, 224, 224, 0.25),
 	),
 
 	dark: (
-		color: rgba(0, 0, 0, 0.234),
+		//color: rgba(0, 0, 0, 0.234),
+		color: black,
 		paragraphColor: $pDark,
 		softParagraphColor: $pSoftDark,
 
@@ -79,6 +85,11 @@ $themes: (
 		//----filters
 		a2: rgba(249, 38, 235, 0.468),
 		backdrop: rgba(48, 48, 48, 0.355),
+		//--
+		workflow: #292929,
+
+		tooltip: rgb(45, 45, 45),
+		childnode: rgba(58, 58, 58, 0.3),
 	),
 );
 

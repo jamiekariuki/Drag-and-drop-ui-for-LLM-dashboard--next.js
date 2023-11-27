@@ -1,0 +1,51 @@
+@import "../../../theme/theme.scss";
+
+.tooltip {
+	@include themify($themes) {
+		position: relative;
+		//	background-color: blueviolet;
+		width: 15px;
+		height: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.tooltip-icon {
+			color: themed("icon");
+			font-size: 14px;
+		}
+		&:hover {
+			.tooltip-container {
+				display: flex;
+			}
+		}
+
+		.tooltip-container {
+			display: none;
+			position: absolute;
+			left: 18px;
+			bottom: -10px;
+			width: 150px;
+			border-radius: 5px;
+			padding: 5px;
+			background-color: themed("tooltip");
+			transition: all 0.3s;
+			border: 1px solid themed("hover");
+
+			p {
+				font-size: 9px;
+			}
+
+			h6 {
+				font-size: 9px;
+				margin-top: 5px;
+			}
+
+			ol li {
+				font-size: 9px;
+				margin-left: 15px;
+				color: themed("text");
+			}
+		}
+	}
+}

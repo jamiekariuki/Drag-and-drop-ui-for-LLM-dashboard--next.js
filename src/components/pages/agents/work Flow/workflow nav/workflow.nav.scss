@@ -1,0 +1,18 @@
+@import "../../../../../theme/theme.scss";
+
+.workflow-nav {
+	@include themify($themes) {
+		position: fixed;
+		top: 10px;
+		height: 97vh;
+		right: 10px;
+		width: 220px;
+		background-color: themed("background");
+		z-index: 1000;
+		border-radius: 8px;
+		transition: all 0.3s;
+		-webkit-box-shadow: -8px 8px 14px -9px rgba(68, 68, 68, 0.6);
+		-moz-box-shadow: -8px 8px 14px -9px rgba(68, 68, 68, 0.6);
+		box-shadow: -8px 8px 14px -9px rgba(68, 68, 68, 0.6);
+	}
+}

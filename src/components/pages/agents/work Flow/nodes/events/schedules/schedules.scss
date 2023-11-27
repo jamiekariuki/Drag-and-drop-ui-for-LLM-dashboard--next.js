@@ -1,0 +1,132 @@
+@import "../../../../../../../theme/theme.scss";
+
+.schedules {
+	@include themify($themes) {
+		width: 100%;
+		height: 450px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+}
+
+.on-time {
+	@include themify($themes) {
+		width: 100%;
+
+		.ot-heading {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.ot-input {
+			margin-top: -9px;
+			margin-bottom: -6px;
+		}
+
+		.ot-daily {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			margin: 0 7px;
+
+			p {
+				font-size: 10px;
+			}
+
+			.cswitch {
+				scale: 0.8;
+			}
+		}
+	}
+}
+
+.on-day {
+	@include themify($themes) {
+		width: 100%;
+
+		.od-heading {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.od-day {
+			display: flex;
+			gap: 3px;
+			margin: 7px 0;
+			align-items: center;
+			justify-content: center;
+
+			button {
+				background-color: transparent;
+				border: 1px solid themed("hover");
+				border-radius: 3px;
+				padding: 1px 2px;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				p {
+					font-size: 10px;
+				}
+			}
+		}
+
+		.od-input {
+			margin-top: -9px;
+			margin-bottom: -6px;
+		}
+
+		.od-daily {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			margin: 0 7px;
+
+			p {
+				font-size: 10px;
+			}
+
+			.cswitch {
+				scale: 0.8;
+			}
+		}
+	}
+}
+
+.on-date {
+	@include themify($themes) {
+		width: 100%;
+
+		.odate-heading {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		//	.odate-input {
+		//	margin-top: -9px;
+		//	margin-bottom: -6px;
+		//}
+
+		.odate-daily {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			margin: 0 7px;
+
+			p {
+				font-size: 10px;
+			}
+
+			.cswitch {
+				scale: 0.8;
+			}
+		}
+	}
+}

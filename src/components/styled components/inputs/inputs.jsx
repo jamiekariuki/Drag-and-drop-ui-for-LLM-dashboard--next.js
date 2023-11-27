@@ -14,25 +14,7 @@ const Inputs = ({
 	inputHeight,
 	value,
 }) => {
-	const [message, setMessage] = useState("");
-	const inputRef = useRef();
-
-	const handleInputChange = (e) => {
-		setMessage(e.target.value);
-		adjustInputHeight();
-	};
-
-	const adjustInputHeight = () => {
-		const input = inputRef.current;
-		if (input) {
-			input.style.height = inputHeight ? inputHeight : "100px";
-			input.style.height = input.scrollHeight + "px";
-		}
-	};
-
-	useEffect(() => {
-		adjustInputHeight();
-	}, [message]);
+	const [defaultValue, setDefaultValue] = useState(value ? value : "");
 
 	if (type === "text" || type === "email" || type === "password") {
 		return (
@@ -41,8 +23,11 @@ const Inputs = ({
 					id={id}
 					disabled={disabled}
 					/* {...register(id, { required })} */
-					value={value}
+					value={defaultValue}
 					placeholder=" "
+					onChange={(e) => {
+						setDefaultValue(e.target.value);
+					}}
 					type={type}
 					className="input-field"
 					style={{
@@ -62,6 +47,27 @@ const Inputs = ({
 			</div>
 		);
 	}
+
+	//-----
+	const [message, setMessage] = useState("");
+	const inputRef = useRef();
+
+	const handleInputChange = (e) => {
+		setMessage(e.target.value);
+		adjustInputHeight();
+	};
+
+	const adjustInputHeight = () => {
+		const input = inputRef.current;
+		if (input) {
+			input.style.height = inputHeight ? inputHeight : "100px";
+			input.style.height = input.scrollHeight + "px";
+		}
+	};
+
+	useEffect(() => {
+		adjustInputHeight();
+	}, [message]);
 
 	if (type === "text area") {
 		return (

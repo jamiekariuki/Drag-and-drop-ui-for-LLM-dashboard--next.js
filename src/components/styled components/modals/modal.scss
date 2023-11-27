@@ -66,7 +66,11 @@
 			outline: none;
 			z-index: 10000;
 			background-color: themed("backdrop");
+
+			backdrop-filter: blur(5px) saturate(149%);
+			-webkit-backdrop-filter: blur(5px) saturate(149%);
 		}
+
 		.modal {
 			background-color: themed("background");
 			position: fixed;
@@ -79,6 +83,10 @@
 			left: 50%;
 			transform: translate(-62.5%, -40%);
 			scale: 0.8;
+
+			-webkit-box-shadow: 0px 0px 7px -3px rgba(107, 107, 107, 1);
+			-moz-box-shadow: 0px 0px 7px -3px rgba(107, 107, 107, 1);
+			box-shadow: 0px 0px 7px -3px rgba(107, 107, 107, 1);
 
 			.modal-title {
 				width: 100%;

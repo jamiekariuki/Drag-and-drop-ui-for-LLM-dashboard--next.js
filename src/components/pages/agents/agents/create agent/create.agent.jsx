@@ -1,22 +1,22 @@
 "use client";
 import React from "react";
-import "./edit.agent.scss";
+import "./create.agent.scss";
 import Modal from "@/components/styled components/modals/modal";
 import Inputs from "@/components/styled components/inputs/inputs";
 import Image from "next/image";
 import { Button } from "@mui/material";
 
-const EditAgent = ({ open, onClose, agentTitle, avatar }) => {
+const CreateAgent = ({ open, onClose, avatar }) => {
 	return (
-		<Modal open={open} onClose={onClose} title={"Edit Agent"}>
-			<div className="edit-agent">
-				<div className="edit-agent-container">
+		<Modal open={open} onClose={onClose} title={"Create Agent"}>
+			<div className="create-agent">
+				<div className="create-agent-container">
 					<form /* onSubmit={handleSubmit} */>
 						<label htmlFor="profilePicture">
 							<div className="profile-wrapper-input">
 								<Image
 									className="profile-image-input"
-									src={avatar}
+									src="https://i.postimg.cc/hPXjLx4P/MO-Studio-LLC-1.jpg"
 									alt="avatar"
 									fill={true}
 								/>
@@ -39,11 +39,7 @@ const EditAgent = ({ open, onClose, agentTitle, avatar }) => {
 					<div className="edit-wrapper">
 						<h4>Edit your Agent Name</h4>
 
-						<Inputs
-							label={"Title"}
-							type={"text"}
-							value={agentTitle}
-						/>
+						<Inputs label={"Title"} type={"text"} />
 					</div>
 				</div>
 
@@ -63,4 +59,4 @@ const EditAgent = ({ open, onClose, agentTitle, avatar }) => {
 	);
 };
 
-export default EditAgent;
+export default CreateAgent;

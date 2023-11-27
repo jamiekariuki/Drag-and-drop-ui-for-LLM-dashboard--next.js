@@ -1,0 +1,164 @@
+@import "../../../theme/theme.scss";
+
+.nodes {
+	@include themify($themes) {
+		background-color: themed("background");
+		border: 1px solid themed("border");
+		//	overflow: hidden;
+		border-radius: 8px;
+		min-height: 100px;
+		width: 230px;
+		-webkit-box-shadow: 0px 0px 15px -7px rgba(76, 76, 76, 0.75);
+		-moz-box-shadow: 0px 0px 15px -7px rgba(76, 76, 76, 0.75);
+		box-shadow: 0px 0px 15px -7px rgba(76, 76, 76, 0.75);
+
+		.node-title {
+			width: 100%;
+			border-bottom: 1px solid themed("hover");
+			display: flex;
+			padding: 5px;
+			align-items: center;
+			justify-content: space-between;
+
+			.node-left {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+
+				.node-avatar {
+					height: 20px;
+					width: 20px;
+					overflow: hidden;
+					position: relative;
+
+					.agent-avatar {
+						object-fit: contain;
+					}
+				}
+
+				.tite-container {
+					display: flex;
+					align-items: center;
+					gap: 3px;
+					h5 {
+						font-size: 14px;
+					}
+
+					p {
+						font-size: 10px;
+					}
+				}
+			}
+
+			.node-right {
+				.tb-delete {
+					font-size: 16px;
+					color: themed("icon");
+				}
+			}
+		}
+
+		.children-container {
+			cursor: default;
+			padding: 6px;
+		}
+	}
+}
+
+.childnodes {
+	@include themify($themes) {
+		cursor: default;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+		background-color: themed("childnode");
+		border-radius: 6px;
+		padding: 5px;
+		width: 210px;
+
+		.chandle {
+			background-color: $main;
+			width: 10px;
+			height: 10px;
+			right: -13.5px;
+			top: 14px;
+			border-color: themed("background");
+		}
+	}
+}
+
+//-----mui dates
+.css-4jnixx-MuiStack-root {
+	margin-top: 0;
+	scale: 0.75;
+	width: 250px;
+	position: relative;
+	left: -25px;
+}
+
+//--------input------------
+.css-i4pkc5-MuiFormLabel-root-MuiInputLabel-root {
+	//label time
+	font-family: var(--font-poppins);
+	font-size: 14px;
+	top: 2px;
+	font-weight: 500;
+}
+.css-10m6luk-MuiFormLabel-root-MuiInputLabel-root {
+	//label-hover
+	font-family: var(--font-poppins);
+	font-size: 15px;
+}
+.css-19qh8xo-MuiInputBase-input-MuiOutlinedInput-input {
+	//time
+	font-family: var(--font-poppins);
+}
+//darkmode-----------------------------
+.css-g7m9m1-MuiFormLabel-root-MuiInputLabel-root {
+	font-family: var(--font-poppins);
+	font-size: 14px;
+	top: 2px;
+	font-weight: 500;
+}
+.css-qsi8if-MuiFormLabel-root-MuiInputLabel-root {
+	font-family: var(--font-poppins);
+	font-size: 15px;
+}
+.css-14jik6a-MuiInputBase-input-MuiOutlinedInput-input {
+	font-family: var(--font-poppins);
+}
+
+//------------------dates----------------------------------
+.css-a643pv-MuiStack-root > .MuiTextField-root {
+	min-width: 200px;
+}
+
+//----popper--------
+.css-qcqeqv-MuiPaper-root-MuiPickersPopper-paper {
+	border-radius: 10px;
+	scale: 0.8;
+	margin-bottom: -70px;
+	top: 50px;
+}
+.css-16iv5hl-MuiPaper-root-MuiPickersPopper-paper {
+	border-radius: 10px;
+	scale: 0.8;
+	margin-bottom: -70px;
+	top: 50px;
+}
+//darkmode
+.css-1nulih-MuiPaper-root-MuiPickersPopper-paper {
+	border-radius: 10px;
+	scale: 0.8;
+	margin-bottom: -70px;
+	top: 50px;
+}
+.css-1toz8zn-MuiPaper-root-MuiPickersPopper-paper {
+	border-radius: 10px;
+	scale: 0.8;
+	margin-bottom: -70px;
+	top: 50px;
+}
+
+//------------date-popper---------

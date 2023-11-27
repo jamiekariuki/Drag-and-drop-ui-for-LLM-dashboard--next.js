@@ -1,0 +1,28 @@
+@import "../../../../theme/theme.scss";
+
+.reactflow-wrapper {
+	@include themify($themes) {
+	}
+}
+
+.react-flow__attribution {
+	display: none;
+}
+
+.text-updater-node {
+	height: 50px;
+	border: 1px solid #eee;
+	padding: 5px;
+	border-radius: 5px;
+	background: white;
+}
+
+.text-updater-node label {
+	display: block;
+	color: #777;
+	font-size: 12px;
+}
+
+/* .react-flow__node {
+	z-index: -1 !important;
+} */

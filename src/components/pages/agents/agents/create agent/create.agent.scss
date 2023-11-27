@@ -1,6 +1,6 @@
 @import "../../../../../theme/theme.scss";
 
-.edit-agent {
+.create-agent {
 	@include themify($themes) {
 		width: 500px;
 		height: auto;
@@ -13,7 +13,7 @@
 			width: 95vw;
 		}
 
-		.edit-agent-container {
+		.create-agent-container {
 			width: 100%;
 			display: flex;
 			align-items: center;

@@ -1,0 +1,45 @@
+@import "../../../../../../theme/theme.scss";
+
+.nav-header {
+	@include themify($themes) {
+		width: 100%;
+		height: 50px;
+		padding: 5px 10px;
+		border-bottom: 1px solid themed("hover");
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.nav-header-left {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+
+			.nav-header-save {
+				.nav-header-save-btn {
+					border: 1px solid themed("border");
+					height: 27px;
+					width: 33px;
+					//	padding: 0 5px;
+					p {
+						margin-left: -4px;
+					}
+
+					.nav-header-save-icon {
+						color: themed("icon");
+						font-size: 16px;
+					}
+
+					p {
+						font-size: 12px;
+						text-transform: lowercase;
+					}
+				}
+			}
+		}
+	}
+}
+
+.MuiButtonBase-root-MuiButton-root {
+	color: rgb(134, 134, 134);
+}

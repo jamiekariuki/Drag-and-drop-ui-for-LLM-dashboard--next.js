@@ -36,25 +36,68 @@
 					border-radius: 10px;
 					background-color: themed("glass");
 					border: 1px solid themed("hover");
+					padding: 13px 10px;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-					padding: 10px;
 
-					.agent-header {
+					.agent-box-container {
 						display: flex;
-						align-items: center;
-						justify-content: space-between;
+						flex-direction: column;
+						justify-content: flex-start;
+						gap: 6px;
 
-						.agent-avatar-container {
-							width: 50px;
-							height: 50px;
-							position: relative;
-							border-radius: 50%;
-							overflow: hidden;
+						.agent-header {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
 
-							.agent-avatar {
-								object-fit: cover;
+							.agent-avatar-container {
+								width: 50px;
+								height: 50px;
+								position: relative;
+								border-radius: 50%;
+								overflow: hidden;
+
+								.agent-avatar {
+									object-fit: cover;
+								}
+							}
+						}
+
+						.agent-stack {
+							display: flex;
+							align-items: center;
+							gap: 3px;
+							flex-wrap: wrap;
+
+							.stack-wrapper {
+								border: 1px solid themed("hover");
+								border-radius: 10px;
+								padding: 2px 5px;
+								background: transparent;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+
+								p {
+									font-size: 10px;
+								}
+							}
+						}
+					}
+
+					.agent-box-buttons {
+						.agent-box-btn {
+							.agent-box-icon {
+								font-size: 15px;
+								color: white;
+							}
+
+							p {
+								font-size: 11px;
+								color: white;
+								text-transform: lowercase;
 							}
 						}
 					}
