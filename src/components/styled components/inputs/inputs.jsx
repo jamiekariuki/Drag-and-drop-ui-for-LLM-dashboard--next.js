@@ -16,6 +16,28 @@ const Inputs = ({
 }) => {
 	const [defaultValue, setDefaultValue] = useState(value ? value : "");
 
+	//----- text type field
+	const [message, setMessage] = useState("");
+	const inputRef = useRef();
+
+	const handleInputChange = (e) => {
+		setMessage(e.target.value);
+		adjustInputHeight();
+	};
+
+	const adjustInputHeight = () => {
+		const input = inputRef.current;
+		if (input) {
+			input.style.height = inputHeight ? inputHeight : "100px";
+			input.style.height = input.scrollHeight + "px";
+		}
+	};
+
+	useEffect(() => {
+		adjustInputHeight();
+	}, [message]);
+
+	///----
 	if (type === "text" || type === "email" || type === "password") {
 		return (
 			<div className="inputs">
@@ -48,26 +70,7 @@ const Inputs = ({
 		);
 	}
 
-	//-----
-	const [message, setMessage] = useState("");
-	const inputRef = useRef();
-
-	const handleInputChange = (e) => {
-		setMessage(e.target.value);
-		adjustInputHeight();
-	};
-
-	const adjustInputHeight = () => {
-		const input = inputRef.current;
-		if (input) {
-			input.style.height = inputHeight ? inputHeight : "100px";
-			input.style.height = input.scrollHeight + "px";
-		}
-	};
-
-	useEffect(() => {
-		adjustInputHeight();
-	}, [message]);
+	////--
 
 	if (type === "text area") {
 		return (
