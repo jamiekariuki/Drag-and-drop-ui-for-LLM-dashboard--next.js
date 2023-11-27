@@ -1,4 +1,4 @@
-/* import {
+import {
 	Facebook,
 	OnCommentReplyFacebook,
 	OnFirstCommentFacebook,
@@ -35,7 +35,7 @@ import {
 	OnFirstMessageWhatsapp,
 	OnMessageWhatsapp,
 	Whatsapp,
-} from "./nodes/events/whatsapp/whatsapp"; */
+} from "./nodes/events/whatsapp/whatsapp"; 
 
 import {
 	CustomSchedules,
@@ -48,7 +48,7 @@ import {
 export const nodeTypes = {
 	//1. events
 	//whatsapp
-	/* whatsapp: Whatsapp,
+	 whatsapp: Whatsapp,
 	onFirstMessageWhatsapp: OnFirstMessageWhatsapp,
 	onMessageWhatsapp: OnMessageWhatsapp,
 	//instagram
@@ -78,7 +78,7 @@ export const nodeTypes = {
 	//gmail
 	gmail: Gmail,
 	onFirstMessageGmail: OnFirstMessageGmail,
-	onMessageGmail: OnMessageGmail, */
+	onMessageGmail: OnMessageGmail, 
 
 	//schedules
 	schedules: Schedules,

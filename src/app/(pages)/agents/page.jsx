@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import "./page.agents.scss";
 import Agents from "@/components/pages/agents/agents/agents";
 
@@ -10,4 +10,4 @@ const Agentspage = () => {
 	);
 };
 
-export default Agentspage;
+export default Agentspage; */

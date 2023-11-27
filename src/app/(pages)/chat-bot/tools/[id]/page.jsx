@@ -1,6 +1,6 @@
 import React from "react";
 import "./page.chat.scss";
-import UseTool from "@/components/pages/chat bot/tools/use tool/use.tool";
+//import UseTool from "@/components/pages/chat bot/tools/use tool/use.tool";
 
 const Chat = ({ params }) => {
 	const param = params.id;
@@ -10,12 +10,7 @@ const Chat = ({ params }) => {
 		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(" ");
 
-	return (
-		<div className="chat">
-			{/* 	{" "}
-			<UseTool urlTitle={urlTitle} />{" "} */}
-		</div>
-	);
+	return <div className="chat">{/* <UseTool urlTitle={urlTitle} /> */}</div>;
 };
 
 export default Chat;

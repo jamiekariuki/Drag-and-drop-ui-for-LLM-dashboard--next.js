@@ -41,7 +41,8 @@ const ChatbotTools = () => {
 	const [indexIt, setIndexIt] = useState(null);
 
 	const [open, setOpen] = useState(false);
-	const onOpen = (i) => {
+	const onOpen = (index) => {
+		setIndexIt(index);
 		setOpen(true);
 	};
 	const onClose = () => {
@@ -54,7 +55,8 @@ const ChatbotTools = () => {
 	};
 
 	const [openConfigure, setOpenConfigure] = useState(false);
-	const onOpenConfigure = () => {
+	const onOpenConfigure = (index) => {
+		setIndexIt(index);
 		setOpenConfigure(true);
 	};
 	const onCloseConfigure = () => {

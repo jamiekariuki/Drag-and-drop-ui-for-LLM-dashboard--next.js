@@ -1,10 +1,12 @@
 import "./page.tools.scss";
 //import ChatbotTools from "@/components/pages/chat bot/tools/chatbot.tools";
 
-/*const Tools = () => {
+const Tools = () => {
 	return (
 		<div className="tools">
-			 <div className="tools-nav">
+			{
+				{
+					/* <div className="tools-nav">
 				<div className="tools-search">
 					<div class="group">
 						<svg
@@ -31,10 +33,11 @@ import "./page.tools.scss";
 			</div>
 			<div className="tools-container">
 				<ChatbotTools />
-			</div> 
+			</div> */
+				}
+			}
 		</div>
 	);
-}; 
+};
 
 export default Tools;
-*/
