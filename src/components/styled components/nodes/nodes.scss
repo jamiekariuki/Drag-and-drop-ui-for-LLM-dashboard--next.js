@@ -90,6 +90,7 @@
 
 //-----mui dates
 .css-4jnixx-MuiStack-root {
+	//input div
 	margin-top: 0;
 	scale: 0.75;
 	width: 250px;
@@ -133,32 +134,38 @@
 .css-a643pv-MuiStack-root > .MuiTextField-root {
 	min-width: 200px;
 }
+.css-a643pv-MuiStack-root {
+	//input div
+	margin-top: 0;
+	scale: 0.75;
+	width: 250px;
+	position: relative;
+	left: -25px;
+}
 
 //----popper--------
 .css-qcqeqv-MuiPaper-root-MuiPickersPopper-paper {
 	border-radius: 10px;
-	scale: 0.8;
-	margin-bottom: -70px;
-	top: 50px;
+	scale: 0.7;
+	margin-bottom: -85px;
 }
 .css-16iv5hl-MuiPaper-root-MuiPickersPopper-paper {
+	//top
 	border-radius: 10px;
-	scale: 0.8;
-	margin-bottom: -70px;
-	top: 50px;
+	scale: 0.7;
+	margin-bottom: -85px;
 }
 //darkmode
 .css-1nulih-MuiPaper-root-MuiPickersPopper-paper {
 	border-radius: 10px;
-	scale: 0.8;
-	margin-bottom: -70px;
-	top: 50px;
+	scale: 0.7;
+	margin-bottom: -85px;
 }
 .css-1toz8zn-MuiPaper-root-MuiPickersPopper-paper {
+	//top
 	border-radius: 10px;
-	scale: 0.8;
-	margin-bottom: -70px;
-	top: 50px;
+	scale: 0.7;
+	margin-bottom: -85px;
 }
 
 //------------date-popper---------

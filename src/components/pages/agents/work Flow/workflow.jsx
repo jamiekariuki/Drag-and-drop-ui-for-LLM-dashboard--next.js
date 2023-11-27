@@ -53,7 +53,7 @@ const initialNodes = [
 		extent: "parent",
 	}, */
 	//-----------------------------------------------------------
-	{
+	/* {
 		id: "schedules",
 		data: { label: null },
 		position: { x: 0, y: 0 },
@@ -78,11 +78,20 @@ const initialNodes = [
 	{
 		id: "Schedules-ondate",
 		data: { label: null },
-		position: { x: 10, y: 290 },
+		position: { x: 10, y: 270 },
 		type: "onDateSchedules",
 		parentNode: "schedules",
 		extent: "parent",
 	},
+
+	{
+		id: "Schedules-custom",
+		data: { label: null },
+		position: { x: 10, y: 367 },
+		type: "customSchedules",
+		parentNode: "schedules",
+		extent: "parent",
+	}, */
 
 	//----
 	{

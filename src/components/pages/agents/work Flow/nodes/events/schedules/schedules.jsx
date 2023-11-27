@@ -5,7 +5,7 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useCallback, useEffect, useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
-//--
+import Button from "@mui/material/Button";
 import Switch from "@mui/material/Switch";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -340,4 +340,59 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 	);
 };
 
-export { Schedules, OnTimeSchedules, OnDaySchedules, OnDateSchedules };
+//custom dates
+const CustomSchedules = ({ id, data, isConnectable }) => {
+	//update nodes
+
+	const tip = (
+		<div>
+			<p>
+				This node is custom, it includes (date range, multiple schedules
+				per period, random time selector, google calender events).
+			</p>
+			<p>using this node might lead to consuption of more credits</p>
+			<h6>This node connects with:</h6>
+			<ol>
+				<li>Virtual Assistant (AI)</li>
+				<li>ChatBot (AI)</li>
+				<li>Research Assistant (AI)</li>
+			</ol>
+		</div>
+	);
+	return (
+		<ChildNodes>
+			<Handle
+				type="source"
+				position={Position.Right}
+				id="e2"
+				isConnectable={isConnectable}
+				className="chandle"
+			/>
+			<div className="custom-time">
+				<div className="custom-heading">
+					<h6>Custom schedules</h6>
+					<Tooltip tip={tip} />
+				</div>
+
+				<div className="custom-time-btn">
+					<Button
+						variant="outlined"
+						size="small"
+						className="custom-date-btn "
+						disableElevation
+					>
+						<p>configure</p>
+					</Button>
+				</div>
+			</div>
+		</ChildNodes>
+	);
+};
+
+export {
+	Schedules,
+	OnTimeSchedules,
+	OnDaySchedules,
+	OnDateSchedules,
+	CustomSchedules,
+};

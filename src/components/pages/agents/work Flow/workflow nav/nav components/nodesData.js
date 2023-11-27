@@ -33,6 +33,23 @@ export const nodesData = [
 						parentNode: "schedules",
 						extent: "parent",
 					},
+					{
+						id: "Schedules-ondate",
+						data: { label: null },
+						position: { x: 10, y: 270 },
+						type: "onDateSchedules",
+						parentNode: "schedules",
+						extent: "parent",
+					},
+
+					{
+						id: "Schedules-custom",
+						data: { label: null },
+						position: { x: 10, y: 367 },
+						type: "customSchedules",
+						parentNode: "schedules",
+						extent: "parent",
+					},
 				],
 			},
 			{

@@ -38,6 +38,7 @@ import {
 } from "./nodes/events/whatsapp/whatsapp"; */
 
 import {
+	CustomSchedules,
 	OnDateSchedules,
 	OnDaySchedules,
 	OnTimeSchedules,
@@ -84,4 +85,5 @@ export const nodeTypes = {
 	onTimeSchedules: OnTimeSchedules,
 	onDaySchedules: OnDaySchedules,
 	onDateSchedules: OnDateSchedules,
+	customSchedules: CustomSchedules,
 };
