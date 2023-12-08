@@ -64,7 +64,7 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			outline: none;
-			z-index: 10000;
+			z-index: 900;
 			background-color: themed("backdrop");
 
 			backdrop-filter: blur(5px) saturate(149%);
@@ -78,7 +78,7 @@
 			padding: 20px;
 			overflow: hidden;
 			animation: slideIn 0.2s ease-out forwards;
-			z-index: 11000;
+			z-index: 1000;
 			top: 50%;
 			left: 50%;
 
@@ -135,7 +135,7 @@
 				top: 2px;
 				right: 4px;
 				cursor: pointer;
-				z-index: 20000;
+				z-index: 1001;
 
 				@media (max-width: 600px) {
 					top: -1px;
