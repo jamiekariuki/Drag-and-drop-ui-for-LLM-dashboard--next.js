@@ -42,7 +42,7 @@ const LeadsMessage = ({ userData }) => {
 		if (message.trim() !== "") {
 			//call api
 
-			console.log("Message sent:", message);
+			//console.log("Message sent:", message);
 
 			setMessage("");
 		}

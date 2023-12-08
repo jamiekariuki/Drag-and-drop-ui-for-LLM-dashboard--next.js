@@ -7,13 +7,12 @@ import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 import Button from "@mui/material/Button";
 import Switch from "@mui/material/Switch";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { renderTimeViewClock } from "@mui/x-date-pickers/timeViewRenderers";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import dayjs from "dayjs";
+import CustomScheduleModal from "./custom schedule/custom.schedule.modal";
 
 const icon = "https://i.postimg.cc/3xY2tmF2/pngwing-com-5.png";
 const Schedules = () => {
@@ -98,25 +97,37 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 
 				<div className="ot-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
-						<DemoContainer components={["TimePicker"]}>
-							<TimePicker
-								value={time}
-								onChange={(newValue) => setTime(newValue)}
-								label="Time"
-								viewRenderers={{
-									hours: renderTimeViewClock,
-									minutes: renderTimeViewClock,
-									seconds: renderTimeViewClock,
-								}}
-								slotProps={{ textField: { size: "small" } }}
-							/>
-						</DemoContainer>
+						<TimePicker
+							value={time}
+							onChange={(newValue) => setTime(newValue)}
+							label="Time"
+							viewRenderers={{
+								hours: renderTimeViewClock,
+								minutes: renderTimeViewClock,
+								seconds: renderTimeViewClock,
+							}}
+							className="muidp"
+							slotProps={{
+								textField: {
+									size: "small",
+									sx: {
+										width: 280,
+									},
+									InputProps: {
+										style: {
+											borderRadius: 7,
+										},
+									},
+								},
+							}}
+						/>
 					</LocalizationProvider>
 				</div>
 
 				<div className="ot-daily">
 					<p>Run daily</p>
 					<Switch
+						disabled={time === null}
 						checked={checked}
 						onChange={handleChange}
 						inputProps={{ "aria-label": "controlled" }}
@@ -221,25 +232,37 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 
 				<div className="od-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
-						<DemoContainer components={["TimePicker"]}>
-							<TimePicker
-								value={time}
-								onChange={(newValue) => setTime(newValue)}
-								label="Time"
-								viewRenderers={{
-									hours: renderTimeViewClock,
-									minutes: renderTimeViewClock,
-									seconds: renderTimeViewClock,
-								}}
-								slotProps={{ textField: { size: "small" } }}
-							/>
-						</DemoContainer>
+						<TimePicker
+							value={time}
+							onChange={(newValue) => setTime(newValue)}
+							label="Time"
+							viewRenderers={{
+								hours: renderTimeViewClock,
+								minutes: renderTimeViewClock,
+								seconds: renderTimeViewClock,
+							}}
+							className="muidp"
+							slotProps={{
+								textField: {
+									size: "small",
+									sx: {
+										width: 280,
+									},
+									InputProps: {
+										style: {
+											borderRadius: 7,
+										},
+									},
+								},
+							}}
+						/>
 					</LocalizationProvider>
 				</div>
 
 				<div className="od-daily">
 					<p>Run weekly</p>
 					<Switch
+						disabled={time === null}
 						checked={checked}
 						onChange={handleChange}
 						inputProps={{ "aria-label": "controlled" }}
@@ -314,20 +337,32 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 
 				<div className="odate-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
-						<DemoContainer components={["DateTimePicker"]}>
-							<DateTimePicker
-								label="Date"
-								value={date}
-								onChange={(newValue) => setDate(newValue)}
-								slotProps={{ textField: { size: "small" } }}
-							/>
-						</DemoContainer>
+						<DateTimePicker
+							label="Date"
+							value={date}
+							onChange={(newValue) => setDate(newValue)}
+							className="muidp"
+							slotProps={{
+								textField: {
+									size: "small",
+									sx: {
+										width: 280,
+									},
+									InputProps: {
+										style: {
+											borderRadius: 7,
+										},
+									},
+								},
+							}}
+						/>
 					</LocalizationProvider>
 				</div>
 
 				<div className="odate-daily">
 					<p>Run monthly</p>
 					<Switch
+						disabled={date === null}
 						checked={checked}
 						onChange={handleChange}
 						inputProps={{ "aria-label": "controlled" }}
@@ -343,12 +378,17 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 //custom dates
 const CustomSchedules = ({ id, data, isConnectable }) => {
 	//update nodes
+	const [open, setOpen] = useState(false);
+	const onClose = () => {
+		setOpen(false);
+	};
 
 	const tip = (
 		<div>
 			<p>
-				This node is custom, it includes (date range, multiple schedules
-				per period, random time selector, google calender events).
+				This node is Advance, it includes (date range, multiple
+				schedules per period, random time selector, google calender
+				events).
 			</p>
 			<p>using this node might lead to consuption of more credits</p>
 			<h6>This node connects with:</h6>
@@ -370,7 +410,7 @@ const CustomSchedules = ({ id, data, isConnectable }) => {
 			/>
 			<div className="custom-time">
 				<div className="custom-heading">
-					<h6>Custom schedules</h6>
+					<h6>Advance schedules</h6>
 					<Tooltip tip={tip} />
 				</div>
 
@@ -380,10 +420,18 @@ const CustomSchedules = ({ id, data, isConnectable }) => {
 						size="small"
 						className="custom-date-btn "
 						disableElevation
+						onClick={() => {
+							setOpen(true);
+						}}
 					>
 						<p>configure</p>
 					</Button>
 				</div>
+				<CustomScheduleModal
+					open={open}
+					onClose={onClose}
+					data={data}
+				/>
 			</div>
 		</ChildNodes>
 	);

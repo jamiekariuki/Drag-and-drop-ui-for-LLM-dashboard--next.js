@@ -3,7 +3,7 @@
 .schedules {
 	@include themify($themes) {
 		width: 100%;
-		height: 395px;
+		height: 382px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -23,8 +23,15 @@
 		}
 
 		.ot-input {
-			margin-top: -9px;
 			margin-bottom: -6px;
+
+			.muidp {
+				background: themed("background");
+				border-radius: 7px;
+				scale: 0.7;
+				position: relative;
+				left: -40px;
+			}
 		}
 
 		.ot-daily {
@@ -38,7 +45,7 @@
 			}
 
 			.cswitch {
-				scale: 0.8;
+				scale: 0.7;
 			}
 		}
 	}
@@ -57,7 +64,7 @@
 
 		.od-day {
 			display: flex;
-			gap: 3px;
+			gap: 4px;
 			margin: 7px 0;
 			align-items: center;
 			justify-content: center;
@@ -66,19 +73,26 @@
 				background-color: transparent;
 				border: 1px solid themed("hover");
 				border-radius: 3px;
-				padding: 1px 2px;
+				padding: 1px 3px;
 				cursor: pointer;
 				transition: all 0.3s;
 
 				p {
-					font-size: 10px;
+					font-size: 9px;
 				}
 			}
 		}
 
 		.od-input {
-			margin-top: -9px;
 			margin-bottom: -6px;
+
+			.muidp {
+				background: themed("background");
+				border-radius: 7px;
+				scale: 0.7;
+				position: relative;
+				left: -40px;
+			}
 		}
 
 		.od-daily {
@@ -92,7 +106,7 @@
 			}
 
 			.cswitch {
-				scale: 0.8;
+				scale: 0.7;
 			}
 		}
 	}
@@ -110,8 +124,15 @@
 		}
 
 		.odate-input {
-			margin-top: -9px;
 			margin-bottom: -6px;
+
+			.muidp {
+				background: themed("background");
+				border-radius: 7px;
+				scale: 0.7;
+				position: relative;
+				left: -40px;
+			}
 		}
 
 		.odate-daily {
@@ -125,7 +146,7 @@
 			}
 
 			.cswitch {
-				scale: 0.8;
+				scale: 0.7;
 			}
 		}
 	}
@@ -148,7 +169,6 @@
 		.custom-time-btn {
 			width: 100%;
 			margin: 6px 7px 4px 7px;
-			//background-color: aqua;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -162,4 +182,15 @@
 			}
 		}
 	}
+}
+
+.MuiPickersPopper-root {
+	scale: 0.8;
+	margin-bottom: -70px;
+	z-index: 10000000000;
+}
+
+.MuiPickersLayout-root {
+	margin-bottom: -60px;
+	z-index: 10000000000;
 }

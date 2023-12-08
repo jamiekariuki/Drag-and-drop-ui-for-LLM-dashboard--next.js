@@ -1,0 +1,128 @@
+@import "../../../../../../../../../theme/theme.scss";
+
+.date-range {
+	@include themify($themes) {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 5px;
+
+		.date-range-heading {
+			height: 33px;
+			margin-top: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h3 {
+				font-size: 17px;
+			}
+
+			.dr-clear-btn {
+				p {
+					font-size: 12px;
+					text-transform: lowercase;
+					color: $main;
+				}
+			}
+		}
+
+		.dr-container {
+			padding: 10px;
+			width: 100%;
+			height: 64vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow-y: scroll;
+
+			.dr-info {
+				p {
+					font-size: 12px;
+
+					span {
+						color: themed("titleColor");
+						font-size: 13px;
+					}
+				}
+			}
+
+			.dr-wrapper {
+				margin-top: 20px;
+				width: 85%;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				.dr-components {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.time-input {
+						.muidp {
+							width: 250px;
+							background: themed("background");
+							border-radius: 7px;
+							scale: 0.9;
+							position: relative;
+						}
+					}
+				}
+
+				.dr-day {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 20px;
+
+					.dr-time-component {
+						display: flex;
+						align-items: center;
+
+						.time-input {
+							.muidp {
+								width: 150px;
+								background: themed("background");
+								border-radius: 7px;
+								scale: 0.9;
+								position: relative;
+							}
+						}
+					}
+
+					.dr-pick-random {
+						display: flex;
+						align-items: center;
+						padding-right: 8px;
+
+						.cswitch {
+							scale: 0.8;
+						}
+					}
+				}
+			}
+		}
+
+		.dr-bottom {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.dr-btn {
+				p {
+					font-size: 13px;
+					color: white;
+					text-transform: lowercase;
+
+					.dr-icon {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

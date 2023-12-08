@@ -1,33 +1,26 @@
 @import "./../../../theme/theme.scss";
 
-.select-container {
+.more-info-container {
 	@include themify($themes) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 5px;
-
-		select {
-			border: 1px solid themed("border");
-			border-radius: 4px;
-			height: 23px;
-			font-family: var(--font-poppins);
-			color: themed("softParagraphColor");
-			display: flex;
-			align-items: center;
-			background-color: themed("background");
-			cursor: pointer;
-
-			&:active {
-				border: 1px solid themed("border");
-			}
-
-			&:focus {
-				border: 1px solid themed("border");
-			}
-
+		.schedules-btn {
 			p {
+				color: white;
 				font-size: 12px;
+				text-transform: lowercase;
+			}
+		}
+	}
+}
+
+.form-select {
+	@include themify($themes) {
+		scale: 0.85;
+		.form-controller {
+			width: 100%;
+
+			.select-container {
+				border-radius: 7px;
+				background-color: themed("background");
 			}
 		}
 	}
@@ -35,4 +28,9 @@
 
 .MuiPaper-root {
 	border-radius: 6px;
+	z-index: 10000000;
+}
+
+.MuiMenu-root {
+	z-index: 10000000;
 }

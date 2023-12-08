@@ -52,6 +52,7 @@ $themes: (
 		shadow: rgba(75, 75, 75, 0.389),
 		hover: rgba(133, 133, 133, 0.275),
 		glass: rgba(245, 245, 245, 0.593),
+		disabled: rgb(217, 217, 217),
 		//----filters
 		a2: rgba(226, 87, 217, 0.645),
 		backdrop: rgba(0, 0, 0, 0.181),
@@ -82,7 +83,7 @@ $themes: (
 		shadow: rgba(65, 65, 65, 0.263),
 		hover: rgba(133, 133, 133, 0.267),
 		glass: rgba(58, 58, 58, 0.22),
-		//----filters
+		disabled: rgb(55, 55, 55),
 		a2: rgba(249, 38, 235, 0.468),
 		backdrop: rgba(48, 48, 48, 0.355),
 		//--

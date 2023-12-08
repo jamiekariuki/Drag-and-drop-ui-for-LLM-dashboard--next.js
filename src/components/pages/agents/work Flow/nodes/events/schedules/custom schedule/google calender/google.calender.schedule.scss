@@ -1,0 +1,110 @@
+@import "../../../../../../../../../theme/theme.scss";
+
+.google-calender-schedule {
+	@include themify($themes) {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 5px;
+
+		.google-schedules-heading {
+			flex: 1;
+			margin-top: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h3 {
+				font-size: 17px;
+			}
+
+			.google-schedules-btns {
+				display: flex;
+				gap: 7px;
+
+				p {
+					font-size: 12px;
+					text-transform: lowercase;
+					color: $main;
+				}
+			}
+		}
+
+		.gs-container {
+			flex: 11;
+			padding: 10px;
+			width: 100%;
+			border-bottom: 1px solid themed("hover");
+			overflow-y: scroll;
+
+			.gc-info {
+				margin-bottom: 10px;
+				p {
+					font-size: 12px;
+				}
+			}
+
+			.gs-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+
+				.event-container {
+					width: 100%;
+					border: 1px solid themed("info");
+					border-radius: 7px;
+					padding: 13px 10px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.events-wrapper {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						width: 90%;
+
+						.calender-details {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							gap: 10px;
+
+							.calender-title {
+								width: 40%;
+								display: flex;
+								justify-content: flex-end;
+							}
+
+							.calender-input {
+								width: 60%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.gs-bottom {
+			flex: 1;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.gs-btn {
+				p {
+					font-size: 13px;
+					color: white;
+					text-transform: lowercase;
+
+					.gs-icon {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

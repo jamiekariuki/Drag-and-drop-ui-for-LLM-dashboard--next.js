@@ -90,4 +90,72 @@ const Inputs = ({
 	}
 };
 
-export default Inputs;
+const Inputs2 = ({
+	changeValue,
+	value,
+	id,
+	disabled,
+	error,
+	type,
+	label,
+	node,
+}) => {
+	return (
+		<div className="inputs" style={{ height: node && "27px" }}>
+			<input
+				id={id}
+				disabled={disabled}
+				value={value}
+				placeholder=" "
+				onChange={(e) => {
+					changeValue(e.target.value);
+				}}
+				type={type}
+				className="input-field"
+				style={{
+					borderColor: error && "rgba(255, 0, 0, 0.45)",
+					fontSize: node && "12px",
+				}}
+			/>
+			<label className={disabled && "label-disabled"}>
+				<p
+					style={{
+						color: error && "rgba(255, 0, 0, 0.7)",
+						fontSize: node && "12px",
+					}}
+				>
+					{label}
+				</p>
+			</label>
+		</div>
+	);
+};
+
+const TextArea2 = ({
+	id,
+	label,
+	disabled,
+	inputHeight,
+	value,
+	changeValue,
+	node,
+}) => {
+	return (
+		<div className="inputs-ta">
+			<textarea
+				placeholder={label}
+				id={id}
+				value={value}
+				disabled={disabled}
+				style={{ height: inputHeight ? inputHeight : "100px" }}
+				onChange={(e) => {
+					changeValue(e.target.value);
+				}}
+				type="text area"
+				className={node && "node-ta"}
+			/>
+		</div>
+	);
+};
+
+export { Inputs, Inputs2, TextArea2 };

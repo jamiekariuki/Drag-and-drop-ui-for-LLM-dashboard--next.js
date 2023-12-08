@@ -6,18 +6,33 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { nodesData } from "./nodesData";
 import { RxDragHandleDots2 } from "react-icons/rx";
+import { useReactFlow } from "reactflow";
+import Toast from "@/components/styled components/toast/toast";
 
 const NavComponents = () => {
 	const [expanded, setExpanded] = useState(false);
 	const handleChange = (panel) => (event, isExpanded) => {
 		setExpanded(isExpanded ? panel : false);
 	};
+	//----get all nodes
+	const { getNodes } = useReactFlow();
 
 	//----
 	const onDragStart = (event, nodesToDrag) => {
-		const serializedNodes = JSON.stringify(nodesToDrag);
-		event.dataTransfer.setData("application/reactflow", serializedNodes);
+		const currentNodes = getNodes();
+
+		const allData = {
+			dragedNodes: nodesToDrag,
+			allNodes: currentNodes,
+		};
+
+		const serializedData = JSON.stringify(allData);
+		event.dataTransfer.setData("application/reactflow", serializedData);
 		event.dataTransfer.effectAllowed = "move";
+
+		/* const serializedNodes = JSON.stringify(nodesToDrag);
+		event.dataTransfer.setData("application/reactflow", serializedNodes);
+		event.dataTransfer.effectAllowed = "move"; */
 	};
 
 	return (
@@ -28,9 +43,9 @@ const NavComponents = () => {
 
 					<div className="nc-search">
 						<div className="nc-search-container">
-							<div class="group">
+							<div className="group">
 								<svg
-									class="icon"
+									className="icon"
 									aria-hidden="true"
 									viewBox="0 0 24 24"
 								>
@@ -41,7 +56,7 @@ const NavComponents = () => {
 								<input
 									placeholder="Search..."
 									type="search"
-									class="input"
+									className="input"
 								/>
 							</div>
 						</div>

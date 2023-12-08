@@ -68,10 +68,10 @@ const Messages = () => {
 
 			{loading && (
 				<div className="loading">
-					<div class="load">
-						<div class="progress"></div>
-						<div class="progress"></div>
-						<div class="progress"></div>
+					<div className="load">
+						<div className="progress"></div>
+						<div className="progress"></div>
+						<div className="progress"></div>
 					</div>
 				</div>
 			)}

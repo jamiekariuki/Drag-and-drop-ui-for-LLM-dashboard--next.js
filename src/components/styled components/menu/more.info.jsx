@@ -1,12 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./more.info.scss";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import IconButton from "@mui/material/IconButton";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
-const MoreInfo = ({ list, func }) => {
+export function MoreInfo({ list, func }) {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
 
@@ -19,10 +22,10 @@ const MoreInfo = ({ list, func }) => {
 	};
 
 	return (
-		<div>
+		<div className="more-info-container">
 			<IconButton
 				aria-label="more info"
-				size="medium"
+				//size="small"
 				id="basic-button"
 				aria-controls={open ? "basic-menu" : undefined}
 				aria-haspopup="true"
@@ -41,15 +44,6 @@ const MoreInfo = ({ list, func }) => {
 					"aria-labelledby": "basic-button",
 				}}
 			>
-				{/* <MenuItem onClick={handleClose}>
-					<p style={{ fontSize: "13px" }}>Edit</p>
-				</MenuItem>
-				<MenuItem onClick={handleClose}>
-					<p style={{ fontSize: "13px", color: "rgb(199, 13, 13)" }}>
-						Delete
-					</p>
-				</MenuItem> */}
-
 				{list.map((item, index) => (
 					<MenuItem onClick={() => handleClose(item)} key={index}>
 						<p
@@ -65,6 +59,50 @@ const MoreInfo = ({ list, func }) => {
 			</Menu>
 		</div>
 	);
-};
+}
 
-export default MoreInfo;
+//select
+
+export function SelectDropDown({ list, initialValue, func, label, disabled }) {
+	/* const [data, setData] = React.useState(initialValue);
+
+	useEffect(() => {
+		console.log(
+			"this index is: " + index + " intial value is: " + initialValue
+		);
+	}, []);
+
+	const handleChange = (event) => {
+		setData(event.target.value);
+		func(event.target.value);
+	}; */
+
+	return (
+		<div className="form-select">
+			<FormControl
+				sx={{ m: 1, minWidth: 120 }}
+				size="small"
+				className="form-controller"
+			>
+				<InputLabel id="demo-select-small-label">
+					<p>{label}</p>
+				</InputLabel>
+				<Select
+					disabled={disabled}
+					labelId="demo-select-small-label"
+					id="demo-select-small"
+					value={initialValue}
+					label={label}
+					onChange={(e) => func(e.target.value)}
+					className="select-container"
+				>
+					{list.map((item, index) => (
+						<MenuItem key={index} value={index}>
+							<p>{item}</p>
+						</MenuItem>
+					))}
+				</Select>
+			</FormControl>
+		</div>
+	);
+}

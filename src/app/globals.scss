@@ -49,7 +49,7 @@ $darkText: rgb(181, 181, 181);
 
 	h3,
 	h4 {
-		font-size: clamp(13px, 3vw, 14px);
+		font-size: clamp(13px, 3vw, 16px);
 		color: rgb(32, 32, 32);
 	}
 
@@ -65,7 +65,7 @@ $darkText: rgb(181, 181, 181);
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 12px);
+		font-size: clamp(12px, 2vw, 14px);
 		font-weight: 500;
 		color: $lightText;
 	}
@@ -89,7 +89,7 @@ $darkText: rgb(181, 181, 181);
 
 	h3,
 	h4 {
-		font-size: clamp(13px, 3vw, 14px);
+		font-size: clamp(13px, 3vw, 16px);
 		color: white;
 	}
 	h4 {
@@ -104,7 +104,7 @@ $darkText: rgb(181, 181, 181);
 
 	h6,
 	p {
-		font-size: clamp(12px, 2vw, 12px);
+		font-size: clamp(12px, 2vw, 14px);
 		font-weight: 400;
 		color: $darkText;
 	}
@@ -146,4 +146,10 @@ p {
 
 /* .MuiSvgIcon-root {
 	font-size: 16px;
+} */
+
+/* .MuiTypography-root {
+	font-family: var(
+		--font-poppins
+	) !important; 
 } */

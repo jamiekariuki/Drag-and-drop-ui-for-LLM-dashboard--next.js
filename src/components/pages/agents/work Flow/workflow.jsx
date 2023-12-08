@@ -14,91 +14,51 @@ import { nodeTypes } from "./nodesType";
 import WorkFlowNav from "./workflow nav/worflow.nav";
 
 const initialNodes = [
-	/* {
-		id: "linkedin",
-		data: { label: null },
-		position: { x: 0, y: 0 },
-		type: "linkedin",
-	},
-	{
-		id: "linkedin-onfirstmessage",
-		data: { label: null },
-		position: { x: 10, y: 45 },
-		type: "onFirstMessageLinkedin",
-		parentNode: "linkedin",
-		extent: "parent",
-	},
-	{
-		id: "linkedin-onmessage",
-		data: { label: null },
-		position: { x: 10, y: 80 },
-		type: "onMessageLinkedin",
-		parentNode: "linkedin",
-		extent: "parent",
-	},
-	{
-		id: "linkedin-onfirstcomment",
-		data: { label: null },
-		position: { x: 10, y: 115 },
-		type: "onFirstCommentLinkedin",
-		parentNode: "linkedin",
-		extent: "parent",
-	},
-	{
-		id: "linkedin-oncommentreply",
-		data: { label: null },
-		position: { x: 10, y: 150 },
-		type: "onCommentReplyLinkedin",
-		parentNode: "linkedin",
-		extent: "parent",
-	}, */
 	//-----------------------------------------------------------
 	/* {
-		id: "schedules",
-		data: { label: null },
+		id: "linkedinplugin",
+		data: { label: "linkedinplugin" },
 		position: { x: 0, y: 0 },
-		type: "schedules",
+		type: "linkedinPlugin",
 	},
 	{
-		id: "Schedules-ontime",
-		data: { label: null },
-		position: { x: 10, y: 45 },
-		type: "onTimeSchedules",
-		parentNode: "schedules",
+		id: "linkedinplugin-inboxreply",
+		data: { label: "linkedinplugin-inboxreply" },
+		position: { x: 10, y: 110 },
+		type: "inboxReplyLinkedinPlugin",
+		parentNode: "linkedinplugin",
 		extent: "parent",
 	},
 	{
-		id: "Schedules-onday",
-		data: { label: null },
-		position: { x: 10, y: 140 },
-		type: "onDaySchedules",
-		parentNode: "schedules",
+		id: "linkedinplugin-commentreply",
+		data: { label: "linkedinplugin-commentreply" },
+		position: { x: 10, y: 146 },
+		type: "commentReplyLinkedinPlugin",
+		parentNode: "linkedinplugin",
 		extent: "parent",
 	},
 	{
-		id: "Schedules-ondate",
-		data: { label: null },
-		position: { x: 10, y: 270 },
-		type: "onDateSchedules",
-		parentNode: "schedules",
+		id: "linkedinplugin-sendmessage",
+		data: { label: "linkedinplugin-sendmessage" },
+		position: { x: 10, y: 182 },
+		type: "sendMessageLinkedinPlugin",
+		parentNode: "linkedinplugin",
 		extent: "parent",
 	},
-
 	{
-		id: "Schedules-custom",
-		data: { label: null },
-		position: { x: 10, y: 367 },
-		type: "customSchedules",
-		parentNode: "schedules",
+		id: "linkedinplugin-post",
+		data: { label: "linkedinplugin-post" },
+		position: { x: 10, y: 407 },
+		type: "postLinkedinPlugin",
+		parentNode: "linkedinplugin",
 		extent: "parent",
 	}, */
-
-	//----
-	{
-		id: "2",
+	//----------
+	/* {
+		d: "2",
 		data: { label: "World" },
 		position: { x: 100, y: 100 },
-	},
+	}, */
 ];
 
 const Workflow = () => {
@@ -111,17 +71,15 @@ const Workflow = () => {
 	);
 	const onEdgesChange = useCallback(
 		(changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-
 		[]
 	);
 	const onConnect = useCallback(
 		(connection) => {
 			const newEdge = {
 				...connection,
-				id: `${connection.source}-${connection.target}`,
+				id: `${connection.source}&${connection.target}`,
 			};
 			setEdges((oldEdges) => addEdge(newEdge, oldEdges));
-			console.log(edges);
 		},
 		[setEdges]
 	);
@@ -139,24 +97,34 @@ const Workflow = () => {
 		(event) => {
 			event.preventDefault();
 
-			const serializedNodes = event.dataTransfer.getData(
+			const serializedData = event.dataTransfer.getData(
 				"application/reactflow"
 			);
 
-			if (typeof serializedNodes === "undefined" || !serializedNodes) {
+			if (typeof serializedData === "undefined" || !serializedData) {
 				return;
 			}
 
-			const droppedNodes = JSON.parse(serializedNodes);
+			const droppedData = JSON.parse(serializedData);
+
+			const droppedNodes = droppedData.dragedNodes;
+			const alldragedNodes = droppedData.allNodes;
 
 			const parentPosition = reactFlowInstance.screenToFlowPosition({
 				x: event.clientX,
 				y: event.clientY,
 			});
 
+			const value = idGenerate(
+				alldragedNodes,
+				droppedNodes[0].data.label
+			);
+
 			const newNodes = droppedNodes.map((node) => {
 				const newNode = {
 					...node,
+					id: `${node.id}=${value.n}`,
+					parentNode: node.extent === "parent" && value.parentId,
 					position:
 						node.extent === "parent"
 							? node.position
@@ -202,3 +170,20 @@ const Workflow = () => {
 };
 
 export default Workflow;
+
+//functions
+
+const idGenerate = (nodes, label) => {
+	const existingItems = nodes.filter((node) => node.data.label === label);
+
+	let nextId = 0;
+	if (existingItems.length > 0) {
+		const existingIds = existingItems.map((item) =>
+			parseInt(item.id.split("=")[1])
+		);
+		const maxId = Math.max(...existingIds);
+		nextId = maxId + 1;
+	}
+
+	return { n: nextId, parentId: `${label}=${nextId}` };
+};

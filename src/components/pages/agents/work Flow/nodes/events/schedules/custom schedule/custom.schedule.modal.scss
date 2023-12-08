@@ -1,0 +1,52 @@
+@import "../../../../../../../../theme/theme.scss";
+
+.custom-schedules {
+	@include themify($themes) {
+		height: 85vh;
+		width: 700px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.cs-heading {
+			width: 100%;
+
+			h1 {
+				text-align: center;
+			}
+
+			.cs-tab {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				border-bottom: 1px solid themed("hover");
+				padding-bottom: 7px;
+				margin-top: 5px;
+
+				.leads-tab-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 6px;
+					padding: 3px 10px;
+					cursor: pointer;
+					border: 0;
+					border-radius: 5px;
+					background-color: $main;
+					background-color: themed("info");
+					transition: all 0.3s;
+
+					p {
+						transition: all 0.3s;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		.scheduling-container {
+			height: 88%;
+			width: 100%;
+		}
+	}
+}

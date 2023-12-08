@@ -35,7 +35,7 @@ import {
 	OnFirstMessageWhatsapp,
 	OnMessageWhatsapp,
 	Whatsapp,
-} from "./nodes/events/whatsapp/whatsapp"; 
+} from "./nodes/events/whatsapp/whatsapp";
 
 import {
 	CustomSchedules,
@@ -44,11 +44,50 @@ import {
 	OnTimeSchedules,
 	Schedules,
 } from "./nodes/events/schedules/schedules";
+import {
+	CommentReplyFacebookPlugin,
+	FacebookPlugin,
+	InboxReplyFacebookPlugin,
+	PostFacebookPlugin,
+	SendMessageFacebookPlugin,
+} from "./nodes/plugins/facebook/facebook.plugin";
+import {
+	GmailPlugin,
+	InboxReplyGmailPlugin,
+	SendMessageGmailPlugin,
+} from "./nodes/plugins/gmail/gmail.plugin";
+import {
+	CommentReplyInstagramPlugin,
+	InboxReplyInstagramPlugin,
+	InstagramPlugin,
+	PostInstagramPlugin,
+	SendMessageInstagramPlugin,
+} from "./nodes/plugins/instagram/instagram.plugin";
+import {
+	CommentReplyLinkedinPlugin,
+	InboxReplyLinkedinPlugin,
+	LinkedinPlugin,
+	PostLinkedinPlugin,
+	SendMessageLinkedinPlugin,
+} from "./nodes/plugins/linkedin/linkedin.plugin";
+import {
+	CommentReplyTwitterPlugin,
+	InboxReplyTwitterPlugin,
+	PostTwitterPlugin,
+	SendMessageTwitterPlugin,
+	TwitterPlugin,
+} from "./nodes/plugins/twitter/twitter.plugin";
+import {
+	InboxReplyWhatsappPlugin,
+	SendMessageWhatsappPlugin,
+	WhatsappPlugin,
+} from "./nodes/plugins/whatsapp/whatsapp.plugin";
 
+//------------------------------------------------------------------------
 export const nodeTypes = {
 	//1. events
 	//whatsapp
-	 whatsapp: Whatsapp,
+	whatsapp: Whatsapp,
 	onFirstMessageWhatsapp: OnFirstMessageWhatsapp,
 	onMessageWhatsapp: OnMessageWhatsapp,
 	//instagram
@@ -78,12 +117,45 @@ export const nodeTypes = {
 	//gmail
 	gmail: Gmail,
 	onFirstMessageGmail: OnFirstMessageGmail,
-	onMessageGmail: OnMessageGmail, 
-
+	onMessageGmail: OnMessageGmail,
 	//schedules
 	schedules: Schedules,
 	onTimeSchedules: OnTimeSchedules,
 	onDaySchedules: OnDaySchedules,
 	onDateSchedules: OnDateSchedules,
 	customSchedules: CustomSchedules,
+
+	//2. plugins
+	//whatsapp
+	whatsappPlugin: WhatsappPlugin,
+	inboxReplyWhatsappPlugin: InboxReplyWhatsappPlugin,
+	sendMessageWhatsappPlugin: SendMessageWhatsappPlugin,
+	//gmail
+	gmailPlugin: GmailPlugin,
+	inboxReplyGmailPlugin: InboxReplyGmailPlugin,
+	sendMessageGmailPlugin: SendMessageGmailPlugin,
+	//instagram
+	instagramPlugin: InstagramPlugin,
+	inboxReplyInstagramPlugin: InboxReplyInstagramPlugin,
+	commentReplyInstagramPlugin: CommentReplyInstagramPlugin,
+	sendMessageInstagramPlugin: SendMessageInstagramPlugin,
+	postInstagramPlugin: PostInstagramPlugin,
+	//twitter
+	twitterPlugin: TwitterPlugin,
+	inboxReplyTwitterPlugin: InboxReplyTwitterPlugin,
+	commentReplyTwitterPlugin: CommentReplyTwitterPlugin,
+	sendMessageTwitterPlugin: SendMessageTwitterPlugin,
+	postTwitterPlugin: PostTwitterPlugin,
+	//facebook
+	facebookPlugin: FacebookPlugin,
+	inboxReplyFacebookPlugin: InboxReplyFacebookPlugin,
+	commentReplyFacebookPlugin: CommentReplyFacebookPlugin,
+	sendMessageFacebookPlugin: SendMessageFacebookPlugin,
+	postFacebookPlugin: PostFacebookPlugin,
+	//linkedin
+	linkedinPlugin: LinkedinPlugin,
+	inboxReplyLinkedinPlugin: InboxReplyLinkedinPlugin,
+	commentReplyLinkedinPlugin: CommentReplyLinkedinPlugin,
+	sendMessageLinkedinPlugin: SendMessageLinkedinPlugin,
+	postLinkedinPlugin: PostLinkedinPlugin,
 };

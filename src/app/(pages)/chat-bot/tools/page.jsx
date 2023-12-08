@@ -8,9 +8,9 @@ const Tools = () => {
 				{
 					/* <div className="tools-nav">
 				<div className="tools-search">
-					<div class="group">
+					<div className"group">
 						<svg
-							class="icon"
+							className="icon"
 							aria-hidden="true"
 							viewBox="0 0 24 24"
 						>
@@ -21,7 +21,7 @@ const Tools = () => {
 						<input
 							placeholder="Search..."
 							type="search"
-							class="input"
+							className="input"
 						/>
 					</div>
 				</div>

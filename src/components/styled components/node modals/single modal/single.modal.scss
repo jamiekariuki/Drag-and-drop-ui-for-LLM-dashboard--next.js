@@ -1,0 +1,15 @@
+@import "../../../../theme/theme.scss";
+
+.enter-item {
+	@include themify($themes) {
+		height: 10vh;
+		width: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.item-input {
+			width: 100%;
+		}
+	}
+}

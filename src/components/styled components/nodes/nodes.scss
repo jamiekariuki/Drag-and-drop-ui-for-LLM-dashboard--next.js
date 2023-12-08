@@ -60,7 +60,12 @@
 
 		.children-container {
 			cursor: default;
-			padding: 6px;
+			padding: 6px 9px;
+
+			h6,
+			p {
+				font-size: 12px;
+			}
 		}
 	}
 }
@@ -77,6 +82,11 @@
 		padding: 5px;
 		width: 210px;
 
+		h6,
+		p {
+			font-size: 12px;
+		}
+
 		.chandle {
 			background-color: $main;
 			width: 10px;
@@ -84,88 +94,43 @@
 			right: -13.5px;
 			top: 14px;
 			border-color: themed("background");
+
+			&.thandle {
+				left: -13.8px;
+				background-color: rgb(32, 185, 32);
+			}
+		}
+
+		.node-container {
+			width: 100%;
+			padding: 2px;
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			.child-heading {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.n-container {
+				width: 100%;
+				margin-top: 5px;
+			}
+
+			.n-btn {
+				width: 100%;
+				p {
+					color: $main;
+					text-transform: lowercase;
+				}
+			}
 		}
 	}
 }
 
-//-----mui dates
-.css-4jnixx-MuiStack-root {
-	//input div
-	margin-top: 0;
-	scale: 0.75;
-	width: 250px;
-	position: relative;
-	left: -25px;
+.MuiFormLabel-root .MuiInputLabel-root {
+	font-size: 5px;
 }
-
-//--------input------------
-.css-i4pkc5-MuiFormLabel-root-MuiInputLabel-root {
-	//label time
-	font-family: var(--font-poppins);
-	font-size: 14px;
-	top: 2px;
-	font-weight: 500;
-}
-.css-10m6luk-MuiFormLabel-root-MuiInputLabel-root {
-	//label-hover
-	font-family: var(--font-poppins);
-	font-size: 15px;
-}
-.css-19qh8xo-MuiInputBase-input-MuiOutlinedInput-input {
-	//time
-	font-family: var(--font-poppins);
-}
-//darkmode-----------------------------
-.css-g7m9m1-MuiFormLabel-root-MuiInputLabel-root {
-	font-family: var(--font-poppins);
-	font-size: 14px;
-	top: 2px;
-	font-weight: 500;
-}
-.css-qsi8if-MuiFormLabel-root-MuiInputLabel-root {
-	font-family: var(--font-poppins);
-	font-size: 15px;
-}
-.css-14jik6a-MuiInputBase-input-MuiOutlinedInput-input {
-	font-family: var(--font-poppins);
-}
-
-//------------------dates----------------------------------
-.css-a643pv-MuiStack-root > .MuiTextField-root {
-	min-width: 200px;
-}
-.css-a643pv-MuiStack-root {
-	//input div
-	margin-top: 0;
-	scale: 0.75;
-	width: 250px;
-	position: relative;
-	left: -25px;
-}
-
-//----popper--------
-.css-qcqeqv-MuiPaper-root-MuiPickersPopper-paper {
-	border-radius: 10px;
-	scale: 0.7;
-	margin-bottom: -85px;
-}
-.css-16iv5hl-MuiPaper-root-MuiPickersPopper-paper {
-	//top
-	border-radius: 10px;
-	scale: 0.7;
-	margin-bottom: -85px;
-}
-//darkmode
-.css-1nulih-MuiPaper-root-MuiPickersPopper-paper {
-	border-radius: 10px;
-	scale: 0.7;
-	margin-bottom: -85px;
-}
-.css-1toz8zn-MuiPaper-root-MuiPickersPopper-paper {
-	//top
-	border-radius: 10px;
-	scale: 0.7;
-	margin-bottom: -85px;
-}
-
-//------------date-popper---------
