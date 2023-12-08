@@ -17,7 +17,7 @@ const Toast = () => {
 			return;
 		}
 		setOpen(false);
-	};
+	}; 
 
 	return (
 		<div className="toast">
