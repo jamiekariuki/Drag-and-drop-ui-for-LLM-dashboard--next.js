@@ -2,9 +2,8 @@ import Nodes from "@/components/styled components/nodes/nodes";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
-import ChildNodes from "@/components/styled components/nodes/child.nodes";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
-import { PluginsAction, PluginsCUD, PluginsRead } from "../../../tooltip.info";
+import { PluginsAction } from "../../../tooltip.info";
 import Checkbox from "@mui/material/Checkbox";
 
 const icon = "https://i.postimg.cc/ht8rJjp7/icons8-google-calendar-480.png";
@@ -130,7 +129,7 @@ const Actions = ({ data, nodeId, setNodes }) => {
 				}}
 			>
 				<h6>Actions</h6>
-				<Tooltip tip={<p>Input</p>} />
+				<Tooltip tip={PluginsAction} />
 			</div>
 
 			<div>
