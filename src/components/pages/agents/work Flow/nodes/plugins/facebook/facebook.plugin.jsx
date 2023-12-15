@@ -23,7 +23,7 @@ import {
 import PostModal from "@/components/styled components/node modals/post modal/post.modal";
 import useNodePost from "@/hooks/nodes hooks/use.node.post";
 
-const icon = "https://i.postimg.cc/28wdHMX3/pngwing-com-1-fb.png";
+const icon = "https://i.postimg.cc/XYF9h9Lt/pngwing-com-1-fb.png";
 
 const FacebookPlugin = ({ id, data }) => {
 	const nodeId = id;

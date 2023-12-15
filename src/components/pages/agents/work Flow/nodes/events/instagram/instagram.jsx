@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 
-const icon = "https://i.postimg.cc/QC8Hp3Vg/pngwing-com.png";
+const icon = "https://i.postimg.cc/ZY9QrCF9/pngwing-com.png";
 const Instagram = () => {
 	const nodeId = useNodeId();
 	//delete node

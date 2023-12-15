@@ -23,7 +23,7 @@ import {
 import PostModal from "@/components/styled components/node modals/post modal/post.modal";
 import useNodePost from "@/hooks/nodes hooks/use.node.post";
 
-const icon = "https://i.postimg.cc/QC8Hp3Vg/pngwing-com.png";
+const icon = "https://i.postimg.cc/ZY9QrCF9/pngwing-com.png";
 
 const InstagramPlugin = ({ id, data }) => {
 	const nodeId = id;

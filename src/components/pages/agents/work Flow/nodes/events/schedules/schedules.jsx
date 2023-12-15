@@ -14,7 +14,7 @@ import { renderTimeViewClock } from "@mui/x-date-pickers/timeViewRenderers";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import CustomScheduleModal from "./custom schedule/custom.schedule.modal";
 
-const icon = "https://i.postimg.cc/3xY2tmF2/pngwing-com-5.png";
+const icon = "https://i.postimg.cc/50CPkzWv/icons8-google-calendar-480.png";
 const Schedules = () => {
 	const nodeId = useNodeId();
 	//delete node

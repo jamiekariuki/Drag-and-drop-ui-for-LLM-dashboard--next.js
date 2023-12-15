@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 
-const icon = "https://i.postimg.cc/jdPHQW2Z/pngwing-com-1.png";
+const icon = "https://i.postimg.cc/yYhSxxzZ/pngwing-com-1.png";
 const Whatsapp = () => {
 	const nodeId = useNodeId();
 	//deleting node

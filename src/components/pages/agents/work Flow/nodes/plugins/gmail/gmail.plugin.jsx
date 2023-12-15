@@ -17,7 +17,7 @@ import ListModal from "@/components/styled components/node modals/list modal/lis
 import { useToast } from "@/context/ToastContext";
 import { PluginsInboxReply, PluginsSendMessage } from "../../../tooltip.info";
 
-const icon = "https://i.postimg.cc/x1P7kd06/pngwing-com-3.png";
+const icon = "https://i.postimg.cc/KvYQYZhQ/pngwing-com-3.png";
 
 const GmailPlugin = ({ id, data }) => {
 	const nodeId = id;

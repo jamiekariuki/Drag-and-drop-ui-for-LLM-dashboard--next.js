@@ -5,7 +5,7 @@ import Image from "next/image";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const Nodes = ({ children, title, type, onDelete, icon }) => {
+const Nodes = ({ children, title, type, onDelete, icon, agent }) => {
 	return (
 		<div className="nodes">
 			<div className="node-title">
@@ -21,11 +21,7 @@ const Nodes = ({ children, title, type, onDelete, icon }) => {
 					</div>
 					<div className="tite-container">
 						<h5>{title}</h5>
-						<p>
-							{"("}
-							{type}
-							{")"}
-						</p>
+						<p>{type}</p>
 					</div>
 				</div>
 
@@ -39,7 +35,15 @@ const Nodes = ({ children, title, type, onDelete, icon }) => {
 					</IconButton>
 				</div>
 			</div>
-			<div className="children-container nodrag">{children}</div>
+			<div
+				className={
+					agent
+						? "children-agent-container nodrag "
+						: "children-container nodrag"
+				}
+			>
+				{children}
+			</div>
 		</div>
 	);
 };

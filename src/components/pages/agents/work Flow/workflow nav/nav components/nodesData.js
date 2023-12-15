@@ -1,6 +1,7 @@
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import AppsIcon from "@mui/icons-material/Apps";
 import BlurOnIcon from "@mui/icons-material/BlurOn";
+import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
 
 export const nodesData = [
 	{
@@ -317,22 +318,59 @@ export const nodesData = [
 		icon: AppsIcon,
 		list: [
 			{
-				title: "Human",
-			},
-			{
-				title: "Documents",
-			},
-			{
 				title: "Inventory",
+				nodes: [
+					{
+						id: "inventoryplugin",
+						data: { label: "inventoryplugin" },
+						position: { x: 0, y: 0 },
+						type: "inventoryPlugin",
+					},
+				],
 			},
 			{
 				title: "Google Sheets",
+				nodes: [
+					{
+						id: "googlesheetsplugin",
+						data: { label: "googlesheetsplugin" },
+						position: { x: 0, y: 0 },
+						type: "googlesheetsPlugin",
+					},
+				],
 			},
 			{
 				title: "Google Calender",
+				nodes: [
+					{
+						id: "googlecalendarplugin",
+						data: { label: "googlecalendarplugin" },
+						position: { x: 0, y: 0 },
+						type: "googlecalendarPlugin",
+					},
+				],
 			},
 			{
 				title: "Google Docs",
+				nodes: [
+					{
+						id: "googledocsplugin",
+						data: { label: "googledocsplugin" },
+						position: { x: 0, y: 0 },
+						type: "googledocsPlugin",
+					},
+				],
+			},
+			{
+				title: "Google Drive",
+				nodes: [
+					{
+						id: "googledriveplugin",
+						data: { label: "googledriveplugin" },
+						position: { x: 0, y: 0 },
+						type: "googledrivePlugin",
+					},
+				],
 			},
 			{
 				title: "Gmail",
@@ -557,6 +595,45 @@ export const nodesData = [
 						type: "postFacebookPlugin",
 						parentNode: "facebookplugin",
 						extent: "parent",
+					},
+				],
+			},
+		],
+	},
+	{
+		title: "Tools",
+		icon: HomeRepairServiceIcon,
+		list: [
+			{
+				title: "Human",
+				nodes: [
+					{
+						id: "humanTool",
+						data: { label: "humanTool" },
+						position: { x: 0, y: 0 },
+						type: "humanTool",
+					},
+				],
+			},
+			{
+				title: "Files",
+				nodes: [
+					{
+						id: "fileTool",
+						data: { label: "fileTool" },
+						position: { x: 0, y: 0 },
+						type: "fileTool",
+					},
+				],
+			},
+			{
+				title: "Media",
+				nodes: [
+					{
+						id: "mediaTool",
+						data: { label: "mediaTool" },
+						position: { x: 0, y: 0 },
+						type: "mediaTool",
 					},
 				],
 			},

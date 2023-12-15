@@ -16,44 +16,36 @@ import WorkFlowNav from "./workflow nav/worflow.nav";
 const initialNodes = [
 	//-----------------------------------------------------------
 	/* {
-		id: "linkedinplugin",
-		data: { label: "linkedinplugin" },
+		id: "inventoryplugin",
+		data: { label: "inventoryplugin" },
 		position: { x: 0, y: 0 },
-		type: "linkedinPlugin",
+		type: "inventoryPlugin",
 	},
 	{
-		id: "linkedinplugin-inboxreply",
-		data: { label: "linkedinplugin-inboxreply" },
+		id: "inventoryplugin-cud",
+		data: { label: "inventoryplugin-cud" },
 		position: { x: 10, y: 110 },
-		type: "inboxReplyLinkedinPlugin",
-		parentNode: "linkedinplugin",
+		type: "cudInventoryPlugin",
+		parentNode: "inventoryplugin",
 		extent: "parent",
 	},
 	{
-		id: "linkedinplugin-commentreply",
-		data: { label: "linkedinplugin-commentreply" },
+		id: "inventoryplugin-read",
+		data: { label: "inventoryplugin-read" },
 		position: { x: 10, y: 146 },
-		type: "commentReplyLinkedinPlugin",
-		parentNode: "linkedinplugin",
-		extent: "parent",
-	},
-	{
-		id: "linkedinplugin-sendmessage",
-		data: { label: "linkedinplugin-sendmessage" },
-		position: { x: 10, y: 182 },
-		type: "sendMessageLinkedinPlugin",
-		parentNode: "linkedinplugin",
-		extent: "parent",
-	},
-	{
-		id: "linkedinplugin-post",
-		data: { label: "linkedinplugin-post" },
-		position: { x: 10, y: 407 },
-		type: "postLinkedinPlugin",
-		parentNode: "linkedinplugin",
+		type: "readInventoryPlugin",
+		parentNode: "inventoryplugin",
 		extent: "parent",
 	}, */
 	//----------
+
+	{
+		id: "chatbotagent",
+		data: { label: "chatbotagent" },
+		position: { x: 0, y: 0 },
+		type: "chatbotagent",
+	},
+
 	/* {
 		d: "2",
 		data: { label: "World" },

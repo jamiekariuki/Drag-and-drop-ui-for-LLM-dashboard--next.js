@@ -23,7 +23,7 @@ import {
 import PostModal from "@/components/styled components/node modals/post modal/post.modal";
 import useNodePost from "@/hooks/nodes hooks/use.node.post";
 
-const icon = "https://i.postimg.cc/zB83f9MK/pngwing-com-2.png";
+const icon = "https://i.postimg.cc/j5XqffCm/pngwing-com-2.png";
 
 const TwitterPlugin = ({ id, data }) => {
 	const nodeId = id;

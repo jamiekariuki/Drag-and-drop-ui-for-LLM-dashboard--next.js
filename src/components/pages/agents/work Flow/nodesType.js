@@ -77,11 +77,21 @@ import {
 	SendMessageTwitterPlugin,
 	TwitterPlugin,
 } from "./nodes/plugins/twitter/twitter.plugin";
+import { GooglecalendarPlugin } from "./nodes/plugins/google calendar/googlecalendar.plugin";
+import { GoogledocsPlugin } from "./nodes/plugins/google docs/googledocs.plugin";
+import { GoogledrivePlugin } from "./nodes/plugins/google drive/googledrive.plugin";
+import { GooglesheetsPlugin } from "./nodes/plugins/google sheets/goglesheets.plugin";
+import { InventoryPlugin } from "./nodes/plugins/inventory/invetory.plugin";
 import {
 	InboxReplyWhatsappPlugin,
 	SendMessageWhatsappPlugin,
 	WhatsappPlugin,
 } from "./nodes/plugins/whatsapp/whatsapp.plugin";
+import FileTool from "./nodes/tools/file/file.tool";
+import HumanTool from "./nodes/tools/human/human.tool";
+import MediaTool from "./nodes/tools/media/media.tool";
+
+import ChatbotAgent from "./nodes/AI/Chatbot Agent/chatbot.agent";
 
 //------------------------------------------------------------------------
 export const nodeTypes = {
@@ -90,34 +100,40 @@ export const nodeTypes = {
 	whatsapp: Whatsapp,
 	onFirstMessageWhatsapp: OnFirstMessageWhatsapp,
 	onMessageWhatsapp: OnMessageWhatsapp,
+
 	//instagram
 	instagram: Instagram,
 	onFirstMessageInstagram: OnFirstMessageInstagram,
 	onMessageInstagram: OnMessageInstagram,
 	onFirstCommentInstagram: OnFirstCommentInstagram,
 	onCommentReplyInstagram: OnCommentReplyInstagram,
+
 	//facebook
 	facebook: Facebook,
 	onFirstMessageFacebook: OnFirstMessageFacebook,
 	onMessageFacebook: OnMessageFacebook,
 	onFirstCommentFacebook: OnFirstCommentFacebook,
 	onCommentReplyFacebook: OnCommentReplyFacebook,
+
 	//twitter
 	twitter: Twitter,
 	onFirstMessageTwitter: OnFirstMessageTwitter,
 	onMessageTwitter: OnMessageTwitter,
 	onFirstCommentTwitter: OnFirstCommentTwitter,
 	onCommentReplyTwitter: OnCommentReplyTwitter,
+
 	//linkedin
 	linkedin: Linkedin,
 	onFirstMessageLinkedin: OnFirstMessageLinkedin,
 	onMessageLinkedin: OnMessageLinkedin,
 	onFirstCommentLinkedin: OnFirstCommentLinkedin,
 	onCommentReplyLinkedin: OnCommentReplyLinkedin,
+
 	//gmail
 	gmail: Gmail,
 	onFirstMessageGmail: OnFirstMessageGmail,
 	onMessageGmail: OnMessageGmail,
+
 	//schedules
 	schedules: Schedules,
 	onTimeSchedules: OnTimeSchedules,
@@ -130,32 +146,64 @@ export const nodeTypes = {
 	whatsappPlugin: WhatsappPlugin,
 	inboxReplyWhatsappPlugin: InboxReplyWhatsappPlugin,
 	sendMessageWhatsappPlugin: SendMessageWhatsappPlugin,
+
 	//gmail
 	gmailPlugin: GmailPlugin,
 	inboxReplyGmailPlugin: InboxReplyGmailPlugin,
 	sendMessageGmailPlugin: SendMessageGmailPlugin,
+
 	//instagram
 	instagramPlugin: InstagramPlugin,
 	inboxReplyInstagramPlugin: InboxReplyInstagramPlugin,
 	commentReplyInstagramPlugin: CommentReplyInstagramPlugin,
 	sendMessageInstagramPlugin: SendMessageInstagramPlugin,
 	postInstagramPlugin: PostInstagramPlugin,
+
 	//twitter
 	twitterPlugin: TwitterPlugin,
 	inboxReplyTwitterPlugin: InboxReplyTwitterPlugin,
 	commentReplyTwitterPlugin: CommentReplyTwitterPlugin,
 	sendMessageTwitterPlugin: SendMessageTwitterPlugin,
 	postTwitterPlugin: PostTwitterPlugin,
+
 	//facebook
 	facebookPlugin: FacebookPlugin,
 	inboxReplyFacebookPlugin: InboxReplyFacebookPlugin,
 	commentReplyFacebookPlugin: CommentReplyFacebookPlugin,
 	sendMessageFacebookPlugin: SendMessageFacebookPlugin,
 	postFacebookPlugin: PostFacebookPlugin,
+
 	//linkedin
 	linkedinPlugin: LinkedinPlugin,
 	inboxReplyLinkedinPlugin: InboxReplyLinkedinPlugin,
 	commentReplyLinkedinPlugin: CommentReplyLinkedinPlugin,
 	sendMessageLinkedinPlugin: SendMessageLinkedinPlugin,
 	postLinkedinPlugin: PostLinkedinPlugin,
+
+	//google sheets
+	googlesheetsPlugin: GooglesheetsPlugin,
+
+	//google docs
+	googledocsPlugin: GoogledocsPlugin,
+
+	//google drive
+	googledrivePlugin: GoogledrivePlugin,
+
+	//google calendar
+	googlecalendarPlugin: GooglecalendarPlugin,
+
+	//inventory
+	inventoryPlugin: InventoryPlugin,
+
+	//tools
+	//human
+	humanTool: HumanTool,
+
+	//File
+	fileTool: FileTool,
+
+	//media
+	mediaTool: MediaTool,
+
+	chatbotagent: ChatbotAgent,
 };

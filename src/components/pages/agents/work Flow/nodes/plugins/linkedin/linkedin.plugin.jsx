@@ -23,7 +23,7 @@ import {
 import PostModal from "@/components/styled components/node modals/post modal/post.modal";
 import useNodePost from "@/hooks/nodes hooks/use.node.post";
 
-const icon = "https://i.postimg.cc/W3F3XCzJ/pngwing-com-4.png";
+const icon = "https://i.postimg.cc/PJkmcXNj/pngwing-com-4.png";
 const LinkedinPlugin = ({ id, data }) => {
 	const nodeId = id;
 	//deleting node

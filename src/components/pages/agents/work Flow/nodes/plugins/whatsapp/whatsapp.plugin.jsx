@@ -17,7 +17,7 @@ import ListModal from "@/components/styled components/node modals/list modal/lis
 import { useToast } from "@/context/ToastContext";
 import { PluginsInboxReply, PluginsSendMessage } from "../../../tooltip.info";
 
-const icon = "https://i.postimg.cc/jdPHQW2Z/pngwing-com-1.png";
+const icon = "https://i.postimg.cc/yYhSxxzZ/pngwing-com-1.png";
 
 const WhatsappPlugin = ({ id, data }) => {
 	const nodeId = id;

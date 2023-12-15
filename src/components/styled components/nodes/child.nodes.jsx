@@ -1,8 +1,18 @@
 import React from "react";
 import "./nodes.scss";
 
-const ChildNodes = ({ children }) => {
-	return <div className="childnodes nodrag">{children}</div>;
+const ChildNodes = ({ children, agent }) => {
+	return (
+		<div
+			className={
+				agent
+					? "childnodes childnodes-agent nodrag "
+					: "childnodes nodrag"
+			}
+		>
+			{children}
+		</div>
+	);
 };
 
 export default ChildNodes;

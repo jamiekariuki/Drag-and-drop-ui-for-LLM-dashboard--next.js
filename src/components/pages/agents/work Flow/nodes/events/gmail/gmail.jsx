@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 
-const icon = "https://i.postimg.cc/x1P7kd06/pngwing-com-3.png";
+const icon = "https://i.postimg.cc/KvYQYZhQ/pngwing-com-3.png";
 const Gmail = () => {
 	const nodeId = useNodeId();
 	//deleting node
