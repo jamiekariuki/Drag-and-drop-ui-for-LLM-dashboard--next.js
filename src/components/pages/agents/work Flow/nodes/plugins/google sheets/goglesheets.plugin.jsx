@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 const icon = "https://i.postimg.cc/VkC9VgtP/spreadsheet-com.png";
 
-const GooglesheetsPlugin = ({ id, data }) => {
+const GooglesheetsPlugin = ({ id, data, isConnectable }) => {
 	const nodeId = id;
 	//deleting node
 	const { deleteElements } = useReactFlow();

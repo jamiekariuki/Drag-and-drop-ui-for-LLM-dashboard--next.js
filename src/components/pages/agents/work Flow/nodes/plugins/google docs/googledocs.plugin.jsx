@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 const icon = "https://i.postimg.cc/B6fT33JS/pngwing-com-6.png";
 
-const GoogledocsPlugin = ({ id, data }) => {
+const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 	const nodeId = id;
 	//deleting node
 	const { deleteElements } = useReactFlow();

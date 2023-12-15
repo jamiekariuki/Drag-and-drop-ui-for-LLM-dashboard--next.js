@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 const icon = "https://i.postimg.cc/sDHj58RJ/icons8-folder-480.png";
 
-const InventoryPlugin = ({ id, data }) => {
+const InventoryPlugin = ({ id, data, isConnectable }) => {
 	const nodeId = id;
 	//deleting node
 	const { deleteElements } = useReactFlow();

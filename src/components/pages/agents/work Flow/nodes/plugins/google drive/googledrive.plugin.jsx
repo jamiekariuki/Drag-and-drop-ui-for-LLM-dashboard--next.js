@@ -8,7 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 const icon = "https://i.postimg.cc/ZKX02cbZ/pngwing-com-7.png";
 
-const GoogledrivePlugin = ({ id, data }) => {
+const GoogledrivePlugin = ({ id, data, isConnectable }) => {
 	const nodeId = id;
 	//deleting node
 	const { deleteElements } = useReactFlow();
