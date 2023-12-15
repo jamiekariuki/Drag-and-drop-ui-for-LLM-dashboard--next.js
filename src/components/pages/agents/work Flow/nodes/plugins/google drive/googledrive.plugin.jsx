@@ -63,7 +63,7 @@ const GoogledrivePlugin = ({ id, data, isConnectable }) => {
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>
-			<div style={{ width: "100%", height: "131px" }}>
+			<div style={{ width: "100%" }}>
 				<div className="id-input" style={{ width: "100%" }}>
 					<h6 style={{ marginBottom: "3px" }}> Folder ID</h6>
 					<Inputs2
