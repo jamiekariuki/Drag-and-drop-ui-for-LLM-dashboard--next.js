@@ -98,7 +98,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 				{/*plugin*/}
 				<ChildNodes agent={true}>
 					<Handle
-						type="target"
+						type="source"
 						position={Position.Right}
 						id="chatbot-plugin"
 						isConnectable={isConnectable}
