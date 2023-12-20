@@ -139,6 +139,7 @@ const TextArea2 = ({
 	value,
 	changeValue,
 	node,
+	error,
 }) => {
 	return (
 		<div className="inputs-ta">
@@ -147,7 +148,10 @@ const TextArea2 = ({
 				id={id}
 				value={value}
 				disabled={disabled}
-				style={{ height: inputHeight ? inputHeight : "100px" }}
+				style={{
+					height: inputHeight ? inputHeight : "100px",
+					borderColor: error && "rgba(255, 0, 0, 0.45)",
+				}}
 				onChange={(e) => {
 					changeValue(e.target.value);
 				}}

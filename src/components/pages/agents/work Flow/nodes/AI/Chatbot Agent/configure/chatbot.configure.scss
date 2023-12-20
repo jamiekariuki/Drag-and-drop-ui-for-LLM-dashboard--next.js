@@ -1,0 +1,59 @@
+@import "../../../../../../../../theme/theme.scss";
+
+.chatbot-config {
+	@include themify($themes) {
+		width: 65vw;
+		height: 83vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		p {
+			font-size: 13px;
+		}
+
+		.container {
+			display: flex;
+			height: 77vh;
+			border-bottom: 1px solid themed("hover");
+
+			.left {
+				flex: 2;
+				height: 100%;
+			}
+
+			.middle {
+				flex: 5;
+				height: 100%;
+				border-left: 1px solid themed("hover");
+				border-right: 1px solid themed("hover");
+				overflow-y: scroll;
+			}
+
+			.right {
+				flex: 3;
+				height: 100%;
+				padding: 5px 10px;
+			}
+		}
+
+		.footer-btns {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.el-btn {
+				p {
+					font-size: 13px;
+					color: white;
+					text-transform: lowercase;
+
+					.el-icon {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

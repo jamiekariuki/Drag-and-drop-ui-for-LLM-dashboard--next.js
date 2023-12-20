@@ -1,0 +1,34 @@
+@import "../../../../../../../../../theme/theme.scss";
+
+.chatbot-prompts {
+	@include themify($themes) {
+		padding: 10px 15px;
+
+		.prompts {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			.header {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				margin-bottom: 5px;
+			}
+
+			.text-input {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			.switch-input {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+		}
+	}
+}

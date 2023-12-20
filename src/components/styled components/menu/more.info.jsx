@@ -63,24 +63,18 @@ export function MoreInfo({ list, func }) {
 
 //select
 
-export function SelectDropDown({ list, initialValue, func, label, disabled }) {
-	/* const [data, setData] = React.useState(initialValue);
-
-	useEffect(() => {
-		console.log(
-			"this index is: " + index + " intial value is: " + initialValue
-		);
-	}, []);
-
-	const handleChange = (event) => {
-		setData(event.target.value);
-		func(event.target.value);
-	}; */
-
+export function SelectDropDown({
+	list,
+	initialValue,
+	func,
+	label,
+	disabled,
+	width,
+}) {
 	return (
 		<div className="form-select">
 			<FormControl
-				sx={{ m: 1, minWidth: 120 }}
+				sx={{ m: 1, minWidth: width ? width : 120 }}
 				size="small"
 				className="form-controller"
 			>

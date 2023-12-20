@@ -41,7 +41,16 @@ const initialNodes = [
 
 	{
 		id: "chatbotagent",
-		data: { label: "chatbotagent" },
+		data: {
+			label: "chatbotagent",
+			settings: {},
+			generalPrompts: {},
+			timeSchedule: {},
+			leadsExtraction: {},
+			salesAndMarketing: {},
+			multimodal: {},
+			knowledgeRetrival: {},
+		},
 		position: { x: 0, y: 0 },
 		type: "chatbotagent",
 	},

@@ -1,10 +1,12 @@
 import Nodes from "@/components/styled components/nodes/nodes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
 import { TextArea2 } from "@/components/styled components/inputs/inputs";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Button from "@mui/material/Button";
+import ChatbotConfigure from "./configure/chatbot.configure";
+import { NodeAiProvider } from "@/context/nodeAiContext";
 
 const icon = "https://i.postimg.cc/XvL7qGTd/icons8-message-480.png";
 
@@ -22,32 +24,40 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 	};
 
 	//custom prompt
-	const { setNodes } = useReactFlow();
+	const { setNodes, getNodes } = useReactFlow();
 	const [prompt, setPrompt] = useState(
-		data.customPrompt ? data.customPrompt : ""
+		data.generalPrompts.systemPrompt ? data.generalPrompts.systemPrompt : ""
 	);
-
+	const promptLength = 1000;
 	const handlePromptChange = (e) => {
-		setPrompt(e);
+		if (e.replace(/\s/g, "").length <= promptLength) {
+			setPrompt(e);
+			setNodes((nds) =>
+				nds.map((node) => {
+					if (node.id === nodeId) {
+						node.data.generalPrompts = {
+							...node.data.generalPrompts,
+							systemPrompt: e,
+						};
+					}
 
-		setNodes((nds) =>
-			nds.map((node) => {
-				if (node.id === nodeId) {
-					node.data = {
-						...node.data,
-						customPrompt: e,
-					};
-				}
-
-				return node;
-			})
-		);
+					return node;
+				})
+			);
+		}
 	};
 
-	/* const allNodes = getNodes();
+	//configure
+	const [open, setOpen] = useState(false);
+	const onClose = () => {
+		setOpen(false);
+	};
+
+	//testing
+	const allNodes = getNodes();
 	const seeNodes = () => {
 		console.log(allNodes);
-	}; */
+	};
 
 	return (
 		<Nodes
@@ -149,11 +159,13 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<TextArea2
+							error={
+								prompt.replace(/\s/g, "").length >= promptLength
+							}
 							node={true}
 							label={"Enter prompt..."}
-							id={"chatbot-prompt"}
+							id={"chatbot-prompts"}
 							value={prompt}
-							//	inputHeight="0px"
 							changeValue={(e) => {
 								handlePromptChange(e);
 							}}
@@ -174,6 +186,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						size="small"
 						disableElevation
 						sx={{ width: "100%" }}
+						onClick={() => setOpen(true)}
 					>
 						<p
 							style={{
@@ -185,6 +198,17 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						</p>
 					</Button>
 				</div>
+
+				<NodeAiProvider
+					data={data}
+					prompt={prompt}
+					setPrompt={setPrompt}
+					promptLength={promptLength}
+				>
+					<ChatbotConfigure open={open} onClose={onClose} />
+				</NodeAiProvider>
+
+				<button onClick={seeNodes}>see nodes</button>
 
 				{/*output*/}
 				<ChildNodes agent={true}>

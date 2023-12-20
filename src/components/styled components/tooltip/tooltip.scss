@@ -31,6 +31,7 @@
 			background-color: themed("tooltip");
 			transition: all 0.3s;
 			border: 1px solid themed("hover");
+			z-index: 700;
 
 			p {
 				font-size: 9px;
