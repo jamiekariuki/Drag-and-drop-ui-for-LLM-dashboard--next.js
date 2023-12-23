@@ -5,12 +5,12 @@ import { TextArea2 } from "@/components/styled components/inputs/inputs";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Button from "@mui/material/Button";
-import ChatbotConfigure from "./configure/chatbot.configure";
+import VirtualConfigure from "./configure/virtual.configure";
 import { NodeAiProvider } from "@/context/nodeAiContext";
 
-const icon = "https://i.postimg.cc/zBpQPMgB/icons8-chat-bot-96.png";
+const icon = "https://i.postimg.cc/x8nv5gcG/icons8-ai-96.png";
 
-const ChatbotAgent = ({ id, data, isConnectable }) => {
+const VirtualAgent = ({ id, data, isConnectable }) => {
 	const nodeId = id;
 	//deleting node
 	const { deleteElements } = useReactFlow();
@@ -65,12 +65,19 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 
 	return (
 		<Nodes
-			title="Chat-bot Agent"
+			title="Virtual Assistant"
 			type="AI"
 			onDelete={deleteNode}
 			icon={icon}
 			agent={true}
 		>
+			<Handle
+				type="target"
+				position={Position.Left}
+				id="Virtual-assistant"
+				isConnectable={isConnectable}
+				className="phandle thandle"
+			/>
 			<div
 				className="nodrag"
 				style={{
@@ -86,7 +93,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="target"
 						position={Position.Left}
-						id="chatbot-input"
+						id="Virtual-input"
 						isConnectable={isConnectable}
 						className="phandle thandle"
 						style={{ top: "60px" }}
@@ -95,29 +102,15 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Tooltip tip={<p>Input</p>} />
 				</ChildNodes>
 
-				{/*knowledge*/}
-				<ChildNodes agent={true}>
-					<Handle
-						type="target"
-						position={Position.Left}
-						id="chatbot-knowledge"
-						isConnectable={isConnectable}
-						className="phandle thandle"
-						style={{ top: "97px" }}
-					/>
-					<p>Knowledge retrival</p>
-					<Tooltip tip={<p>Input</p>} />
-				</ChildNodes>
-
 				{/*plugin*/}
 				<ChildNodes agent={true}>
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-plugin"
+						id="Virtual-plugin"
 						isConnectable={isConnectable}
 						className="phandle"
-						style={{ top: "132px" }}
+						style={{ top: "96px" }}
 					/>
 					<p>Plugin</p>
 					<Tooltip tip={<p>Input</p>} />
@@ -128,10 +121,10 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-extend"
+						id="Virtual-extend"
 						isConnectable={isConnectable}
 						className="phandle "
-						style={{ top: "167px" }}
+						style={{ top: "132px" }}
 					/>
 					<p>Extend Agent</p>
 					<Tooltip tip={<p>Input</p>} />
@@ -168,7 +161,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 							}
 							node={true}
 							label={"Enter prompt..."}
-							id={"chatbot-prompts"}
+							id={"Virtual-prompts"}
 							value={prompt}
 							changeValue={(e) => {
 								handlePromptChange(e);
@@ -209,7 +202,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					setPrompt={setPrompt}
 					promptLength={promptLength}
 				>
-					<ChatbotConfigure open={open} onClose={onClose} />
+					<VirtualConfigure open={open} onClose={onClose} />
 				</NodeAiProvider>
 
 				{/* <button onClick={seeNodes}>see nodes</button> */}
@@ -219,10 +212,10 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-output"
+						id="Virtual-output"
 						isConnectable={isConnectable}
 						className="phandle "
-						style={{ top: "369px" }}
+						style={{ top: "335px" }}
 					/>
 					<p>Output</p>
 					<Tooltip tip={<p>Input</p>} />
@@ -232,4 +225,4 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 	);
 };
 
-export default ChatbotAgent;
+export default VirtualAgent;

@@ -44,6 +44,26 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 		);
 	};
 
+	const [description, setDescription] = useState(
+		data.description ? data.description : ""
+	);
+
+	const handleDescChange = (e) => {
+		setDescription(e);
+		setNodes((nds) =>
+			nds.map((node) => {
+				if (node.id === nodeId) {
+					node.data = {
+						...node.data,
+						description: e,
+					};
+				}
+
+				return node;
+			})
+		);
+	};
+
 	/* const allNodes = getNodes();
 	const seeNodes = () => {
 		console.log(allNodes);
@@ -63,14 +83,25 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>
+
 			<div style={{ width: "100%" }}>
 				<div className="id-input" style={{ width: "100%" }}>
-					<h6 style={{ marginBottom: "3px" }}>Docx ID</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Sheet ID</h6>
+						<Tooltip tip={PluginsAction} />
+					</div>
 					<Inputs2
 						node={true}
 						type={"text"}
 						label={"id"}
-						id={"GoogleDocsid"}
+						id={"GoogleSheetsid"}
 						value={socialId}
 						changeValue={(e) => {
 							handleIdChange(e);
@@ -78,6 +109,37 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 					/>
 				</div>
 			</div>
+
+			<div style={{ width: "100%" }}>
+				<div
+					className="id-input"
+					style={{ width: "100%", marginTop: "5px" }}
+				>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Description</h6>
+						<Tooltip tip={PluginsAction} />
+					</div>
+
+					<Inputs2
+						node={true}
+						type={"text"}
+						label={"eg FQA"}
+						id={"descriptionfqa"}
+						value={description}
+						changeValue={(e) => {
+							handleDescChange(e);
+						}}
+					/>
+				</div>
+			</div>
+
 			<Actions data={data} nodeId={nodeId} setNodes={setNodes} />
 		</Nodes>
 	);
@@ -124,7 +186,6 @@ const Actions = ({ data, nodeId, setNodes }) => {
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					padding: "0 10px 3px 10px",
 				}}
 			>
 				<h6>Actions</h6>

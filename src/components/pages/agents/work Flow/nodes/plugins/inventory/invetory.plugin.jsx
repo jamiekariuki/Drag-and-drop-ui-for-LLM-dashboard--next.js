@@ -44,6 +44,26 @@ const InventoryPlugin = ({ id, data, isConnectable }) => {
 		);
 	};
 
+	const [description, setDescription] = useState(
+		data.description ? data.description : ""
+	);
+
+	const handleDescChange = (e) => {
+		setDescription(e);
+		setNodes((nds) =>
+			nds.map((node) => {
+				if (node.id === nodeId) {
+					node.data = {
+						...node.data,
+						description: e,
+					};
+				}
+
+				return node;
+			})
+		);
+	};
+
 	/* const allNodes = getNodes();
 	const seeNodes = () => {
 		console.log(allNodes);
@@ -65,15 +85,55 @@ const InventoryPlugin = ({ id, data, isConnectable }) => {
 			/>
 			<div style={{ width: "100%" }}>
 				<div className="id-input" style={{ width: "100%" }}>
-					<h6 style={{ marginBottom: "3px" }}> Category name</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Sheet ID</h6>
+						<Tooltip tip={PluginsAction} />
+					</div>
 					<Inputs2
 						node={true}
 						type={"text"}
 						label={"id"}
-						id={"inventoryid"}
+						id={"GoogleSheetsid"}
 						value={socialId}
 						changeValue={(e) => {
 							handleIdChange(e);
+						}}
+					/>
+				</div>
+			</div>
+
+			<div style={{ width: "100%" }}>
+				<div
+					className="id-input"
+					style={{ width: "100%", marginTop: "5px" }}
+				>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Description</h6>
+						<Tooltip tip={PluginsAction} />
+					</div>
+
+					<Inputs2
+						node={true}
+						type={"text"}
+						label={"eg Clothe catalogue"}
+						id={"descriptioninventory"}
+						value={description}
+						changeValue={(e) => {
+							handleDescChange(e);
 						}}
 					/>
 				</div>
@@ -124,7 +184,6 @@ const Actions = ({ data, nodeId, setNodes }) => {
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					padding: "0 10px 3px 10px",
 				}}
 			>
 				<h6>Actions</h6>

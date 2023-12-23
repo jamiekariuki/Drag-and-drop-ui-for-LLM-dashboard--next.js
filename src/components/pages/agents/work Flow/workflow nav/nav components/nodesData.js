@@ -644,10 +644,30 @@ export const nodesData = [
 		icon: BlurOnIcon,
 		list: [
 			{
-				title: "Chat Bot",
+				title: "Chat-bot",
+				nodes: [
+					{
+						id: "chatbotagent",
+						data: {
+							label: "chatbotagent",
+						},
+						position: { x: 0, y: 0 },
+						type: "chatbotagent",
+					},
+				],
 			},
 			{
 				title: "Research Assistant",
+				nodes: [
+					{
+						id: "researchagent",
+						data: {
+							label: "researchagent",
+						},
+						position: { x: 0, y: 0 },
+						type: "researchagent",
+					},
+				],
 			},
 			{
 				title: "Virtual Assistant",

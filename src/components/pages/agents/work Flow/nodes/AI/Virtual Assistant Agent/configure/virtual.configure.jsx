@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import "./chatbot.configure.scss";
+import "./virtual.configure.scss";
 import Modal from "@/components/styled components/modals/modal";
 import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
-import ChatbotSettings from "./settings right/chatbot.settings";
+import VirtualSettings from "./settings right/virtual.settings";
 import { useNodeId, useReactFlow } from "reactflow";
 import { useToast } from "@/context/ToastContext";
-import ChatbotNav from "./nav left/chatbot.nav";
-import ChatbotPrompts from "./prompts middle/chatbot.prompts";
+import VirtualNav from "./nav left/virtual.nav";
+import VirtualPrompts from "./prompts middle/virtual.prompts";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 
-const ChatbotConfigure = ({ open, onClose }) => {
+const VirtualConfigure = ({ open, onClose }) => {
 	const [nav, setNav] = useState("General prompts");
 
 	const { showToast } = useToast();
@@ -34,21 +34,28 @@ const ChatbotConfigure = ({ open, onClose }) => {
 			})
 		);
 		setSaveBtn(false);
-		showToast("Chat-bot configure saved successfully", "success");
+		showToast(
+			"Virtual Assistant agent configure saved successfully",
+			"success"
+		);
 	};
 
 	return (
-		<Modal open={open} onClose={onClose} title={"Chat-bot configure"}>
-			<div className="chatbot-config">
+		<Modal
+			open={open}
+			onClose={onClose}
+			title={"Virtual Assistant configure"}
+		>
+			<div className="virtual-config">
 				<div className="container">
 					<div className="left">
-						<ChatbotNav setNav={setNav} nav={nav} />
+						<VirtualNav setNav={setNav} nav={nav} />
 					</div>
 					<div className="middle">
-						<ChatbotPrompts nav={nav} />
+						<VirtualPrompts nav={nav} />
 					</div>
 					<div className="right">
-						<ChatbotSettings />
+						<VirtualSettings />
 					</div>
 				</div>
 
@@ -77,4 +84,4 @@ const ChatbotConfigure = ({ open, onClose }) => {
 	);
 };
 
-export default ChatbotConfigure;
+export default VirtualConfigure;

@@ -1,0 +1,23 @@
+@import "../../../../../../../../../theme/theme.scss";
+
+.virtual-settings {
+	@include themify($themes) {
+		.settings-heading {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			margin-bottom: 10px;
+
+			.agent-icon {
+				color: themed("titleColor");
+				font-size: 18px;
+			}
+		}
+
+		.ai-settings {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+}

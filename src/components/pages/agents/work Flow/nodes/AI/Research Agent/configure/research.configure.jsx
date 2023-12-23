@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import "./chatbot.configure.scss";
+import "./research.configure.scss";
 import Modal from "@/components/styled components/modals/modal";
 import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
-import ChatbotSettings from "./settings right/chatbot.settings";
+import ResearchSettings from "./settings right/research.settings";
 import { useNodeId, useReactFlow } from "reactflow";
 import { useToast } from "@/context/ToastContext";
-import ChatbotNav from "./nav left/chatbot.nav";
-import ChatbotPrompts from "./prompts middle/chatbot.prompts";
+import ResearchNav from "./nav left/research.nav";
+import ResearchPrompts from "./prompts middle/research.prompts";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 
-const ChatbotConfigure = ({ open, onClose }) => {
+const ResearchConfigure = ({ open, onClose }) => {
 	const [nav, setNav] = useState("General prompts");
 
 	const { showToast } = useToast();
@@ -34,21 +34,25 @@ const ChatbotConfigure = ({ open, onClose }) => {
 			})
 		);
 		setSaveBtn(false);
-		showToast("Chat-bot configure saved successfully", "success");
+		showToast("Research assistant configure saved successfully", "success");
 	};
 
 	return (
-		<Modal open={open} onClose={onClose} title={"Chat-bot configure"}>
-			<div className="chatbot-config">
+		<Modal
+			open={open}
+			onClose={onClose}
+			title={"Research Assistant configure"}
+		>
+			<div className="research-config">
 				<div className="container">
 					<div className="left">
-						<ChatbotNav setNav={setNav} nav={nav} />
+						<ResearchNav setNav={setNav} nav={nav} />
 					</div>
 					<div className="middle">
-						<ChatbotPrompts nav={nav} />
+						<ResearchPrompts nav={nav} />
 					</div>
 					<div className="right">
-						<ChatbotSettings />
+						<ResearchSettings />
 					</div>
 				</div>
 
@@ -77,4 +81,4 @@ const ChatbotConfigure = ({ open, onClose }) => {
 	);
 };
 
-export default ChatbotConfigure;
+export default ResearchConfigure;

@@ -1,0 +1,38 @@
+@import "../../../../../../../../../theme/theme.scss";
+
+.research-nav {
+	@include themify($themes) {
+		padding: 7px;
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+
+		button {
+			border: 0;
+			background-color: transparent;
+			cursor: pointer;
+			border-radius: 3px;
+			transition: all 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 1px 3px;
+
+			&:hover {
+				background-color: #b12f9b12;
+
+				p {
+					color: #b12f9c;
+				}
+			}
+			&:disabled {
+				background-color: transparent;
+				cursor: default;
+
+				p {
+					color: rgba(128, 128, 128, 0.583);
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./chatbot.settings.scss";
+import "./research.settings.scss";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SelectOption from "@/components/styled components/inputs/select.option";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
@@ -7,9 +6,17 @@ import Radio from "@mui/material/Radio";
 import Checkbox from "@mui/material/Checkbox";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 
-const ChatbotSettings = () => {
-	const { usage, setUsage, aiLevel, setAiLevel, abilities, setAbilities } =
-		useNodeAiContext();
+const ResearchSettings = () => {
+	const {
+		usage,
+		setUsage,
+		aiLevel,
+		setAiLevel,
+		abilities,
+		setAbilities,
+		searchQuality,
+		setSearchQuality,
+	} = useNodeAiContext();
 
 	//ai intelligence
 	const aiList = ["Low ", "Medium", "High"];
@@ -28,7 +35,7 @@ const ChatbotSettings = () => {
 	};
 
 	return (
-		<div className="chatbot-settings">
+		<div className="research-settings">
 			<div className="settings-heading">
 				<SettingsIcon className="agent-icon" />
 				<h3>Settings</h3>
@@ -54,6 +61,29 @@ const ChatbotSettings = () => {
 						value={aiLevel}
 						changeValue={(e) => {
 							setAiLevel(e);
+						}}
+					/>
+				</div>
+
+				<div>
+					<div
+						style={{
+							display: "flex",
+							alignItems: "center",
+							gap: "5px",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Search quality</h6>
+						<Tooltip tip={<p>tip</p>} />
+					</div>
+
+					<SelectOption
+						label={"Search quality"}
+						list={aiList}
+						value={searchQuality}
+						changeValue={(e) => {
+							setSearchQuality(e);
 						}}
 					/>
 				</div>
@@ -116,48 +146,6 @@ const ChatbotSettings = () => {
 					<div>
 						<div style={abilitiesStyle}>
 							<Checkbox
-								checked={abilities.timeSchedule}
-								size="small"
-								onChange={(e) => {
-									handleAbilities(
-										e.target.checked,
-										"timeSchedule"
-									);
-								}}
-								inputProps={{ "aria-label": "controlled" }}
-							/>
-							<p>Time Schedule</p>
-						</div>
-						<div style={abilitiesStyle}>
-							<Checkbox
-								checked={abilities.leadExtraction}
-								size="small"
-								onChange={(e) => {
-									handleAbilities(
-										e.target.checked,
-										"leadExtraction"
-									);
-								}}
-								inputProps={{ "aria-label": "controlled" }}
-							/>
-							<p>Lead Extraction</p>
-						</div>
-						<div style={abilitiesStyle}>
-							<Checkbox
-								checked={abilities.salesAndMarketing}
-								size="small"
-								onChange={(e) => {
-									handleAbilities(
-										e.target.checked,
-										"salesAndMarketing"
-									);
-								}}
-								inputProps={{ "aria-label": "controlled" }}
-							/>
-							<p>Sales and Marketing</p>
-						</div>
-						<div style={abilitiesStyle}>
-							<Checkbox
 								checked={abilities.multiModal}
 								size="small"
 								onChange={(e) => {
@@ -168,7 +156,7 @@ const ChatbotSettings = () => {
 								}}
 								inputProps={{ "aria-label": "controlled" }}
 							/>
-							<p>Multi Modal</p>
+							<p>Multimodal</p>
 						</div>
 					</div>
 				</div>
@@ -182,4 +170,4 @@ const abilitiesStyle = {
 	alignItems: "center",
 };
 
-export default ChatbotSettings;
+export default ResearchSettings;

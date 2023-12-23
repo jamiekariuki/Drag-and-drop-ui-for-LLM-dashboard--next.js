@@ -29,10 +29,6 @@ const NavComponents = () => {
 		const serializedData = JSON.stringify(allData);
 		event.dataTransfer.setData("application/reactflow", serializedData);
 		event.dataTransfer.effectAllowed = "move";
-
-		/* const serializedNodes = JSON.stringify(nodesToDrag);
-		event.dataTransfer.setData("application/reactflow", serializedNodes);
-		event.dataTransfer.effectAllowed = "move"; */
 	};
 
 	return (

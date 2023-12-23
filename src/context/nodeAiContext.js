@@ -25,6 +25,10 @@ export const NodeAiProvider = ({
 		aiLevel,
 		setAiLevel,
 		setAbilities,
+		searchQuality,
+		setSearchQuality,
+		taskExecution,
+		setTaskExecution,
 		//general
 		//system prompt
 		systemPrompt,
@@ -54,6 +58,10 @@ export const NodeAiProvider = ({
 		extraInfo,
 		setExtraInfo,
 		extraInfoLength,
+		//format
+		format,
+		setFormat,
+		formatLength,
 		//schdule title
 		scheduleTitle,
 		setScheduleTitle,
@@ -131,6 +139,10 @@ export const NodeAiProvider = ({
 				aiLevel,
 				setAiLevel,
 				setAbilities,
+				searchQuality,
+				setSearchQuality,
+				taskExecution,
+				setTaskExecution,
 				//system prompt
 				systemPrompt,
 				setSystemPrompt,
@@ -159,6 +171,10 @@ export const NodeAiProvider = ({
 				extraInfo,
 				setExtraInfo,
 				extraInfoLength,
+				//format
+				format,
+				setFormat,
+				formatLength,
 				//schdule title
 				scheduleTitle,
 				setScheduleTitle,

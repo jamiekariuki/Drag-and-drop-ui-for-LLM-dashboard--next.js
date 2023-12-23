@@ -1,4 +1,4 @@
-/* import {
+import {
 	Facebook,
 	OnCommentReplyFacebook,
 	OnFirstCommentFacebook,
@@ -77,6 +77,7 @@ import {
 	SendMessageTwitterPlugin,
 	TwitterPlugin,
 } from "./nodes/plugins/twitter/twitter.plugin";
+
 import { GooglecalendarPlugin } from "./nodes/plugins/google calendar/googlecalendar.plugin";
 import { GoogledocsPlugin } from "./nodes/plugins/google docs/googledocs.plugin";
 import { GoogledrivePlugin } from "./nodes/plugins/google drive/googledrive.plugin";
@@ -87,17 +88,20 @@ import {
 	SendMessageWhatsappPlugin,
 	WhatsappPlugin,
 } from "./nodes/plugins/whatsapp/whatsapp.plugin";
+
 import FileTool from "./nodes/tools/file/file.tool";
 import HumanTool from "./nodes/tools/human/human.tool";
-import MediaTool from "./nodes/tools/media/media.tool"; */
+import MediaTool from "./nodes/tools/media/media.tool";
 
 import ChatbotAgent from "./nodes/AI/Chatbot Agent/chatbot.agent";
+import ResearchAgent from "./nodes/AI/Research Agent/research.agent";
+import VirtualAgent from "./nodes/AI/Virtual Assistant Agent/virtual.agent";
 
 //------------------------------------------------------------------------
 export const nodeTypes = {
 	//1. events
 	//whatsapp
-	/* whatsapp: Whatsapp,
+	whatsapp: Whatsapp,
 	onFirstMessageWhatsapp: OnFirstMessageWhatsapp,
 	onMessageWhatsapp: OnMessageWhatsapp,
 
@@ -203,7 +207,11 @@ export const nodeTypes = {
 	fileTool: FileTool,
 
 	//media
-	mediaTool: MediaTool, */
+	mediaTool: MediaTool,
 
 	chatbotagent: ChatbotAgent,
+
+	researchagent: ResearchAgent,
+
+	virtualagent: VirtualAgent,
 };

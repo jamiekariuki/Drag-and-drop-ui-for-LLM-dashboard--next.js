@@ -14,45 +14,13 @@ import { nodeTypes } from "./nodesType";
 import WorkFlowNav from "./workflow nav/worflow.nav";
 
 const initialNodes = [
-	//-----------------------------------------------------------
-	/* {
-		id: "inventoryplugin",
-		data: { label: "inventoryplugin" },
-		position: { x: 0, y: 0 },
-		type: "inventoryPlugin",
-	},
 	{
-		id: "inventoryplugin-cud",
-		data: { label: "inventoryplugin-cud" },
-		position: { x: 10, y: 110 },
-		type: "cudInventoryPlugin",
-		parentNode: "inventoryplugin",
-		extent: "parent",
-	},
-	{
-		id: "inventoryplugin-read",
-		data: { label: "inventoryplugin-read" },
-		position: { x: 10, y: 146 },
-		type: "readInventoryPlugin",
-		parentNode: "inventoryplugin",
-		extent: "parent",
-	}, */
-	//----------
-
-	{
-		id: "chatbotagent",
+		id: "virtualagent",
 		data: {
-			label: "chatbotagent",
-			settings: {},
-			generalPrompts: {},
-			timeSchedule: {},
-			leadsExtraction: {},
-			salesAndMarketing: {},
-			multimodal: {},
-			knowledgeRetrival: {},
+			label: "virtualagent",
 		},
 		position: { x: 0, y: 0 },
-		type: "chatbotagent",
+		type: "virtualagent",
 	},
 
 	/* {
@@ -173,7 +141,6 @@ const Workflow = () => {
 export default Workflow;
 
 //functions
-
 const idGenerate = (nodes, label) => {
 	const existingItems = nodes.filter((node) => node.data.label === label);
 
