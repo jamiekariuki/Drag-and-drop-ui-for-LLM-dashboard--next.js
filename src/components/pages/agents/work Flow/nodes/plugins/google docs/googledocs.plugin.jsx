@@ -3,8 +3,12 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
-import { PluginsAction } from "../../../tooltip.info";
 import Checkbox from "@mui/material/Checkbox";
+import {
+	PluginsDescription,
+	PluginsId,
+	PluginsAction,
+} from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/B6fT33JS/pngwing-com-6.png";
 
@@ -94,8 +98,8 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 							marginBottom: "3px",
 						}}
 					>
-						<h6>Sheet ID</h6>
-						<Tooltip tip={PluginsAction} />
+						<h6>Docs ID</h6>
+						<Tooltip tip={PluginsId} />
 					</div>
 					<Inputs2
 						node={true}
@@ -124,7 +128,7 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<h6>Description</h6>
-						<Tooltip tip={PluginsAction} />
+						<Tooltip tip={PluginsDescription} />
 					</div>
 
 					<Inputs2

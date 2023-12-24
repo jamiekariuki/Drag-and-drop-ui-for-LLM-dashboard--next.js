@@ -3,8 +3,12 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
-import { PluginsAction } from "../../../tooltip.info";
 import Checkbox from "@mui/material/Checkbox";
+import {
+	PluginsDescription,
+	PluginsId,
+	PluginsAction,
+} from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/ZKX02cbZ/pngwing-com-7.png";
 
@@ -94,7 +98,7 @@ const GoogledrivePlugin = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<h6>Folder ID</h6>
-						<Tooltip tip={PluginsAction} />
+						<Tooltip tip={PluginsId} />
 					</div>
 					<Inputs2
 						node={true}
@@ -123,7 +127,7 @@ const GoogledrivePlugin = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<h6>Description</h6>
-						<Tooltip tip={PluginsAction} />
+						<Tooltip tip={PluginsDescription} />
 					</div>
 
 					<Inputs2

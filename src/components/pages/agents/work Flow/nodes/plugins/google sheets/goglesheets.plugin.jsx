@@ -3,8 +3,12 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
-import { PluginsAction } from "../../../tooltip.info";
 import Checkbox from "@mui/material/Checkbox";
+import {
+	PluginsDescription,
+	PluginsId,
+	PluginsAction,
+} from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/VkC9VgtP/spreadsheet-com.png";
 
@@ -83,60 +87,54 @@ const GooglesheetsPlugin = ({ id, data, isConnectable }) => {
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>
-			<div style={{ width: "100%" }}>
-				<div className="id-input" style={{ width: "100%" }}>
-					<div
-						style={{
-							display: "flex",
-							justifyContent: "space-between",
-							alignItems: "center",
-							marginBottom: "3px",
-						}}
-					>
-						<h6>Sheet ID</h6>
-						<Tooltip tip={PluginsAction} />
-					</div>
-					<Inputs2
-						node={true}
-						type={"text"}
-						label={"id"}
-						id={"GoogleSheetsid"}
-						value={socialId}
-						changeValue={(e) => {
-							handleIdChange(e);
-						}}
-					/>
-				</div>
-			</div>
 
 			<div style={{ width: "100%" }}>
 				<div
-					className="id-input"
-					style={{ width: "100%", marginTop: "5px" }}
+					style={{
+						display: "flex",
+						justifyContent: "space-between",
+						alignItems: "center",
+						marginBottom: "3px",
+					}}
 				>
-					<div
-						style={{
-							display: "flex",
-							justifyContent: "space-between",
-							alignItems: "center",
-							marginBottom: "3px",
-						}}
-					>
-						<h6>Description</h6>
-						<Tooltip tip={PluginsAction} />
-					</div>
-
-					<Inputs2
-						node={true}
-						type={"text"}
-						label={"eg Products"}
-						id={"description"}
-						value={description}
-						changeValue={(e) => {
-							handleDescChange(e);
-						}}
-					/>
+					<h6>Sheet ID</h6>
+					<Tooltip tip={PluginsId} />
 				</div>
+				<Inputs2
+					node={true}
+					type={"text"}
+					label={"id"}
+					id={"GoogleSheetsid"}
+					value={socialId}
+					changeValue={(e) => {
+						handleIdChange(e);
+					}}
+				/>
+			</div>
+
+			<div style={{ width: "100%", marginTop: "5px" }}>
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "space-between",
+						alignItems: "center",
+						marginBottom: "3px",
+					}}
+				>
+					<h6>Description</h6>
+					<Tooltip tip={PluginsDescription} />
+				</div>
+
+				<Inputs2
+					node={true}
+					type={"text"}
+					label={"eg Products"}
+					id={"description"}
+					value={description}
+					changeValue={(e) => {
+						handleDescChange(e);
+					}}
+				/>
 			</div>
 
 			<Actions data={data} nodeId={nodeId} setNodes={setNodes} />

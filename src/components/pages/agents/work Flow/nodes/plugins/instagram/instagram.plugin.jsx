@@ -14,14 +14,15 @@ import SingleModal from "@/components/styled components/node modals/single modal
 import useNodeValues from "@/hooks/nodes hooks/use.node.value";
 import ListModal from "@/components/styled components/node modals/list modal/list.modal";
 import { useToast } from "@/context/ToastContext";
+import PostModal from "@/components/styled components/node modals/post modal/post.modal";
+import useNodePost from "@/hooks/nodes hooks/use.node.post";
 import {
+	PluginsId,
 	PluginsCommentReply,
 	PluginsInboxReply,
 	PluginsPost,
 	PluginsSendMessage,
-} from "../../../tooltip.info";
-import PostModal from "@/components/styled components/node modals/post modal/post.modal";
-import useNodePost from "@/hooks/nodes hooks/use.node.post";
+} from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/ZY9QrCF9/pngwing-com.png";
 
@@ -75,7 +76,18 @@ const InstagramPlugin = ({ id, data }) => {
 		>
 			<div style={{ width: "100%", height: "480px" }}>
 				<div className="id-input" style={{ width: "100%" }}>
-					<h6 style={{ marginBottom: "3px" }}>Instagram ID</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Instagram ID</h6>
+						<Tooltip tip={PluginsId} />
+					</div>
+
 					<Inputs2
 						node={true}
 						type={"text"}

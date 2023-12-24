@@ -1,4 +1,18 @@
-/* //plugins
+//plugins
+export const PluginsId = (
+	<div>
+		<p>
+			This node will run everytime it recives an instagram message and
+			sender ID, Only runs when Instagram is configure in plugins
+		</p>
+		<h6>This node connects with:</h6>
+		<ol>
+			<li>Human (plugin)</li>
+			<li>ChatBot (AI)</li>
+		</ol>
+	</div>
+);
+
 export const PluginsInboxReply = (
 	<div>
 		<p>
@@ -55,6 +69,21 @@ export const PluginsPost = (
 	</div>
 );
 
+export const PluginsRead = (
+	<div>
+		<p>
+			This node will run everytime it recives an instagram message and
+			sender ID, Only runs when Instagram is configure in plugins
+		</p>
+		<h6>This node connects with:</h6>
+		<ol>
+			<li>Human (plugin)</li>
+			<li>ChatBot (AI)</li>
+		</ol>
+	</div>
+);
+
+//none social
 export const PluginsAction = (
 	<div>
 		<p>
@@ -69,7 +98,7 @@ export const PluginsAction = (
 	</div>
 );
 
-export const PluginsRead = (
+export const PluginsDescription = (
 	<div>
 		<p>
 			This node will run everytime it recives an instagram message and
@@ -82,4 +111,3 @@ export const PluginsRead = (
 		</ol>
 	</div>
 );
- */

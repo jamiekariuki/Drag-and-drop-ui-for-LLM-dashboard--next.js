@@ -3,8 +3,8 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useEffect, useState } from "react";
 import { Handle, Position, useReactFlow } from "reactflow";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
-import { PluginsAction } from "../../../tooltip.info";
 import Checkbox from "@mui/material/Checkbox";
+import { PluginsAction, PluginsId } from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/ht8rJjp7/icons8-google-calendar-480.png";
 
@@ -65,7 +65,18 @@ const GooglecalendarPlugin = ({ id, data, isConnectable }) => {
 			/>
 			<div style={{ width: "100%" }}>
 				<div className="id-input" style={{ width: "100%" }}>
-					<h6 style={{ marginBottom: "3px" }}> Calendar ID</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Calender ID</h6>
+						<Tooltip tip={PluginsId} />
+					</div>
+
 					<Inputs2
 						node={true}
 						type={"text"}

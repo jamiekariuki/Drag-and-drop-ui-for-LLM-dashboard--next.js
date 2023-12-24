@@ -16,10 +16,11 @@ import ListModal from "@/components/styled components/node modals/list modal/lis
 import { useToast } from "@/context/ToastContext";
 import {
 	PluginsCommentReply,
+	PluginsId,
 	PluginsInboxReply,
 	PluginsPost,
 	PluginsSendMessage,
-} from "../../../tooltip.info";
+} from "../plugins.tooltip";
 import PostModal from "@/components/styled components/node modals/post modal/post.modal";
 import useNodePost from "@/hooks/nodes hooks/use.node.post";
 
@@ -69,7 +70,18 @@ const LinkedinPlugin = ({ id, data }) => {
 		<Nodes title="Linkedin" type="Plugin" onDelete={deleteNode} icon={icon}>
 			<div style={{ width: "100%", height: "480px" }}>
 				<div className="id-input" style={{ width: "100%" }}>
-					<h6 style={{ marginBottom: "3px" }}>Linkedin ID</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>LinkedIn ID</h6>
+						<Tooltip tip={PluginsId} />
+					</div>
+
 					<Inputs2
 						node={true}
 						type={"text"}

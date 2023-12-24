@@ -82,7 +82,7 @@ export const nodesData = [
 					{
 						id: "gmail-onfirstmessage",
 						data: { label: "gmail-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageGmail",
 						parentNode: "gmail",
 						extent: "parent",
@@ -91,7 +91,7 @@ export const nodesData = [
 					{
 						id: "gmail-onmessage",
 						data: { label: "gmail-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageGmail",
 						parentNode: "gmail",
 						extent: "parent",
@@ -111,7 +111,7 @@ export const nodesData = [
 					{
 						id: "whatsapp-onfirstmessage",
 						data: { label: "whatsapp-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageWhatsapp",
 						parentNode: "whatsapp",
 						extent: "parent",
@@ -120,7 +120,7 @@ export const nodesData = [
 					{
 						id: "whatsapp-onmessage",
 						data: { label: "whatsapp-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageWhatsapp",
 						parentNode: "whatsapp",
 						extent: "parent",
@@ -140,7 +140,7 @@ export const nodesData = [
 					{
 						id: "instagram-onfirstmessage",
 						data: { label: "instagram-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageInstagram",
 						parentNode: "instagram",
 						extent: "parent",
@@ -149,7 +149,7 @@ export const nodesData = [
 					{
 						id: "instagram-onmessage",
 						data: { label: "instagram-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageInstagram",
 						parentNode: "instagram",
 						extent: "parent",
@@ -158,7 +158,7 @@ export const nodesData = [
 					{
 						id: "instagram-onfirstcomment",
 						data: { label: "instagram-onfirstcomment" },
-						position: { x: 10, y: 115 },
+						position: { x: 10, y: 175 },
 						type: "onFirstCommentInstagram",
 						parentNode: "instagram",
 						extent: "parent",
@@ -166,7 +166,7 @@ export const nodesData = [
 					{
 						id: "instagram-oncommentreply",
 						data: { label: "instagram-oncommentreply" },
-						position: { x: 10, y: 150 },
+						position: { x: 10, y: 210 },
 						type: "onCommentReplyInstagram",
 						parentNode: "instagram",
 						extent: "parent",
@@ -186,7 +186,7 @@ export const nodesData = [
 					{
 						id: "twitter-onfirstmessage",
 						data: { label: "twitter-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageTwitter",
 						parentNode: "twitter",
 						extent: "parent",
@@ -195,7 +195,7 @@ export const nodesData = [
 					{
 						id: "twitter-onmessage",
 						data: { label: "twitter-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageTwitter",
 						parentNode: "twitter",
 						extent: "parent",
@@ -204,7 +204,7 @@ export const nodesData = [
 					{
 						id: "twitter-onfirstcomment",
 						data: { label: "twitter-onfirstcomment" },
-						position: { x: 10, y: 115 },
+						position: { x: 10, y: 175 },
 						type: "onFirstCommentTwitter",
 						parentNode: "twitter",
 						extent: "parent",
@@ -212,7 +212,7 @@ export const nodesData = [
 					{
 						id: "twitter-oncommentreply",
 						data: { label: "twitter-oncommentreply" },
-						position: { x: 10, y: 150 },
+						position: { x: 10, y: 210 },
 						type: "onCommentReplyTwitter",
 						parentNode: "twitter",
 						extent: "parent",
@@ -232,7 +232,7 @@ export const nodesData = [
 					{
 						id: "linkedin-onfirstmessage",
 						data: { label: "linkedin-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageLinkedin",
 						parentNode: "linkedin",
 						extent: "parent",
@@ -241,7 +241,7 @@ export const nodesData = [
 					{
 						id: "linkedin-onmessage",
 						data: { label: "linkedin-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageLinkedin",
 						parentNode: "linkedin",
 						extent: "parent",
@@ -250,7 +250,7 @@ export const nodesData = [
 					{
 						id: "linkedin-onfirstcomment",
 						data: { label: "linkedin-onfirstcomment" },
-						position: { x: 10, y: 115 },
+						position: { x: 10, y: 175 },
 						type: "onFirstCommentLinkedin",
 						parentNode: "linkedin",
 						extent: "parent",
@@ -258,7 +258,7 @@ export const nodesData = [
 					{
 						id: "linkedin-oncommentreply",
 						data: { label: "linkedin-oncommentreply" },
-						position: { x: 10, y: 150 },
+						position: { x: 10, y: 210 },
 						type: "onCommentReplyLinkedin",
 						parentNode: "linkedin",
 						extent: "parent",
@@ -278,7 +278,7 @@ export const nodesData = [
 					{
 						id: "facebook-onfirstmessage",
 						data: { label: "facebook-onfirstmessage" },
-						position: { x: 10, y: 45 },
+						position: { x: 10, y: 105 },
 						type: "onFirstMessageFacebook",
 						parentNode: "facebook",
 						extent: "parent",
@@ -287,7 +287,7 @@ export const nodesData = [
 					{
 						id: "facebook-onmessage",
 						data: { label: "facebook-onmessage" },
-						position: { x: 10, y: 80 },
+						position: { x: 10, y: 140 },
 						type: "onMessageFacebook",
 						parentNode: "facebook",
 						extent: "parent",
@@ -296,7 +296,7 @@ export const nodesData = [
 					{
 						id: "facebook-onfirstcomment",
 						data: { label: "facebook-onfirstcomment" },
-						position: { x: 10, y: 115 },
+						position: { x: 10, y: 175 },
 						type: "onFirstCommentFacebook",
 						parentNode: "facebook",
 						extent: "parent",
@@ -304,7 +304,7 @@ export const nodesData = [
 					{
 						id: "facebook-oncommentreply",
 						data: { label: "facebook-oncommentreply" },
-						position: { x: 10, y: 150 },
+						position: { x: 10, y: 210 },
 						type: "onCommentReplyFacebook",
 						parentNode: "facebook",
 						extent: "parent",
@@ -671,6 +671,16 @@ export const nodesData = [
 			},
 			{
 				title: "Virtual Assistant",
+				nodes: [
+					{
+						id: "virtualagent",
+						data: {
+							label: "virtualagent",
+						},
+						position: { x: 0, y: 0 },
+						type: "virtualagent",
+					},
+				],
 			},
 		],
 	},

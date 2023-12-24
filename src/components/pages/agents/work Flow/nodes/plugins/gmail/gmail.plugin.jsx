@@ -15,7 +15,11 @@ import SingleModal from "@/components/styled components/node modals/single modal
 import useNodeValues from "@/hooks/nodes hooks/use.node.value";
 import ListModal from "@/components/styled components/node modals/list modal/list.modal";
 import { useToast } from "@/context/ToastContext";
-import { PluginsInboxReply, PluginsSendMessage } from "../../../tooltip.info";
+import {
+	PluginsId,
+	PluginsInboxReply,
+	PluginsSendMessage,
+} from "../plugins.tooltip";
 
 const icon = "https://i.postimg.cc/KvYQYZhQ/pngwing-com-3.png";
 
@@ -64,7 +68,18 @@ const GmailPlugin = ({ id, data }) => {
 		<Nodes title="Gmail" type="Plugin" onDelete={deleteNode} icon={icon}>
 			<div className="gmail-plugin">
 				<div className="id-input">
-					<h6>Gmail ID</h6>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							alignItems: "center",
+							marginBottom: "3px",
+						}}
+					>
+						<h6>Gmail ID</h6>
+						<Tooltip tip={PluginsId} />
+					</div>
+
 					<Inputs2
 						node={true}
 						type={"text"}

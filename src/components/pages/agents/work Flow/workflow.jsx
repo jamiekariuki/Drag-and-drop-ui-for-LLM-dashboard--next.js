@@ -14,15 +14,6 @@ import { nodeTypes } from "./nodesType";
 import WorkFlowNav from "./workflow nav/worflow.nav";
 
 const initialNodes = [
-	{
-		id: "virtualagent",
-		data: {
-			label: "virtualagent",
-		},
-		position: { x: 0, y: 0 },
-		type: "virtualagent",
-	},
-
 	/* {
 		d: "2",
 		data: { label: "World" },

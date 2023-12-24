@@ -1,13 +1,20 @@
 import React from "react";
-import "./instagram.scss";
 import Nodes from "@/components/styled components/nodes/nodes";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
+import { Inputs2 } from "@/components/styled components/inputs/inputs";
+import {
+	EventsId,
+	EventsOnCommentReply,
+	EventsOnFirstComment,
+	EventsOnFirstMessage,
+	EventsOnMessageReply,
+} from "../events.tooltip";
 
 const icon = "https://i.postimg.cc/ZY9QrCF9/pngwing-com.png";
-const Instagram = () => {
+const Instagram = ({ data }) => {
 	const nodeId = useNodeId();
 	//delete node
 	const { deleteElements } = useReactFlow();
@@ -20,29 +27,61 @@ const Instagram = () => {
 		});
 	};
 
+	//id input
+	const { setNodes } = useReactFlow();
+	const [socialId, setSocialId] = useState(
+		data.socialId ? data.socialId : ""
+	);
+
+	const handleIdChange = (e) => {
+		setSocialId(e);
+
+		setNodes((nds) =>
+			nds.map((node) => {
+				if (node.id === nodeId) {
+					node.data = {
+						...node.data,
+						socialId: e,
+					};
+				}
+
+				return node;
+			})
+		);
+	};
+
 	return (
 		<Nodes title="Instagram" type="Event" onDelete={deleteNode} icon={icon}>
-			<div className="instagram"></div>
+			<div style={{ width: "100%", height: "195px" }}>
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "space-between",
+						alignItems: "center",
+						marginBottom: "3px",
+					}}
+				>
+					<h6>Instagram ID</h6>
+					<Tooltip tip={EventsId} />
+				</div>
+				<Inputs2
+					node={true}
+					type={"text"}
+					label={"id"}
+					id={"igeventid"}
+					value={socialId}
+					changeValue={(e) => {
+						handleIdChange(e);
+					}}
+				/>
+			</div>
 		</Nodes>
 	);
 };
 
 //children
 
-const OnFirstMessageInstagram = ({ data, isConnectable }) => {
-	const tip = (
-		<div>
-			<p>
-				This node will run everytime you get a message from an account
-				you have never interacted with before
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Human (plugin)</li>
-				<li>ChatBot (AI)</li>
-			</ol>
-		</div>
-	);
+const OnFirstMessageInstagram = ({ isConnectable }) => {
 	return (
 		<ChildNodes>
 			<Handle
@@ -53,25 +92,12 @@ const OnFirstMessageInstagram = ({ data, isConnectable }) => {
 				className="chandle"
 			/>
 			<p>On recieving first message</p>
-			<Tooltip tip={tip} />
+			<Tooltip tip={EventsOnFirstMessage} />
 		</ChildNodes>
 	);
 };
 //---
-const OnMessageInstagram = ({ data, isConnectable }) => {
-	const tip = (
-		<div>
-			<p>
-				This node will run everytime you get a message from an account
-				you have interacted with before
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Human (plugin)</li>
-				<li>ChatBot (AI)</li>
-			</ol>
-		</div>
-	);
+const OnMessageInstagram = ({ isConnectable }) => {
 	return (
 		<ChildNodes>
 			<Handle
@@ -81,27 +107,14 @@ const OnMessageInstagram = ({ data, isConnectable }) => {
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
-			<p>On recieving a message</p>
-			<Tooltip tip={tip} />
+			<p>On message reply</p>
+			<Tooltip tip={EventsOnMessageReply} />
 		</ChildNodes>
 	);
 };
 
 //----
-const OnFirstCommentInstagram = ({ data, isConnectable }) => {
-	const tip = (
-		<div>
-			<p>
-				This node will run everytime you get a comment from an account
-				you have not interacted with before
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Human (plugin)</li>
-				<li>ChatBot (AI)</li>
-			</ol>
-		</div>
-	);
+const OnFirstCommentInstagram = ({ isConnectable }) => {
 	return (
 		<ChildNodes>
 			<Handle
@@ -111,26 +124,13 @@ const OnFirstCommentInstagram = ({ data, isConnectable }) => {
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
-			<p>On recieving a comment</p>
-			<Tooltip tip={tip} />
+			<p>On recieving first comment</p>
+			<Tooltip tip={EventsOnFirstComment} />
 		</ChildNodes>
 	);
 };
 //---
 const OnCommentReplyInstagram = ({ data, isConnectable }) => {
-	const tip = (
-		<div>
-			<p>
-				This node will run everytime you get a reply to a comment from
-				an account you had replied to their comment
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Human (plugin)</li>
-				<li>ChatBot (AI)</li>
-			</ol>
-		</div>
-	);
 	return (
 		<ChildNodes>
 			<Handle
@@ -141,7 +141,7 @@ const OnCommentReplyInstagram = ({ data, isConnectable }) => {
 				className="chandle"
 			/>
 			<p>On comment reply</p>
-			<Tooltip tip={tip} />
+			<Tooltip tip={EventsOnCommentReply} />
 		</ChildNodes>
 	);
 };

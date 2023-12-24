@@ -2,7 +2,7 @@ import React from "react";
 import "./schedules.scss";
 import Nodes from "@/components/styled components/nodes/nodes";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Handle, Position, useNodeId, useReactFlow } from "reactflow";
 import ChildNodes from "@/components/styled components/nodes/child.nodes";
 import Button from "@mui/material/Button";
@@ -13,6 +13,12 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { renderTimeViewClock } from "@mui/x-date-pickers/timeViewRenderers";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import CustomScheduleModal from "./custom schedule/custom.schedule.modal";
+import {
+	EventsSheduleAdvance,
+	EventsSheduleOnDate,
+	EventsSheduleOnDay,
+	EventsSheduleOnTime,
+} from "../events.tooltip";
 
 const icon = "https://i.postimg.cc/50CPkzWv/icons8-google-calendar-480.png";
 const Schedules = () => {
@@ -65,21 +71,6 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 		);
 	}, [time, checked, setNodes]);
 
-	const tip = (
-		<div>
-			<p>This node will run everytime a specific time is reached.</p>
-			<p>
-				By default this node will run once on the time set. If you wish
-				to run it on daily basis turn on "Run daily"
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Virtual Assistant (AI)</li>
-				<li>ChatBot (AI)</li>
-				<li>Research Assistant (AI)</li>
-			</ol>
-		</div>
-	);
 	return (
 		<ChildNodes>
 			<Handle
@@ -92,7 +83,7 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 			<div className="on-time">
 				<div className="ot-heading">
 					<h6>On Time</h6>
-					<Tooltip tip={tip} />
+					<Tooltip tip={EventsSheduleOnTime} />
 				</div>
 
 				<div className="ot-input">
@@ -177,23 +168,6 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 		);
 	}, [time, selectedDay, checked, setNodes]);
 
-	const tip = (
-		<div>
-			<p>
-				This node will run everytime a specific time and day is reached.
-			</p>
-			<p>
-				By default this node will run once on the time and day set. If
-				you wish to run it every week turn on "Run weekly"
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Virtual Assistant (AI)</li>
-				<li>ChatBot (AI)</li>
-				<li>Research Assistant (AI)</li>
-			</ol>
-		</div>
-	);
 	return (
 		<ChildNodes>
 			<Handle
@@ -206,7 +180,7 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 			<div className="on-day">
 				<div className="od-heading">
 					<h6>On Day</h6>
-					<Tooltip tip={tip} />
+					<Tooltip tip={EventsSheduleOnDay} />
 				</div>
 
 				<div className="od-day">
@@ -304,22 +278,6 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 		);
 	}, [date, checked, setNodes]);
 
-	const tip = (
-		<div>
-			<p>This node will run everytime a specific date is reached.</p>
-			<p>
-				By default this node will run once on the date and time set. If
-				you wish to run it every month on the set date, turn on "Run
-				monthly"
-			</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Virtual Assistant (AI)</li>
-				<li>ChatBot (AI)</li>
-				<li>Research Assistant (AI)</li>
-			</ol>
-		</div>
-	);
 	return (
 		<ChildNodes>
 			<Handle
@@ -332,7 +290,7 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 			<div className="on-date">
 				<div className="odate-heading">
 					<h6>On Date</h6>
-					<Tooltip tip={tip} />
+					<Tooltip tip={EventsSheduleOnDate} />
 				</div>
 
 				<div className="odate-input">
@@ -383,22 +341,6 @@ const CustomSchedules = ({ id, data, isConnectable }) => {
 		setOpen(false);
 	};
 
-	const tip = (
-		<div>
-			<p>
-				This node is Advance, it includes (date range, multiple
-				schedules per period, random time selector, google calender
-				events).
-			</p>
-			<p>using this node might lead to consuption of more credits</p>
-			<h6>This node connects with:</h6>
-			<ol>
-				<li>Virtual Assistant (AI)</li>
-				<li>ChatBot (AI)</li>
-				<li>Research Assistant (AI)</li>
-			</ol>
-		</div>
-	);
 	return (
 		<ChildNodes>
 			<Handle
@@ -411,7 +353,7 @@ const CustomSchedules = ({ id, data, isConnectable }) => {
 			<div className="custom-time">
 				<div className="custom-heading">
 					<h6>Advance schedules</h6>
-					<Tooltip tip={tip} />
+					<Tooltip tip={EventsSheduleAdvance} />
 				</div>
 
 				<div className="custom-time-btn">
