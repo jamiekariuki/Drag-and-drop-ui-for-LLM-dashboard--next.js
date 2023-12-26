@@ -1,7 +1,8 @@
-import React from "react";
+/* import React from "react";
 import "./tooltip.scss";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Tooltip as CustomTooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Tooltip = ({ tip }) => {
 	return (
@@ -19,5 +20,19 @@ const Tooltip = ({ tip }) => {
 		</div>
 	);
 };
+export default Tooltip; */
 
-export default Tooltip;
+import "./tooltip.scss";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import * as React from "react";
+import { Tooltip as CustomTooltip } from "@mui/material/Tooltip";
+
+export default function Tooltip({ tip }) {
+	return (
+		<CustomTooltip title={tip} className="ctooltip">
+			<IconButton>
+				<InfoOutlinedIcon className="tooltip-icon" />
+			</IconButton>
+		</CustomTooltip>
+	);
+}
