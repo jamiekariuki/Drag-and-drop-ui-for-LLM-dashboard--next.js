@@ -136,7 +136,6 @@ const Actions = ({ data, nodeId, setNodes }) => {
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					padding: "0 10px 3px 10px",
 				}}
 			>
 				<h6>Actions</h6>

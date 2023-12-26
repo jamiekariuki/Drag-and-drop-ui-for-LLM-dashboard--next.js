@@ -4,6 +4,7 @@ import { Handle, Position, useReactFlow } from "reactflow";
 import DescriptionIcon from "@mui/icons-material/Description";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
+import { toolsDescription } from "../tools.tooltip";
 
 const icon = "https://i.postimg.cc/L4w4JM0C/icons8-file-480.png";
 
@@ -80,7 +81,7 @@ const FileTool = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<h6>Description</h6>
-						<Tooltip tip={<p>Drag</p>} />
+						<Tooltip tip={toolsDescription} />
 					</div>
 
 					<Inputs2

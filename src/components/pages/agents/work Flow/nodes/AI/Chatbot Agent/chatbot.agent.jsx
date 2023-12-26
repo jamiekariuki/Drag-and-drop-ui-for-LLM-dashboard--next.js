@@ -7,6 +7,14 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Button from "@mui/material/Button";
 import ChatbotConfigure from "./configure/chatbot.configure";
 import { NodeAiProvider } from "@/context/nodeAiContext";
+import {
+	aiExtendAgent,
+	aiInput,
+	aiKnowledgeRetrival,
+	aiOutput,
+	aiPlugin,
+	aiSystemPrompt,
+} from "../ai.tooltip";
 
 const icon = "https://i.postimg.cc/zBpQPMgB/icons8-chat-bot-96.png";
 
@@ -92,7 +100,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "60px" }}
 					/>
 					<p>Input</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiInput} />
 				</ChildNodes>
 
 				{/*knowledge*/}
@@ -106,7 +114,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "97px" }}
 					/>
 					<p>Knowledge retrival</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiKnowledgeRetrival} />
 				</ChildNodes>
 
 				{/*plugin*/}
@@ -120,7 +128,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "132px" }}
 					/>
 					<p>Plugin</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiPlugin} />
 				</ChildNodes>
 
 				{/*extend*/}
@@ -134,7 +142,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "167px" }}
 					/>
 					<p>Extend Agent</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiExtendAgent} />
 				</ChildNodes>
 
 				{/*prompt*/}
@@ -152,7 +160,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<p>System prompt</p>
-						<Tooltip tip={<p>Input</p>} />
+						<Tooltip tip={aiSystemPrompt} />
 					</div>
 
 					<div
@@ -225,7 +233,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "369px" }}
 					/>
 					<p>Output</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiOutput} />
 				</ChildNodes>
 			</div>
 		</Nodes>

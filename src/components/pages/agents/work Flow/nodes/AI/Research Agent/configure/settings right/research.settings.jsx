@@ -5,6 +5,12 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Radio from "@mui/material/Radio";
 import Checkbox from "@mui/material/Checkbox";
 import { useNodeAiContext } from "@/context/nodeAiContext";
+import {
+	aiAbilities,
+	aiIntelligenceLevel,
+	aiSearchQuality,
+	aiUsage,
+} from "../../../ai.configure.tooltip";
 
 const ResearchSettings = () => {
 	const {
@@ -52,7 +58,7 @@ const ResearchSettings = () => {
 						}}
 					>
 						<h6>Intelligence level</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip tip={aiIntelligenceLevel} />
 					</div>
 
 					<SelectOption
@@ -75,7 +81,7 @@ const ResearchSettings = () => {
 						}}
 					>
 						<h6>Search quality</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip tip={aiSearchQuality} />
 					</div>
 
 					<SelectOption
@@ -97,7 +103,7 @@ const ResearchSettings = () => {
 						}}
 					>
 						<h6>Usage</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip tip={aiUsage} />
 					</div>
 
 					<div
@@ -140,7 +146,7 @@ const ResearchSettings = () => {
 						}}
 					>
 						<h6>Abilities</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip tip={aiAbilities} />
 					</div>
 
 					<div>

@@ -6,6 +6,7 @@ import AudiotrackIcon from "@mui/icons-material/Audiotrack";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { Inputs2 } from "@/components/styled components/inputs/inputs";
+import { toolsDescription } from "../tools.tooltip";
 
 const icon = "https://i.postimg.cc/g2c7dxqf/icons8-play-property-96.png";
 
@@ -82,7 +83,7 @@ const MediaTool = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<h6>Description</h6>
-						<Tooltip tip={<p>Drag</p>} />
+						<Tooltip tip={toolsDescription} />
 					</div>
 
 					<Inputs2

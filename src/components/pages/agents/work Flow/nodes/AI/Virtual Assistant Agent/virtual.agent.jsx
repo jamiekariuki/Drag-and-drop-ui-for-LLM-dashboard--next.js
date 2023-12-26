@@ -7,6 +7,7 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Button from "@mui/material/Button";
 import VirtualConfigure from "./configure/virtual.configure";
 import { NodeAiProvider } from "@/context/nodeAiContext";
+import { aiInput, aiOutput, aiPlugin, aiSystemPrompt } from "../ai.tooltip";
 
 const icon = "https://i.postimg.cc/x8nv5gcG/icons8-ai-96.png";
 
@@ -99,7 +100,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "60px" }}
 					/>
 					<p>Input</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiInput} />
 				</ChildNodes>
 
 				{/*plugin*/}
@@ -113,7 +114,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "96px" }}
 					/>
 					<p>Plugin</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiPlugin} />
 				</ChildNodes>
 
 				{/*extend*/}
@@ -145,7 +146,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 						}}
 					>
 						<p>System prompt</p>
-						<Tooltip tip={<p>Input</p>} />
+						<Tooltip tip={aiSystemPrompt} />
 					</div>
 
 					<div
@@ -218,7 +219,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "335px" }}
 					/>
 					<p>Output</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiOutput} />
 				</ChildNodes>
 			</div>
 		</Nodes>
