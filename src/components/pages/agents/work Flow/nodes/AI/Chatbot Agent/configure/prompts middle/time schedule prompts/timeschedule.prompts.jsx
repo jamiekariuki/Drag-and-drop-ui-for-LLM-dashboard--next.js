@@ -25,6 +25,7 @@ const TimeschedulePrompts = () => {
 				<div className="header">
 					<h6>Schedule Title</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field prompts users to designate a
@@ -67,6 +68,7 @@ const TimeschedulePrompts = () => {
 				<div className="header">
 					<h6>Guest Email</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This enables the AI to request and collect guest
@@ -92,6 +94,7 @@ const TimeschedulePrompts = () => {
 				<div className="header">
 					<h6>Location</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This allows the AI to collect meeting locations
@@ -122,6 +125,7 @@ const TimeschedulePrompts = () => {
 				<div className="header">
 					<h6>Description</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This permits the AI to generate a description or
@@ -147,6 +151,7 @@ const TimeschedulePrompts = () => {
 				<div className="header">
 					<h6>Detect Time</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This feature enables the AI to detect periods of

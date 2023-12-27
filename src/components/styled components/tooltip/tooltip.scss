@@ -47,6 +47,20 @@
 				margin-left: 15px;
 				color: themed("text");
 			}
+
+			&.tooltip-none-node {
+				p {
+					font-size: 11px;
+				}
+
+				h6 {
+					font-size: 11px;
+				}
+
+				ol li {
+					font-size: 11px;
+				}
+			}
 		}
 	}
 }

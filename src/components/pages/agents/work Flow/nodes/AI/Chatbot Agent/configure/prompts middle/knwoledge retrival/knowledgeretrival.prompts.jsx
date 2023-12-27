@@ -29,6 +29,7 @@ const KnowledgeRetrivalPrompts = () => {
 				<div className="header">
 					<h6>Internal Knowledge retrival</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								Enabling this feature allows the AI to conduct

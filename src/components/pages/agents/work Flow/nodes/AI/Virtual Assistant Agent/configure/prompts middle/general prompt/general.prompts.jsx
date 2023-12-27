@@ -13,7 +13,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={aiSystemPrompt} />
+					<Tooltip node={false} tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2

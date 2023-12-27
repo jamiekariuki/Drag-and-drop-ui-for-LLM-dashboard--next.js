@@ -37,7 +37,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={aiSystemPrompt} />
+					<Tooltip node={false} tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -73,6 +73,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Business/Company name</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This field allows users to input the name of
@@ -115,6 +116,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Business/Company information</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field gathers comprehensive details
@@ -163,6 +165,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>contacts</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field allows users to input multiple
@@ -202,6 +205,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Emails</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field allows users to input multiple
@@ -238,6 +242,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Location</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field accepts a Google Maps URL
@@ -277,6 +282,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Extra information</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field serves as an open space for

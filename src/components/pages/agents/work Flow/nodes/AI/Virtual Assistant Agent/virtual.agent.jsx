@@ -7,7 +7,13 @@ import Tooltip from "@/components/styled components/tooltip/tooltip";
 import Button from "@mui/material/Button";
 import VirtualConfigure from "./configure/virtual.configure";
 import { NodeAiProvider } from "@/context/nodeAiContext";
-import { aiInput, aiOutput, aiPlugin, aiSystemPrompt } from "../ai.tooltip";
+import {
+	aiExtendAgent,
+	aiInput,
+	aiOutput,
+	aiPlugin,
+	aiSystemPrompt,
+} from "../ai.tooltip";
 
 const icon = "https://i.postimg.cc/x8nv5gcG/icons8-ai-96.png";
 
@@ -128,7 +134,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 						style={{ top: "132px" }}
 					/>
 					<p>Extend Agent</p>
-					<Tooltip tip={<p>Input</p>} />
+					<Tooltip tip={aiExtendAgent} />
 				</ChildNodes>
 
 				{/*prompt*/}

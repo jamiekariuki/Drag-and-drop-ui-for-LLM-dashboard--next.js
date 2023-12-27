@@ -19,7 +19,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={aiSystemPrompt} />
+					<Tooltip node={false} tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -56,6 +56,7 @@ const GeneralPrompts = () => {
 				<div className="header">
 					<h6>Format</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input field allows users to specify the

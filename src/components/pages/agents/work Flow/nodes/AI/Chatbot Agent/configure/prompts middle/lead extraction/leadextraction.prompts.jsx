@@ -26,6 +26,7 @@ const LeadExtractionPrompts = () => {
 				<div className="header">
 					<h6>Lead fields</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This field allows users to specify the lead
@@ -77,6 +78,7 @@ const LeadExtractionPrompts = () => {
 				<div className="header">
 					<h6>Save Destination</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This field designates the destination where the

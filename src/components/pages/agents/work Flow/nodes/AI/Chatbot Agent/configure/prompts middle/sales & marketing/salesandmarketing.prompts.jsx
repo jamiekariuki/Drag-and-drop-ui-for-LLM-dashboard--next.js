@@ -19,6 +19,7 @@ const SalesAndMarketingPrompts = () => {
 				<div className="header">
 					<h6>Sales and Marketing preference/Stratergy</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								This input allows users to specify the sales and

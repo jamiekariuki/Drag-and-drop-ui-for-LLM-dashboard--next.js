@@ -24,6 +24,7 @@ const MultimodalPrompts = () => {
 				<div className="header">
 					<h6>Generate Image</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								Enabling this feature empowers the AI to
@@ -103,6 +104,7 @@ const MultimodalPrompts = () => {
 				<div className="header">
 					<h6>process Image</h6>
 					<Tooltip
+						node={false}
 						tip={
 							<p>
 								Enabling this feature allows the AI to process
