@@ -1,10 +1,9 @@
 import React from "react";
 import "./tooltip.scss";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import ReactDOM from "react-dom";
 
 const Tooltip = ({ tip, node }) => {
-	return ReactDOM.createPortal(
+	return (
 		<div className="tooltip">
 			<InfoOutlinedIcon className="tooltip-icon" />
 			<div
@@ -16,8 +15,7 @@ const Tooltip = ({ tip, node }) => {
 			>
 				{tip}
 			</div>
-		</div>,
-		document.getElementById("ctooltip")
+		</div>
 	);
 };
 

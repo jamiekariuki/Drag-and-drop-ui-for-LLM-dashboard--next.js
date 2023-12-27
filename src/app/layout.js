@@ -46,7 +46,6 @@ export default function RootLayout({ children }) {
 						<div id="portal">
 							<Toast />
 						</div>
-						<div id="ctooltip"></div>
 					</ToastProvider>
 				</ThemeProvider2>
 			</body>
