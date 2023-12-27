@@ -1,13 +1,10 @@
 export const toolsDescription = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node enables users to describe the content contained within the
+			tool. Users can input details to describe the contents or nature of
+			the plugin for better organization and identification within the
+			platform.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );

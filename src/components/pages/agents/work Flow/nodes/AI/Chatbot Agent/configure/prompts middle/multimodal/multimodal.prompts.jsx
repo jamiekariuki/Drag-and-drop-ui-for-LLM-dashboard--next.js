@@ -23,7 +23,16 @@ const MultimodalPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Generate Image</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								Enabling this feature empowers the AI to
+								generate images. Users can activate this
+								functionality to allow the AI to create visual
+								content, illustrations, or graphics as needed.
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch
@@ -41,7 +50,20 @@ const MultimodalPrompts = () => {
 				<div className="prompt-container">
 					<div className="header">
 						<h6>Image generation system prompt</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip
+							tip={
+								<p>
+									This optional field allows users to provide
+									specific instructions or prompts to guide
+									the AI in generating images in a preferred
+									or customized manner. Users can input
+									details or preferences regarding image
+									content, style, format, or any specific
+									requirements they wish the AI to consider
+									while generating images.
+								</p>
+							}
+						/>
 					</div>
 					<div className="text-input">
 						<TextArea2
@@ -80,7 +102,21 @@ const MultimodalPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>process Image</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								Enabling this feature allows the AI to process
+								images, enabling it to view and interpret visual
+								content. With this capability, the AI can
+								analyze and derive insights from images,
+								facilitating tasks such as image recognition,
+								analysis, or interpretation. This functionality
+								enhances the AI's ability to comprehend visual
+								data, supporting various image-based tasks or
+								applications within the platform.
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch
@@ -98,7 +134,23 @@ const MultimodalPrompts = () => {
 				<div className="prompt-container">
 					<div className="header">
 						<h6>Image processing system prompt</h6>
-						<Tooltip tip={<p>tip</p>} />
+						<Tooltip
+							tip={
+								<p>
+									This input field allows users to provide
+									specific instructions or prompts to guide
+									the AI in its image processing tasks. Users
+									can input details or preferences regarding
+									image analysis, interpretation methods,
+									desired insights, or any specific
+									requirements they want the AI to consider
+									while processing images. This guidance
+									assists the AI in conducting image-related
+									tasks according to user-defined parameters
+									or objectives.
+								</p>
+							}
+						/>
 					</div>
 					<div className="text-input">
 						<TextArea2

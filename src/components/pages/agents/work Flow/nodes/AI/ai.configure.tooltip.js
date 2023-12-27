@@ -3,70 +3,60 @@
 export const aiIntelligenceLevel = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This option enables users to choose the AI's intelligence level,
+			offering options of low, medium, and high.
+			<br /> Note: High intelligence level is exclusive to premium
+			subscribers and enhances the AI's capabilities for executing
+			advanced tasks and operations within the platform
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const aiSearchQuality = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This option allows users to adjust the search quality settings for
+			the research agent, offering options of low, medium, and high. The
+			chosen setting determines the depth and accuracy of research
+			methodology available, catering to varying levels of research
+			requirements and preferences.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const aiTaskExecution = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This option manages the task execution mode for the virtual
+			assistant agent, providing options of low, medium and high. The
+			selected mode determines the pace and priority in executing assigned
+			tasks, catering to different task management preferences and
+			requirements.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const aiUsage = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This option governs AI usage settings, allowing users to choose
+			between public and personal usage. Users can specify whether the AI
+			will operate in a public domain or within their personal scope,
+			ensuring tailored utilization based on privacy or accessibility
+			preferences.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const aiAbilities = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This option manages the activation of specific skills for the AI,
+			granting additional capabilities. Note: Enabling certain abilities
+			may result in extra credit usage. Users can selectively enable
+			skills to enhance the AI's functionalities according to specific
+			task requirements or preferences.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 

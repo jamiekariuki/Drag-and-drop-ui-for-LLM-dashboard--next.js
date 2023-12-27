@@ -2,6 +2,7 @@ import { TextArea2 } from "@/components/styled components/inputs/inputs";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 import React from "react";
+import { aiSystemPrompt } from "../../../../ai.tooltip";
 
 const GeneralPrompts = () => {
 	const {
@@ -18,7 +19,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -54,7 +55,17 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Format</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field allows users to specify the
+								desired format for a research report. Users can
+								input instructions or guidelines regarding the
+								structure, layout, or specific formatting
+								requirements they prefer for research reports
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<TextArea2

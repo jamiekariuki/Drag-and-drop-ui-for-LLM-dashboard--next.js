@@ -24,7 +24,15 @@ const TimeschedulePrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Schedule Title</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field prompts users to designate a
+								title or label for a scheduled event or plan
+								associated with Google Maps.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<Inputs2
@@ -58,7 +66,16 @@ const TimeschedulePrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Guest Email</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This enables the AI to request and collect guest
+								emails. Please note some users may choose not to
+								provide their email information under specific
+								circumstances or preferences.
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch
@@ -74,7 +91,21 @@ const TimeschedulePrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Location</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This allows the AI to collect meeting locations
+								automatically or utilize the previously provided
+								location information. Users can opt to have the
+								AI use the existing location details or specify
+								a particular location for events. Additionally,
+								if there is a specific location the user
+								prefers, they can input this information in the
+								"Extra Info" section for accurate event location
+								allocation
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch
@@ -90,7 +121,14 @@ const TimeschedulePrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Description</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This permits the AI to generate a description or
+								summary for the schedule or event.
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch
@@ -108,7 +146,18 @@ const TimeschedulePrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Detect Time</h6>
-					<Tooltip tip={<p>sometimes user might refuse</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This feature enables the AI to detect periods of
+								availability and busyness based on Google
+								Calendar events. By analyzing the calendar, the
+								AI can identify free time slots, allowing it to
+								inform customers or users about available
+								timeframes for appointments or interactions.{" "}
+							</p>
+						}
+					/>
 				</div>
 				<div className="switch-input">
 					<Switch

@@ -18,7 +18,21 @@ const SalesAndMarketingPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Sales and Marketing preference/Stratergy</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input allows users to specify the sales and
+								marketing preferences or strategies for the AI.
+								Users can input details about the preferred
+								approaches, strategies, or tactics they want the
+								AI to employ in sales and marketing endeavors.
+								This information guides the AI in tailoring its
+								sales pitches, marketing techniques, or customer
+								engagement methods according to the specified
+								preferences or strategies outlined by the user.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -54,7 +68,22 @@ const SalesAndMarketingPrompts = () => {
 				<div className="prompt-container">
 					<div className="header">
 						<h6>Products suggestion</h6>
-						<Tooltip tip={<p>sometimes user might refuse</p>} />
+						<Tooltip
+							tip={
+								<p>
+									Enabling this feature allows the AI to
+									suggest products or items from a catalog to
+									customers. Users must connect a compatible
+									source, such as a plugin, to facilitate the
+									AI's access and understanding of the product
+									catalog. Once connected, the AI utilizes
+									this information to suggest relevant
+									products or items to customers based on
+									their inquiries or preferences, enhancing
+									the overall customer experience.
+								</p>
+							}
+						/>
 					</div>
 					<div className="switch-input">
 						<Switch

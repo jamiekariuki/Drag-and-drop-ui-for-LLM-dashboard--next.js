@@ -3,70 +3,53 @@
 export const EventsId = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			Type your unique platform ID of your application from your developer
+			platform. Input the specific ID to enable seamless integration
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsOnFirstMessage = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node triggers upon receiving messages from previously
+			uninteracted accounts on the platform. It activates when
+			encountering a message from an unfamiliar sender, signaling the
+			first interaction with that account.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsOnMessageReply = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node activates upon receiving messages from accounts previously
+			interacted with on the platform. It identifies incoming messages
+			from familiar senders, signifying ongoing interactions with those
+			accounts.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsOnFirstComment = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node triggers upon receiving a comment from previously
+			uninteracted accounts on the platform. It activates when
+			encountering a comment from an unfamiliar sender, signaling the
+			first interaction with that account.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsOnCommentReply = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node activates upon receiving comment from accounts previously
+			interacted with on the platform. It identifies incoming comments
+			from familiar senders, signifying ongoing interactions with those
+			accounts.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
@@ -74,55 +57,43 @@ export const EventsOnCommentReply = (
 export const EventsSheduleOnTime = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node runs at the specified time set. Activate run daily for
+			recurring daily runs at the set time
 		</p>
-		<h6>This node connects with:</h6>
+		{/* <h6>This node connects with:</h6>
 		<ol>
 			<li>Human (plugin)</li>
 			<li>ChatBot (AI)</li>
-		</ol>
+		</ol> */}
 	</div>
 );
 
 export const EventsSheduleOnDay = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node runs at the specified time and day set. Activate run
+			weekly for recurring weekly runs at the set time
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsSheduleOnDate = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node runs at the specified date set. Activate run monthly for
+			recurring monthly run at the set date, please note that the node
+			will run every month on the exact date and time of the next month
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );
 
 export const EventsSheduleAdvance = (
 	<div>
 		<p>
-			This node will run everytime it recives an instagram message and
-			sender ID, Only runs when Instagram is configure in plugins
+			This node enables multiple schedules, date range schedules, and
+			Google Calendar integration for scheduling. <br />
+			Note: Extensive usage may incur additional credit charges. Exercise
+			caution when setting up intricate schedules.
 		</p>
-		<h6>This node connects with:</h6>
-		<ol>
-			<li>Human (plugin)</li>
-			<li>ChatBot (AI)</li>
-		</ol>
 	</div>
 );

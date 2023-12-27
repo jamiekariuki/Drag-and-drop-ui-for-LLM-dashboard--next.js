@@ -1,4 +1,4 @@
-import {
+/* import {
 	Facebook,
 	OnCommentReplyFacebook,
 	OnFirstCommentFacebook,
@@ -92,7 +92,7 @@ import {
 
 import FileTool from "./nodes/tools/file/file.tool";
 import HumanTool from "./nodes/tools/human/human.tool";
-import MediaTool from "./nodes/tools/media/media.tool";
+import MediaTool from "./nodes/tools/media/media.tool"; */
 
 import ChatbotAgent from "./nodes/AI/Chatbot Agent/chatbot.agent";
 import ResearchAgent from "./nodes/AI/Research Agent/research.agent";
@@ -102,7 +102,7 @@ import VirtualAgent from "./nodes/AI/Virtual Assistant Agent/virtual.agent";
 export const nodeTypes = {
 	//1. events
 	//whatsapp
-	whatsapp: Whatsapp,
+	/* whatsapp: Whatsapp,
 	onFirstMessageWhatsapp: OnFirstMessageWhatsapp,
 	onMessageWhatsapp: OnMessageWhatsapp,
 
@@ -208,7 +208,7 @@ export const nodeTypes = {
 	fileTool: FileTool,
 
 	//media
-	mediaTool: MediaTool,
+	mediaTool: MediaTool, */
 
 	chatbotagent: ChatbotAgent,
 

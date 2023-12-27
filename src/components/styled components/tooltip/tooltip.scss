@@ -1,6 +1,6 @@
 @import "../../../theme/theme.scss";
 
-/* .tooltip {
+.tooltip {
 	@include themify($themes) {
 		position: relative;
 		//	background-color: blueviolet;
@@ -24,7 +24,7 @@
 			display: none;
 			position: absolute;
 			left: 18px;
-			bottom: -10px;
+			//	bottom: -10px;
 			width: 150px;
 			border-radius: 5px;
 			padding: 5px;
@@ -49,42 +49,4 @@
 			}
 		}
 	}
-} */
-.ctooltip {
-	@include themify($themes) {
-		width: 15px;
-		height: 15px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		.tooltip-icon {
-			color: themed("icon");
-			font-size: 14px;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.custom-tooltip {
-			background-color: themed("tooltip");
-			padding: 5px;
-			border-radius: 4px;
-			max-width: 150px;
-
-			ol li {
-				font-size: 9px;
-				margin-left: 15px;
-				color: themed("text");
-			}
-
-			.example-arrow {
-				display: none;
-			}
-		}
-	}
 }
-
-/* .ctooltip .custom-tooltip {
-	background-color: aqua;
-} */

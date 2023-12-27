@@ -25,7 +25,23 @@ const LeadExtractionPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Lead fields</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This field allows users to specify the lead
+								information fields that the AI should extract
+								during customer conversations. Users can input
+								details such as name, email, phone number,
+								preferences, or any other specific lead
+								information categories they intend the AI to
+								extract. Providing these details assists the AI
+								in identifying, extracting, and organizing
+								pertinent lead information during customer
+								interactions for improved follow-ups or
+								personalized engagement.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -60,7 +76,17 @@ const LeadExtractionPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Save Destination</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This field designates the destination where the
+								AI will store or save the extracted lead
+								information. Users need to ensure that they have
+								connected the specified plugin or destination to
+								enable seamless storage of lead details.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<SelectOption

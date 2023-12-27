@@ -2,6 +2,7 @@ import { TextArea2 } from "@/components/styled components/inputs/inputs";
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 import React from "react";
+import { aiSystemPrompt } from "../../../../ai.tooltip";
 
 const GeneralPrompts = () => {
 	const { systemPrompt, setSystemPrompt, systemPromptLength } =
@@ -12,7 +13,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2

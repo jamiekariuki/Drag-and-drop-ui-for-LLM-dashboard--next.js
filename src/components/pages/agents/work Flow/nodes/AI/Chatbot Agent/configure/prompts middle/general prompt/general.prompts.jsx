@@ -5,6 +5,7 @@ import {
 import Tooltip from "@/components/styled components/tooltip/tooltip";
 import { useNodeAiContext } from "@/context/nodeAiContext";
 import React from "react";
+import { aiSystemPrompt } from "../../../../ai.tooltip";
 
 const GeneralPrompts = () => {
 	const {
@@ -36,7 +37,7 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>System prompt</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip tip={aiSystemPrompt} />
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -45,7 +46,7 @@ const GeneralPrompts = () => {
 							systemPromptLength
 						}
 						node={true}
-						label={"Enter promptjjj..."}
+						label={"Enter prompt..."}
 						id={"chatbot-prompt"}
 						value={systemPrompt}
 						inputHeight={"150px"}
@@ -71,7 +72,16 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Business/Company name</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This field allows users to input the name of
+								their business or company. Providing this
+								information enables the AI to contextualize
+								responses
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<Inputs2
@@ -104,7 +114,21 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Business/Company information</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field gathers comprehensive details
+								about the business or company. Users can input
+								relevant information such as industry, address,
+								size, services offered, and any other pertinent
+								details. Furnishing this information assists the
+								AI in grasping the context, enabling more
+								accurate and customized responses or
+								recommendations tailored to the business or
+								company profile
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<TextArea2
@@ -138,7 +162,15 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>contacts</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field allows users to input multiple
+								contacts associated with the business or
+								company.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<Inputs2
@@ -169,7 +201,14 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Emails</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field allows users to input multiple
+								emails associated with the business or company.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<Inputs2
@@ -198,7 +237,15 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Location</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field accepts a Google Maps URL
+								pinpointing the location of the business or
+								company.
+							</p>
+						}
+					/>
 				</div>
 				<div className="text-input">
 					<Inputs2
@@ -229,8 +276,23 @@ const GeneralPrompts = () => {
 			<div className="prompt-container">
 				<div className="header">
 					<h6>Extra information</h6>
-					<Tooltip tip={<p>tip</p>} />
+					<Tooltip
+						tip={
+							<p>
+								This input field serves as an open space for
+								users to include supplementary details, such as
+								social media links (e.g., LinkedIn, Twitter,
+								etc.), additional notes, or any other relevant
+								information pertaining to the business or
+								company. Users can utilize this section to
+								enrich the AI's understanding and access
+								additional context for a more comprehensive
+								overview of the enterprise.
+							</p>
+						}
+					/>
 				</div>
+
 				<div className="text-input">
 					<TextArea2
 						error={
