@@ -102,7 +102,7 @@ const InboxReplyGmailPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="messagereply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -269,7 +269,7 @@ const SendMessageGmailPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="sendmessage"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>

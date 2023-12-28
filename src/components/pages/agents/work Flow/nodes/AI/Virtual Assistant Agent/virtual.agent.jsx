@@ -81,7 +81,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="Virtual-assistant"
+				id="virtual-assistant"
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>
@@ -100,7 +100,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="target"
 						position={Position.Left}
-						id="Virtual-input"
+						id="input"
 						isConnectable={isConnectable}
 						className="phandle thandle"
 						style={{ top: "60px" }}
@@ -114,7 +114,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Virtual-plugin"
+						id="plugin"
 						isConnectable={isConnectable}
 						className="phandle"
 						style={{ top: "96px" }}
@@ -128,7 +128,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Virtual-extend"
+						id="extend"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "132px" }}
@@ -168,7 +168,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 							}
 							node={true}
 							label={"Enter prompt..."}
-							id={"Virtual-prompts"}
+							id={"prompts"}
 							value={prompt}
 							changeValue={(e) => {
 								handlePromptChange(e);
@@ -219,7 +219,7 @@ const VirtualAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Virtual-output"
+						id="output"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "335px" }}

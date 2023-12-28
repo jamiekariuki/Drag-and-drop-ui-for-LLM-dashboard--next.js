@@ -87,7 +87,7 @@ const OnFirstMessageInstagram = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -103,7 +103,7 @@ const OnMessageInstagram = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -120,7 +120,7 @@ const OnFirstCommentInstagram = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d4"
+				id="onfirstcomment"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -136,7 +136,7 @@ const OnCommentReplyInstagram = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d5"
+				id="oncommentreply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

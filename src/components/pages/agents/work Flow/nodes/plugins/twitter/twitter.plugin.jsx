@@ -105,7 +105,7 @@ const InboxReplyTwitterPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="messagereply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -121,7 +121,7 @@ const CommentReplyTwitterPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="commentreply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -295,7 +295,7 @@ const SendMessageTwitterPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="sendmessage"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -514,7 +514,7 @@ const PostTwitterPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="post"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>

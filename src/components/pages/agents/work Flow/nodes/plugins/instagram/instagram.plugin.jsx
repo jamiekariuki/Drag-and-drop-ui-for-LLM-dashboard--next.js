@@ -110,7 +110,7 @@ const InboxReplyInstagramPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="messagereply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -126,7 +126,7 @@ const CommentReplyInstagramPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="commentreply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -300,7 +300,7 @@ const SendMessageInstagramPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="sendmessage"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -519,7 +519,7 @@ const PostInstagramPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="post"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>

@@ -104,7 +104,7 @@ const InboxReplyLinkedinPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="messagereply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -120,7 +120,7 @@ const CommentReplyLinkedinPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="commentreply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -294,7 +294,7 @@ const SendMessageLinkedinPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="sendmessage"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
@@ -513,7 +513,7 @@ const PostLinkedinPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="post"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>

@@ -85,7 +85,7 @@ const OnFirstMessageWhatsapp = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="a2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -101,7 +101,7 @@ const OnMessageWhatsapp = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="a3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

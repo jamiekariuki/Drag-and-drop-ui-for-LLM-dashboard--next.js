@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import { IconButton } from "@mui/material";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
-const NavHeader = ({ onClose, open }) => {
+const NavHeader = ({ onClose, open, onSave }) => {
 	const { toggle } = useContext(ThemeContext);
 
 	return (
@@ -35,6 +35,7 @@ const NavHeader = ({ onClose, open }) => {
 						startIcon={
 							<SaveIcon className="nav-header-save-icon" />
 						}
+						onClick={onSave}
 					>
 						<p>save</p>
 					</Button>

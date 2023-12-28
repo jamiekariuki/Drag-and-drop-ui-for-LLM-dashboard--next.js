@@ -87,7 +87,7 @@ const OnFirstMessageLinkedin = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="f2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -103,7 +103,7 @@ const OnMessageLinkedin = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="f3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -120,7 +120,7 @@ const OnFirstCommentLinkedin = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="f4"
+				id="onfirstcomment"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -136,7 +136,7 @@ const OnCommentReplyLinkedin = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="f5"
+				id="oncommentreply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

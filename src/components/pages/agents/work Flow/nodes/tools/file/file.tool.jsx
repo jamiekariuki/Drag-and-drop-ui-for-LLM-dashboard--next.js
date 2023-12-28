@@ -51,14 +51,14 @@ const FileTool = ({ id, data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="a2"
+				id="toolout"
 				isConnectable={isConnectable}
 				className="phandle "
 			/>
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="toolin"
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>

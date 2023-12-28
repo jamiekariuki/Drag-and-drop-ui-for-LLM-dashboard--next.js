@@ -83,7 +83,7 @@ const GoogledocsPlugin = ({ id, data, isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="pluginin"
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>

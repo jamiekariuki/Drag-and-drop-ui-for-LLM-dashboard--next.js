@@ -94,7 +94,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="target"
 						position={Position.Left}
-						id="chatbot-input"
+						id="input"
 						isConnectable={isConnectable}
 						className="phandle thandle"
 						style={{ top: "60px" }}
@@ -108,7 +108,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="target"
 						position={Position.Left}
-						id="chatbot-knowledge"
+						id="knowledge"
 						isConnectable={isConnectable}
 						className="phandle thandle"
 						style={{ top: "97px" }}
@@ -122,7 +122,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-plugin"
+						id="plugin"
 						isConnectable={isConnectable}
 						className="phandle"
 						style={{ top: "132px" }}
@@ -136,7 +136,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-extend"
+						id="extend"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "167px" }}
@@ -176,7 +176,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 							}
 							node={true}
 							label={"Enter prompt..."}
-							id={"chatbot-prompts"}
+							id={"prompts"}
 							value={prompt}
 							changeValue={(e) => {
 								handlePromptChange(e);
@@ -227,7 +227,7 @@ const ChatbotAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="chatbot-output"
+						id="output"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "369px" }}

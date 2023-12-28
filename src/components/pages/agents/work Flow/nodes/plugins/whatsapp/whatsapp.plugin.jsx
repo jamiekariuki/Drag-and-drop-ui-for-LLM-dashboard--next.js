@@ -101,11 +101,11 @@ const InboxReplyWhatsappPlugin = ({ isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="messagereply"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>
-			<p>Inbox Reply</p>
+			<p>Message Reply</p>
 			<Tooltip tip={PluginsInboxReply} />
 		</ChildNodes>
 	);
@@ -275,7 +275,7 @@ const SendMessageWhatsappPlugin = ({ id, isConnectable, data }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="sendmessage"
 				isConnectable={isConnectable}
 				className="chandle thandle"
 			/>

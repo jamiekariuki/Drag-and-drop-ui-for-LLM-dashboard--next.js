@@ -76,7 +76,7 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e2"
+				id="ontime"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -173,7 +173,7 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e2"
+				id="onday"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -283,7 +283,7 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e2"
+				id="ondate"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -346,7 +346,7 @@ const CustomSchedules = ({ id, data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e2"
+				id="advance"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

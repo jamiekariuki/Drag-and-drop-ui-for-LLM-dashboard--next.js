@@ -87,7 +87,7 @@ const OnFirstMessageFacebook = ({ data, isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -103,7 +103,7 @@ const OnMessageFacebook = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -119,7 +119,7 @@ const OnFirstCommentFacebook = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d4"
+				id="onfirstcomment"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -135,7 +135,7 @@ const OnCommentReplyFacebook = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="d5"
+				id="oncommentreply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

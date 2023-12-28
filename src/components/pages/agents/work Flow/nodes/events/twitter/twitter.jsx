@@ -87,7 +87,7 @@ const OnFirstMessageTwitter = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -103,7 +103,7 @@ const OnMessageTwitter = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -120,7 +120,7 @@ const OnFirstCommentTwitter = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e4"
+				id="onfirstcomment"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -136,7 +136,7 @@ const OnCommentReplyTwitter = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="e5"
+				id="oncommentreply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

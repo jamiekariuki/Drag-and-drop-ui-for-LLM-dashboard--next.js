@@ -87,7 +87,7 @@ const OnFirstMessageGmail = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="g2"
+				id="onfirstmessage"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>
@@ -103,7 +103,7 @@ const OnMessageGmail = ({ isConnectable }) => {
 			<Handle
 				type="source"
 				position={Position.Right}
-				id="g3"
+				id="onmessagereply"
 				isConnectable={isConnectable}
 				className="chandle"
 			/>

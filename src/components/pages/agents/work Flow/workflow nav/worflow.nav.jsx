@@ -4,7 +4,7 @@ import "./workflow.nav.scss";
 import NavHeader from "./nav header/nav.header";
 import NavComponents from "./nav components/nav.components";
 
-const WorkFlowNav = () => {
+const WorkFlowNav = ({ onSave }) => {
 	const [open, setOpen] = useState(false);
 
 	const onClose = () => {
@@ -20,7 +20,7 @@ const WorkFlowNav = () => {
 			}}
 		>
 			<div className="wn-header">
-				<NavHeader onClose={onClose} open={open} />
+				<NavHeader onClose={onClose} open={open} onSave={onSave} />
 			</div>
 
 			<div

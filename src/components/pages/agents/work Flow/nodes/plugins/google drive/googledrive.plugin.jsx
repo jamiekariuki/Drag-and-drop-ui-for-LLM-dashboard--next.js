@@ -83,7 +83,7 @@ const GoogledrivePlugin = ({ id, data, isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="a2"
+				id="plugin"
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>

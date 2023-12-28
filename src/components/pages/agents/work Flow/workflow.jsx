@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ReactFlow, {
 	ReactFlowProvider,
 	Controls,
@@ -12,19 +12,15 @@ import "./workflow.scss";
 import "reactflow/dist/style.css";
 import { nodeTypes } from "./nodesType";
 import WorkFlowNav from "./workflow nav/worflow.nav";
+import { useToast } from "@/context/ToastContext";
 
-const initialNodes = [
-	/* {
-		d: "2",
-		data: { label: "World" },
-		position: { x: 100, y: 100 },
-	}, */
-];
+const flowKey = "nexusfront-flow";
 
 const Workflow = () => {
 	//-----initials
-	const [nodes, setNodes] = useState(initialNodes);
+	const [nodes, setNodes] = useState([]);
 	const [edges, setEdges] = useState([]);
+
 	const onNodesChange = useCallback(
 		(changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
 		[]
@@ -98,6 +94,32 @@ const Workflow = () => {
 		},
 		[reactFlowInstance]
 	);
+	const { showToast } = useToast();
+	//saving
+	const onSave = useCallback(() => {
+		if (reactFlowInstance) {
+			const flow = reactFlowInstance.toObject();
+			localStorage.setItem(flowKey, JSON.stringify(flow));
+
+			//send to db here
+
+			showToast("Workflow  saved successfully", "success");
+		}
+	}, [reactFlowInstance]);
+
+	//fetching
+	useEffect(() => {
+		const restoreFlow = async () => {
+			const flow = JSON.parse(localStorage.getItem(flowKey));
+
+			if (flow) {
+				setNodes(flow.nodes || []);
+				setEdges(flow.edges || []);
+			}
+		};
+
+		restoreFlow();
+	}, []);
 
 	return (
 		<ReactFlowProvider>
@@ -122,7 +144,7 @@ const Workflow = () => {
 				>
 					<Background />
 					<Controls />
-					<WorkFlowNav />
+					<WorkFlowNav onSave={onSave} />
 				</ReactFlow>
 			</div>
 		</ReactFlowProvider>

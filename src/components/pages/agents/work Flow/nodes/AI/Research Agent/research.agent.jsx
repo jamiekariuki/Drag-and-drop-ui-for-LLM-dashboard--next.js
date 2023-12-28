@@ -81,7 +81,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 			<Handle
 				type="target"
 				position={Position.Left}
-				id="Virtual-assistant"
+				id="research-assistant"
 				isConnectable={isConnectable}
 				className="phandle thandle"
 			/>
@@ -100,7 +100,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="target"
 						position={Position.Left}
-						id="Research-input"
+						id="input"
 						isConnectable={isConnectable}
 						className="phandle thandle"
 						style={{ top: "60px" }}
@@ -114,7 +114,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Research-plugin"
+						id="plugin"
 						isConnectable={isConnectable}
 						className="phandle"
 						style={{ top: "96px" }}
@@ -128,7 +128,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Research-extend"
+						id="extend"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "132px" }}
@@ -168,7 +168,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 							}
 							node={true}
 							label={"Enter prompt..."}
-							id={"Research-prompts"}
+							id={"prompts"}
 							value={prompt}
 							changeValue={(e) => {
 								handlePromptChange(e);
@@ -219,7 +219,7 @@ const ResearchAgent = ({ id, data, isConnectable }) => {
 					<Handle
 						type="source"
 						position={Position.Right}
-						id="Research-output"
+						id="output"
 						isConnectable={isConnectable}
 						className="phandle "
 						style={{ top: "335px" }}
