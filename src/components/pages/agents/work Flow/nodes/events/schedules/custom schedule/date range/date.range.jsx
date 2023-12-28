@@ -7,10 +7,10 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { renderTimeViewClock } from "@mui/x-date-pickers/timeViewRenderers";
-import Switch from "@mui/material/Switch";
 import dayjs from "dayjs";
 import { useNodeId, useReactFlow } from "reactflow";
 import { useToast } from "@/context/ToastContext";
+import SelectOption from "@/components/styled components/inputs/select.option";
 
 const DateRange = ({ data }) => {
 	const { showToast } = useToast();
