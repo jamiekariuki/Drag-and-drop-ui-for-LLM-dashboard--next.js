@@ -58,6 +58,9 @@ const DateRange = ({ data }) => {
 		if (track) {
 			if (operatingFrequency !== "") {
 				setSaveBtn(true);
+				if (operatingFrequency === "Set a Specific Time" && !time) {
+					setSaveBtn(false);
+				}
 			} else {
 				setSaveBtn(false);
 			}
@@ -218,8 +221,6 @@ const DateRange = ({ data }) => {
 
 						{operatingFrequency === "Set a Specific Time" && (
 							<div className="dr-time-component">
-								<p>Set Time to run on each day</p>
-
 								<div className="time-input">
 									<LocalizationProvider
 										dateAdapter={AdapterDayjs}

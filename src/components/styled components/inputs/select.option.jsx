@@ -2,10 +2,11 @@
 import "./inputs.scss";
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 
-const SelectOption = ({ list, value, changeValue, node, label }) => {
+const SelectOption = ({ list, value, changeValue, node, label, disabled }) => {
 	return (
 		<div className="inputs" style={{ height: node && "27px" }}>
 			<select
+				disabled={disabled}
 				id="mySelect"
 				value={value}
 				onChange={(e) => {
