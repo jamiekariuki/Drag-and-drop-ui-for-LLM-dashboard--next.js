@@ -31,11 +31,8 @@ const DateRange = ({ data }) => {
 
 	//operation frequeence
 	const [operatingFrequency, setOperatingFrequency] = useState(
-		data.dateRange ? data.dateRange.random : ""
+		data.dateRange ? data.dateRange.operatingFrequency : ""
 	);
-	const handleChange = (event) => {
-		setOperatingFrequency(event.target.operatingFrequency);
-	};
 
 	const operatingList = [
 		"Set a Specific Time",
@@ -205,7 +202,7 @@ const DateRange = ({ data }) => {
 					<div className="dr-day">
 						<p>Operating Frequency</p>
 
-						<div className="selct-container">
+						<div className="select-container">
 							<SelectOption
 								label={"Frequency"}
 								list={operatingList}
