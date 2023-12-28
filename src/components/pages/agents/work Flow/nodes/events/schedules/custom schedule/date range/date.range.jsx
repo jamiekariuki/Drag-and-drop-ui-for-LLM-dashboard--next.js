@@ -29,13 +29,19 @@ const DateRange = ({ data }) => {
 		data.dateRange ? data.dateRange.time : null
 	);
 
-	//---checked
-	const [checked, setChecked] = useState(
-		data.dateRange ? data.dateRange.random : false
+	//operation frequeence
+	const [operatingFrequency, setOperatingFrequency] = useState(
+		data.dateRange ? data.dateRange.random : ""
 	);
 	const handleChange = (event) => {
-		setChecked(event.target.checked);
+		setOperatingFrequency(event.target.operatingFrequency);
 	};
+
+	const operatingList = [
+		"Set a Specific Time",
+		"Randomize Execution Time",
+		"Continuous Operation",
+	];
 
 	//---clear btn control
 	const [clearBtn, setClearBtn] = useState(false);
@@ -46,26 +52,26 @@ const DateRange = ({ data }) => {
 
 	useEffect(() => {
 		//clear btn
-		if (dateStart || dateEnd || time || checked) {
+		if (dateStart || dateEnd || time || operatingFrequency !== "") {
 			setClearBtn(true);
 		} else {
 			setClearBtn(false);
 		}
 		//save btn
 		if (track) {
-			if (time || checked) {
+			if (operatingFrequency !== "") {
 				setSaveBtn(true);
 			} else {
 				setSaveBtn(false);
 			}
 		}
 		setTrack(true);
-	}, [dateStart, dateEnd, time, checked]);
+	}, [dateStart, dateEnd, time, operatingFrequency]);
 
 	const onClear = () => {
 		setDateStart(null);
 		setDateEnd(null);
-		setChecked(false);
+		setOperatingFrequency("");
 		setTime(null);
 	};
 
@@ -77,8 +83,8 @@ const DateRange = ({ data }) => {
 		const data = {
 			dateStart: dateStart,
 			dateEnd: dateEnd,
+			operatingFrequency: operatingFrequency,
 			time: time,
-			random: checked,
 		};
 
 		setNodes((nds) =>
@@ -118,19 +124,20 @@ const DateRange = ({ data }) => {
 			<div className="dr-container">
 				<div className="dr-info">
 					<p>
-						You have the flexibility to set the date range during
-						which the node will run. Choose the starting and ending
-						dates to define the period within which the node's
-						operations will be active. For the daily execution time,
-						you have two options:
+						Select the date range for the node's active operations.
+						Choose a start and end date to define the period. For
+						daily execution:
 						<br />
-						<span>1. Set a Specific Time:</span> If you prefer a
-						specific time for the node to execute daily within the
-						selected date range.
+						<span>1. Set a Specific Time:</span> Set a fixed daily
+						execution time within the chosen date range
 						<br />
-						<span>2. Randomize Execution Time: </span>{" "}
-						Alternatively, opt to have the node execute at a random
-						time each day within the chosen date range.
+						<span>2. Randomize Execution Time: </span> opt to have
+						the node execute at a random time each day within the
+						chosen date range.
+						<span>3. Continuous Operation: </span> Choose this
+						option for the node to run continuously throughout the
+						specified date range, ensuring it's operational at all
+						times
 					</p>
 				</div>
 				<div className="dr-wrapper">
@@ -196,66 +203,62 @@ const DateRange = ({ data }) => {
 					</div>
 
 					<div className="dr-day">
-						<div className="dr-time-component">
-							<p>Time to run on each day:</p>
+						<p>Operating Frequency</p>
 
-							<div className="time-input">
-								<LocalizationProvider
-									dateAdapter={AdapterDayjs}
-								>
-									<TimePicker
-										disabled={
-											dateStart === null ||
-											dateEnd === null ||
-											checked
-										}
-										value={time}
-										onChange={(newValue) =>
-											setTime(newValue)
-										}
-										label="Time"
-										viewRenderers={{
-											hours: renderTimeViewClock,
-											minutes: renderTimeViewClock,
-											seconds: renderTimeViewClock,
-										}}
-										className="muidp"
-										slotProps={{
-											textField: {
-												size: "small",
-												sx: {
-													width: 200,
-												},
-												InputProps: {
-													style: {
-														borderRadius: 7,
-													},
-												},
-											},
-										}}
-									/>
-								</LocalizationProvider>
-							</div>
-						</div>
-
-						<p>Or</p>
-
-						<div className="dr-pick-random">
-							<p>Pick random time</p>
-
-							<Switch
-								disabled={
-									dateStart === null ||
-									dateEnd === null ||
-									time
-								}
-								checked={checked}
-								onChange={handleChange}
-								inputProps={{ "aria-label": "controlled" }}
-								size="small"
-								className="cswitch"
+						<div className="selct-container">
+							<SelectOption
+								label={"Frequency"}
+								list={operatingList}
+								value={operatingFrequency}
+								changeValue={(e) => {
+									setOperatingFrequency(e);
+								}}
 							/>
 						</div>
+
+						{operatingFrequency === "Set a Specific Time" && (
+							<div className="dr-time-component">
+								<p>Set Time to run on each day</p>
+
+								<div className="time-input">
+									<LocalizationProvider
+										dateAdapter={AdapterDayjs}
+									>
+										<TimePicker
+											disabled={
+												dateStart === null ||
+												dateEnd === null ||
+												checked
+											}
+											value={time}
+											onChange={(newValue) =>
+												setTime(newValue)
+											}
+											label="Time"
+											viewRenderers={{
+												hours: renderTimeViewClock,
+												minutes: renderTimeViewClock,
+												seconds: renderTimeViewClock,
+											}}
+											className="muidp"
+											slotProps={{
+												textField: {
+													size: "small",
+													sx: {
+														width: 200,
+													},
+													InputProps: {
+														style: {
+															borderRadius: 7,
+														},
+													},
+												},
+											}}
+										/>
+									</LocalizationProvider>
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

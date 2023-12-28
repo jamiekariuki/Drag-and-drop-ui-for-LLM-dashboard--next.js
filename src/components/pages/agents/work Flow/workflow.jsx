@@ -20,6 +20,7 @@ const Workflow = () => {
 	//-----initials
 	const [nodes, setNodes] = useState([]);
 	const [edges, setEdges] = useState([]);
+	const [reactFlowInstance, setReactFlowInstance] = useState(null);
 
 	const onNodesChange = useCallback(
 		(changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -42,7 +43,6 @@ const Workflow = () => {
 
 	//-----DND
 	const reactFlowWrapper = useRef(null);
-	const [reactFlowInstance, setReactFlowInstance] = useState(null);
 
 	const onDragOver = useCallback((event) => {
 		event.preventDefault();
@@ -94,8 +94,9 @@ const Workflow = () => {
 		},
 		[reactFlowInstance]
 	);
+
+	//-----saving
 	const { showToast } = useToast();
-	//saving
 	const onSave = useCallback(() => {
 		if (reactFlowInstance) {
 			const flow = reactFlowInstance.toObject();
@@ -107,7 +108,7 @@ const Workflow = () => {
 		}
 	}, [reactFlowInstance]);
 
-	//fetching
+	//-----fetching
 	useEffect(() => {
 		const restoreFlow = async () => {
 			const flow = JSON.parse(localStorage.getItem(flowKey));
