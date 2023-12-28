@@ -204,6 +204,9 @@ const DateRange = ({ data }) => {
 
 						<div className="select-container">
 							<SelectOption
+								disabled={
+									dateStart === null || dateEnd === null
+								}
 								label={"Frequency"}
 								list={operatingList}
 								value={operatingFrequency}
@@ -222,11 +225,6 @@ const DateRange = ({ data }) => {
 										dateAdapter={AdapterDayjs}
 									>
 										<TimePicker
-											disabled={
-												dateStart === null ||
-												dateEnd === null ||
-												checked
-											}
 											value={time}
 											onChange={(newValue) =>
 												setTime(newValue)
