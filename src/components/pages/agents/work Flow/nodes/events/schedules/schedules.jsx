@@ -90,7 +90,7 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 				<div className="ot-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<TimePicker
-							value={dayjs(time)}
+							value={time ? dayjs(time) : time}
 							onChange={(newValue) => setTime(newValue)}
 							label="Time"
 							viewRenderers={{
@@ -208,7 +208,7 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 				<div className="od-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<TimePicker
-							value={dayjs(time)}
+							value={time ? dayjs(time) : time}
 							onChange={(newValue) => setTime(newValue)}
 							label="Time"
 							viewRenderers={{
@@ -298,7 +298,7 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<DateTimePicker
 							label="Date"
-							value={dayjs(date)}
+							value={date ? dayjs(date) : date}
 							onChange={(newValue) => setDate(newValue)}
 							className="muidp"
 							slotProps={{
