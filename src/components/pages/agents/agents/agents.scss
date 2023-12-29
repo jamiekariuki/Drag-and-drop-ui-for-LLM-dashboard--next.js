@@ -34,7 +34,7 @@
 
 				.agent-box {
 					border-radius: 10px;
-					background-color: themed("glass");
+					background-color: themed("background");
 					border: 1px solid themed("hover");
 					padding: 13px 10px;
 					display: flex;
@@ -65,29 +65,27 @@
 							}
 						}
 
-						.agent-stack {
-							display: flex;
-							align-items: center;
-							gap: 3px;
-							flex-wrap: wrap;
+						.agent-desc {
+							padding: 3px;
+							padding-bottom: 7px;
+							p {
+								font-size: 12px;
 
-							.stack-wrapper {
-								border: 1px solid themed("hover");
-								border-radius: 10px;
-								padding: 2px 5px;
-								background: transparent;
-								display: flex;
-								align-items: center;
-								justify-content: center;
-
-								p {
-									font-size: 10px;
+								span {
+									font-size: 13px;
+									color: themed("titleColor");
+									font-weight: 600;
 								}
 							}
 						}
 					}
 
 					.agent-box-buttons {
+						//	background-color: aqua;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
 						.agent-box-btn {
 							.agent-box-icon {
 								font-size: 15px;

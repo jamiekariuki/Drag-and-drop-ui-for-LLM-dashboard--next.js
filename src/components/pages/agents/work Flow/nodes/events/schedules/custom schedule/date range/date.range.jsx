@@ -134,6 +134,7 @@ const DateRange = ({ data }) => {
 						<span>2. Randomize Execution Time: </span> opt to have
 						the node execute at a random time each day within the
 						chosen date range.
+						<br />
 						<span>3. Continuous Operation: </span> Choose this
 						option for the node to run continuously throughout the
 						specified date range, ensuring it's operational at all
@@ -203,9 +204,8 @@ const DateRange = ({ data }) => {
 					</div>
 
 					<div className="dr-day">
-						<p>Operating Frequency</p>
-
 						<div className="select-container">
+							<p>Operating Frequency</p>
 							<SelectOption
 								disabled={
 									dateStart === null || dateEnd === null

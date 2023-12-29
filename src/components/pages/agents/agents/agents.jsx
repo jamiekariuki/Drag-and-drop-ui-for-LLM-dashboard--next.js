@@ -4,13 +4,14 @@ import "./agents.scss";
 import AgentsSearch from "./agents search/agents.search";
 import AddIcon from "@mui/icons-material/Add";
 import Image from "next/image";
-import MoreInfo from "@/components/styled components/menu/more.info";
 import EditAgent from "./edit agent/edit.agent";
 import DeleteAgent from "./delete agent/delete.agent";
 import CreateAgent from "./create agent/create.agent";
 import Button from "@mui/material/Button";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { GoWorkflow } from "react-icons/go";
+import { MoreInfo } from "@/components/styled components/menu/more.info";
+import Switch from "@mui/material/Switch";
+import AgentCard from "./agent card/agent.card";
 
 const Agents = () => {
 	const agents = [
@@ -18,41 +19,29 @@ const Agents = () => {
 			avatar: "https://i.postimg.cc/hPXjLx4P/MO-Studio-LLC-1.jpg",
 			title: "Chat with Documents",
 			status: "Processing...",
-			stack: [
-				"whatsApp",
-				"google calender",
-				"AI",
-				"google calender",
-				"google spread-sheet",
-			],
+			desc: "Lorem ipsum adipi sicing elit. Persp iciatis necess itat ibus numquam assum enda obcaecati cum tempore. Cupiditate alias eligendi quisquam possimus earum cumque.",
 		},
 		{
 			avatar: "https://i.postimg.cc/hPXjLx4P/MO-Studio-LLC-1.jpg",
 			title: "Chat with Website",
 			status: "Ready",
-			stack: [
-				"Instagram",
-				"Gmail",
-				"AI",
-				"google calender",
-				"google spread-sheet",
-			],
+			desc: "Lorem ipsum dolor sit amet, cons ectetur adii ciatis netibus numquam assu menda obcaecati cum tempore. Cupi ditate alias eligendi quisquam possimus earum cumque.",
 		},
 		{
 			avatar: "https://i.postimg.cc/hPXjLx4P/MO-Studio-LLC-1.jpg",
 			title: "Queued",
 			status: "Ready",
-			stack: ["AI", "google calender", "google spread-sheet"],
+			desc: " cons ectetur adipis icing elit. Perspi ciatis nec essi tatibus numquam assumenda obcae cati cum tempore. Cupiditate alias eligendi quisquam possimus earum cumque.",
 		},
 		{
 			avatar: "https://i.postimg.cc/hPXjLx4P/MO-Studio-LLC-1.jpg",
 			title: "Chat with Attorney",
 			status: "Ready",
-			stack: ["whatsApp", "google spread-sheet"],
+			desc: " tempore. Cupid itate alias eligendi quisquam possimus earum cumque.",
 		},
 	];
 
-	const [indexIt, setIndexIt] = useState(null);
+	/* const [indexIt, setIndexIt] = useState(null);
 
 	const menus = ["Edit", "Delete"];
 
@@ -69,11 +58,19 @@ const Agents = () => {
 	const menuInfo = (x) => {
 		setOpen(x === "Edit" && true);
 		setOpenDelete(x === "Delete" && true);
-	};
+	}; */
 
 	const [openCreate, setOpenCreate] = useState(false);
 	const onCloseCreate = () => {
 		setOpenCreate(false);
+	};
+
+	//------------agent switch
+
+	const [on, setOn] = useState(false);
+
+	const handleChange = (event) => {
+		setOn(event.target.checked);
 	};
 
 	return (
@@ -96,6 +93,32 @@ const Agents = () => {
 				>
 					{agents.map((item, index) => (
 						<div className="agent-box" key={index}>
+							<AgentCard item={item} />
+						</div>
+					))}
+
+					<div
+						className="agent-box-add"
+						onClick={() => {
+							setOpenCreate(true);
+						}}
+					>
+						<div className="tb-add">
+							<AddIcon className="tb-add" />
+							<h4>Create custom Agent</h4>
+						</div>
+					</div>
+					<CreateAgent open={openCreate} onClose={onCloseCreate} />
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Agents;
+
+{
+	/* <div className="agent-box" key={index}>
 							<div className="agent-box-container">
 								<div className="agent-header">
 									<div className="agent-avatar-container">
@@ -172,26 +195,18 @@ const Agents = () => {
 								>
 									<p>work flow</p>
 								</Button>
+
+								<div className="agent-switch">
+									<Switch
+										checked={on}
+										onChange={handleChange}
+										inputProps={{
+											"aria-label": "controlled",
+										}}
+										size="small"
+										className="cswitch"
+									/>
+								</div>
 							</div>
-						</div>
-					))}
-
-					<div
-						className="agent-box-add"
-						onClick={() => {
-							setOpenCreate(true);
-						}}
-					>
-						<div className="tb-add">
-							<AddIcon className="tb-add" />
-							<h4>Create custom Agent</h4>
-						</div>
-					</div>
-					<CreateAgent open={openCreate} onClose={onCloseCreate} />
-				</div>
-			</div>
-		</div>
-	);
-};
-
-export default Agents;
+						</div> */
+}

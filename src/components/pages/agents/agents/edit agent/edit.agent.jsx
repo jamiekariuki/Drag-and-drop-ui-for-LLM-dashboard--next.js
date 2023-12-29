@@ -2,7 +2,10 @@
 import React from "react";
 import "./edit.agent.scss";
 import Modal from "@/components/styled components/modals/modal";
-import Inputs from "@/components/styled components/inputs/inputs";
+import Inputs, {
+	Inputs2,
+	TextArea2,
+} from "@/components/styled components/inputs/inputs";
 import Image from "next/image";
 import { Button } from "@mui/material";
 
@@ -37,13 +40,41 @@ const EditAgent = ({ open, onClose, agentTitle, avatar }) => {
 					</form>
 
 					<div className="edit-wrapper">
-						<h4>Edit your Agent Name</h4>
+						<div>
+							<h4>Edit your Agent Name</h4>
 
-						<Inputs
-							label={"Title"}
-							type={"text"}
-							value={agentTitle}
-						/>
+							<Inputs2
+								/* error={
+							companyName.replace(/\s/g, "").length >=
+							companyNameLength
+						} */
+								type={"text"}
+								label={"Agent name"}
+								id={"agent-name"}
+								/* value={companyName}
+						changeValue={(e) => {
+							setCompanyName(e);
+						}} */
+							/>
+						</div>
+
+						<div>
+							<h4>Agent descripton</h4>
+							<TextArea2
+								/* error={
+							systemPrompt.replace(/\s/g, "").length >=
+							systemPromptLength
+						} */
+
+								label={"Enter Agent description..."}
+								id={"agen-desc"}
+								/* value={systemPrompt}
+						inputHeight={"150px"}
+						changeValue={(e) => {
+							setSystemPrompt(e);
+						}} */
+							/>
+						</div>
 					</div>
 				</div>
 

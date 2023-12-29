@@ -4,7 +4,7 @@
 	@include themify($themes) {
 		min-height: 80vh;
 		width: 100%;
-		background-color: themed("background");
+		//background-color: themed("background");
 		border-radius: 6px;
 	}
 }

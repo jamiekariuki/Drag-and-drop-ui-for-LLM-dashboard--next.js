@@ -19,6 +19,7 @@ import {
 	EventsSheduleOnDay,
 	EventsSheduleOnTime,
 } from "../events.tooltip";
+import dayjs from "dayjs";
 
 const icon = "https://i.postimg.cc/50CPkzWv/icons8-google-calendar-480.png";
 const Schedules = () => {
@@ -89,7 +90,7 @@ const OnTimeSchedules = ({ id, data, isConnectable }) => {
 				<div className="ot-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<TimePicker
-							value={time}
+							value={dayjs(time)}
 							onChange={(newValue) => setTime(newValue)}
 							label="Time"
 							viewRenderers={{
@@ -207,7 +208,7 @@ const OnDaySchedules = ({ id, data, isConnectable }) => {
 				<div className="od-input">
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<TimePicker
-							value={time}
+							value={dayjs(time)}
 							onChange={(newValue) => setTime(newValue)}
 							label="Time"
 							viewRenderers={{
@@ -297,7 +298,7 @@ const OnDateSchedules = ({ id, data, isConnectable }) => {
 					<LocalizationProvider dateAdapter={AdapterDayjs}>
 						<DateTimePicker
 							label="Date"
-							value={date}
+							value={dayjs(date)}
 							onChange={(newValue) => setDate(newValue)}
 							className="muidp"
 							slotProps={{
