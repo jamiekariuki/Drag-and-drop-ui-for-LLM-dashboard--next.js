@@ -1,0 +1,74 @@
+@import "../../../../theme/theme.scss";
+
+.plugins-form {
+	@include themify($themes) {
+		padding: 10px 10vw;
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+
+		@media (max-width: 900px) {
+			padding: 5px;
+		}
+
+		.back-container {
+			width: 100%;
+			@media (min-width: 600px) {
+				display: none;
+			}
+		}
+
+		.form-title {
+			display: flex;
+			align-items: center;
+			gap: 3px;
+
+			.card-icon {
+				position: relative;
+				height: 30px;
+				width: 30px;
+				border: 50%;
+				overflow: hidden;
+
+				.platform-avatar {
+					object-fit: cover;
+				}
+			}
+
+			.tb-delete {
+				color: themed("icon");
+				font-size: 20px;
+			}
+		}
+
+		.info {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 5px;
+			padding: 5px;
+			background-color: themed("info");
+			margin-bottom: 5px;
+			border-radius: 5px;
+
+			.ct-info-icon {
+				font-size: 15px;
+				color: themed("icon");
+			}
+
+			p {
+				font-size: 11px;
+			}
+		}
+
+		.form-btn {
+			width: 100px;
+
+			p {
+				text-transform: lowercase;
+				color: white;
+			}
+		}
+	}
+}

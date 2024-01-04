@@ -1,0 +1,95 @@
+@import "./../../../../../theme/theme.scss";
+
+.ut-history {
+	@include themify($themes) {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 15px;
+		padding: 7px;
+		overflow-y: scroll;
+
+		.ut-history-buttons {
+			padding: 0 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.ut-back-icon-wrapper {
+				@media (min-width: 800px) {
+					display: none;
+				}
+				.ut-back-icon {
+					color: themed("icon");
+					font-size: 30px;
+				}
+			}
+
+			.ut-add-btn {
+				@media (min-width: 800px) {
+					width: 100%;
+				}
+
+				border: 1px solid themed("border");
+				p {
+					text-transform: lowercase;
+				}
+				.add-btn-icon {
+					color: themed("icon");
+				}
+			}
+		}
+
+		.ut-history {
+			height: 100%;
+			width: 100%;
+			overflow-y: scroll;
+			padding-right: 5px;
+
+			.ut-history-container {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+
+				.history-container {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					background-color: themed("glass");
+					padding: 3px 5px;
+					border-radius: 4px;
+					transition: all 0.2s;
+					cursor: pointer;
+
+					&:hover {
+						background-color: themed("info");
+
+						.history-actions {
+							opacity: 1;
+						}
+					}
+
+					h4 {
+						font-size: 13px;
+					}
+
+					.history-actions {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 1px;
+						opacity: 0;
+
+						.action-icon {
+							color: themed("icon");
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -2,18 +2,12 @@
 
 .side-bar-container {
 	@include themify($themes) {
-		p {
-			font-size: 13px;
-			color: theme("border");
-		}
-
 		height: 100vh;
-		width: 180px;
+		width: 230px;
 		background-color: themed("background");
 		transition: all 0.3s;
-		overflow-y: scroll;
-		padding: 5px 10px 5px 10px;
-		overflow-x: hidden;
+		padding: 5px 10px;
+		position: relative;
 
 		@media (max-width: 700px) {
 			display: none;
@@ -23,50 +17,101 @@
 			width: 65px;
 		}
 
-		.side-bar-title {
+		.side-bar-toggle {
+			position: absolute;
+			right: -30px;
+			width: 30px;
+			height: 30px;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
+			cursor: pointer;
+			z-index: 200;
 
-			.side-bar-toggle {
-				width: 100%;
-				margin-left: 10px;
+			.open-icon {
+				font-size: 18px;
+				color: themed("icon");
+			}
+		}
 
-				.open-icon {
-					font-size: 22px;
-					color: themed("icon");
-					cursor: pointer;
-				}
+		.logo-container {
+			margin-top: 10px;
+			position: relative;
+			height: 30px;
+
+			width: 100%;
+			display: flex;
+			align-items: center;
+
+			.logo-image {
+				object-fit: contain;
 			}
 		}
 
 		.side-bar-wrapper {
 			margin-top: 20px;
 			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+		}
 
-			.side-bar-heading {
-				margin: 10px 5px 5px 5px;
+		.credits {
+			border-radius: 7px;
+			height: 140px;
+			background: themed("info");
+			position: absolute;
+			bottom: 20px;
+			left: 12px;
+			right: 12px;
+			padding: 7px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			transition: all 0.3s;
+			overflow: hidden;
+
+			p {
+				font-size: 12px;
+			}
+
+			.credits-container {
+				width: 100%;
 				display: flex;
+				flex-direction: column;
 				align-items: center;
-				gap: 5px;
+				gap: 4px;
 
-				p {
-					color: themed("paragraphColor");
-					font-weight: 300;
-					font-size: 11px;
+				h6 {
+					text-wrap: nowrap;
 				}
 
-				.nav-divider {
-					height: 1px;
-					width: auto;
+				.progress-container {
+					height: 6px;
+					border-radius: 5px;
+					overflow: hidden;
+					width: 100%;
 					background-color: themed("hover");
+
+					.progress {
+						background-color: $main;
+						height: 100%;
+					}
 				}
 			}
 
-			.side-bar-general {
-				display: flex;
-				flex-direction: column;
-				gap: 4px;
+			.upgrade-btn {
+				width: 100%;
+
+				.upgrade-icon {
+					color: white;
+				}
+
+				p {
+					text-transform: lowercase;
+					color: white;
+				}
 			}
 		}
 	}

@@ -1,13 +1,9 @@
- import React from "react";
-import "./page.agents.scss";
-import Agents from "@/components/pages/agents/agents/agents";
+import React from "react";
+import PageContainer from "@/components/styled components/containers/page container/page.container";
+//import Agents from "@/components/pages/agents/agents/agents";
 
 const Agentspage = () => {
-	return (
-		<div className="page-agents">
-			<Agents />
-		</div>
-	);
+	<PageContainer>{/* <Agents /> */}</PageContainer>;
 };
 
-export default Agentspage; 
+export default Agentspage;

@@ -1,0 +1,71 @@
+@import "../../../../../theme/theme.scss";
+
+.add-plugin {
+	@include themify($themes) {
+		height: 80vh;
+		width: 60vw;
+
+		@media (max-width: 600px) {
+			width: 90vw;
+			height: 70vh;
+		}
+
+		.add-plugin-container {
+			width: 100%;
+			height: 95%;
+			overflow-y: scroll;
+
+			.add-plugin-wrapper {
+				padding: 15px;
+				height: auto;
+				width: 100%;
+				display: grid;
+				grid-auto-rows: minmax(120px, auto);
+				grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+				gap: 10px 10px;
+				justify-content: center;
+				align-content: flex-start;
+
+				.add-plugin-box {
+					border-radius: 7px;
+					border: 1px solid themed("hover");
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					gap: 3px;
+					padding: 10px;
+					cursor: pointer;
+					transition: 0.3s;
+
+					&:hover {
+						background-color: themed("glass");
+					}
+
+					.add-plugin-top {
+						display: flex;
+						align-items: center;
+						gap: 5px;
+
+						.card-icon {
+							position: relative;
+							height: 30px;
+							width: 30px;
+							border: 50%;
+							overflow: hidden;
+
+							.platform-avatar {
+								object-fit: cover;
+							}
+						}
+					}
+
+					.add-plugin-bottom {
+						p {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

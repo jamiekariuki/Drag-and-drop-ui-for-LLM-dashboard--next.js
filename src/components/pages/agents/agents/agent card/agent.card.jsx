@@ -7,7 +7,7 @@ import Switch from "@mui/material/Switch";
 import EditAgent from "../edit agent/edit.agent";
 import DeleteAgent from "../delete agent/delete.agent";
 
-const AgentCard = ({ item }) => {
+const AgentCard = ({ item, handleAgentChange, index, handleDeleteAgent }) => {
 	//more info
 	const menus = ["Edit", "Delete"];
 
@@ -52,18 +52,24 @@ const AgentCard = ({ item }) => {
 						<div>
 							<MoreInfo list={menus} func={menuInfo} />
 						</div>
+						{open && (
+							<EditAgent
+								open={open}
+								onClose={onClose}
+								item={item}
+								handleAgentChange={handleAgentChange}
+								index={index}
+							/>
+						)}
 
-						<EditAgent
-							open={open}
-							onClose={onClose}
-							agentTitle={item.title}
-							avatar={item.avatar}
-						/>
-
-						<DeleteAgent
-							open={openDelete}
-							onClose={onCloseDelete}
-						/>
+						{openDelete && (
+							<DeleteAgent
+								open={openDelete}
+								onClose={onCloseDelete}
+								handleDeleteAgent={handleDeleteAgent}
+								index={index}
+							/>
+						)}
 					</div>
 				</div>
 

@@ -1,0 +1,79 @@
+@import "../../../../../theme/theme.scss";
+
+.create-tool {
+	@include themify($themes) {
+		height: 80vh;
+		width: 450px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width: 600px) {
+			width: 90vw;
+			height: 70vh;
+		}
+
+		.create-tool-container {
+			width: 100%;
+			height: 100%;
+			overflow-y: scroll;
+
+			.create-tool-wrapper {
+				width: 100%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 13px;
+				margin-top: 15px;
+				padding: 10px 5px;
+
+				.ct-input {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 4px;
+
+					.ct-info {
+						width: 100%;
+						display: flex;
+						align-items: flex-start;
+						justify-content: flex-start;
+						gap: 5px;
+						padding: 5px;
+						background-color: themed("info");
+						margin-bottom: 5px;
+						border-radius: 5px;
+
+						.ct-info-icon {
+							font-size: 15px;
+							color: themed("icon");
+						}
+
+						p {
+							font-size: 11px;
+						}
+					}
+				}
+			}
+		}
+
+		.create-tool-footer {
+			padding-top: 6px;
+			height: 40px;
+			width: 100%;
+			border-top: 1px solid themed("hover");
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			.ct-submit-btn {
+				p {
+					text-transform: lowercase;
+					font-size: 12px;
+					color: white;
+				}
+			}
+		}
+	}
+}

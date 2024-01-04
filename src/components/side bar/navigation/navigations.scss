@@ -9,43 +9,56 @@
 		align-items: center;
 		justify-content: flex-start;
 		gap: 10px;
-		border-radius: 3px;
-		padding: 3px 4px;
+		border-radius: 6px;
+		padding: 5px;
 		cursor: pointer;
-		transition: all 0.3s;
+		transition: all 0.2s;
 
 		&:active {
 			background-color: themed("border");
 		}
 
 		&:hover {
-			background-color: themed("hover");
+			background-color: themed("info");
 		}
 
 		.side-bar-icon {
-			font-size: 14px;
-			color: themed("icon");
 			transition: all 0.3s;
 
 			.nav-icons {
-				font-size: 14px;
+				font-size: 18px;
 				color: themed("icon");
 				transition: all 0.3s;
 			}
 
+			.link-color {
+				.nav-icons {
+					color: white;
+				}
+			}
+
 			&.side-bar-icon-collapse {
-				font-size: 19px;
-				padding: 4px 7px;
+				padding: 3px 5px 1px 5px;
 
 				.nav-icons {
-					font-size: 19px;
+					font-size: 21px;
+
+					&.link {
+						color: white;
+					}
+				}
+
+				.link-color {
+					.nav-icons {
+						color: white;
+					}
 				}
 			}
 		}
 
 		.h5text {
 			transition: all 0.3s;
-			font-size: 12px;
+			font-size: 15px;
 			color: themed("text");
 		}
 
