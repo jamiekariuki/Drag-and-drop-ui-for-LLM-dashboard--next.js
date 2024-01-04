@@ -1,0 +1,69 @@
+@import "./../../../theme/theme.scss";
+
+.dashboard {
+	@include themify($themes) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		.dash-top {
+			width: 100%;
+			height: 150px;
+			display: flex;
+			gap: 20px;
+
+			@media (max-width: 1200px) {
+				flex-direction: column;
+				height: auto;
+			}
+
+			.top-side {
+				height: 100%;
+				flex: 1;
+				justify-content: space-between;
+				display: flex;
+				gap: 20px;
+				flex-wrap: wrap;
+
+				@media (max-width: 1200px) {
+					flex: none;
+					height: 150px;
+				}
+
+				@media (max-width: 500px) {
+					flex-direction: column;
+					height: auto;
+				}
+
+				.summary {
+					height: 100%;
+					flex: 1;
+					justify-content: space-between;
+
+					@media (max-width: 500px) {
+						flex: none;
+						height: 150px;
+					}
+				}
+			}
+		}
+
+		.dash-bottom {
+			display: flex;
+			gap: 20px;
+			height: 600px;
+			width: 100%;
+			flex-wrap: wrap;
+
+			.bottom-left {
+				flex: 3;
+				height: 100%;
+			}
+
+			.bottom-right {
+				flex: 2;
+				height: 100%;
+			}
+		}
+	}
+}

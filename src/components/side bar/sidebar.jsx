@@ -62,7 +62,7 @@ export const SideBar = () => {
 				/>
 			</div>
 
-			{/* <div className="side-bar-wrapper">
+			<div className="side-bar-wrapper">
 				{NavigationLinks.map((item, index) => (
 					<Navigations
 						key={index}
@@ -72,7 +72,7 @@ export const SideBar = () => {
 						sideBar={sideBar}
 					/>
 				))}
-			</div> 
+			</div>
 
 			{sideBar || (
 				<div className="credits">
@@ -99,14 +99,12 @@ export const SideBar = () => {
 						className="upgrade-btn "
 						disableElevation
 						/* onClick={() => {
-						setOpenPlugin(true);
-					}} 
+						setOpenPlugin(true);*/
 					>
 						<p>upgrade</p>
 					</Button>
 				</div>
-			 )} 
-				*/}
+			)}
 		</div>
 	);
 };

@@ -2,9 +2,9 @@
 import "./navbar.scss";
 import { useState } from "react";
 import { SlMenu } from "react-icons/sl";
-import { DarkMode } from "./dark mode/dark.mode";
-//import AccountMenu from "./account menu/account.menu";
-//import MobileSideBarNav from "../side bar/mobile side bar/mobile.sidebar";
+//import { DarkMode } from "./dark mode/dark.mode";
+import AccountMenu from "./account menu/account.menu";
+import MobileSideBarNav from "../side bar/mobile side bar/mobile.sidebar";
 
 export const Navbar = () => {
 	const [mobileSideBar, setMobileSideBar] = useState(false);
@@ -15,10 +15,10 @@ export const Navbar = () => {
 
 	return (
 		<nav>
-			{/* <MobileSideBarNav
+			<MobileSideBarNav
 				mobileSideBar={mobileSideBar}
 				handleMobileSidebarToggle={handleMobileSidebarToggle}
-			/> */}
+			/>
 			<div
 				className={
 					mobileSideBar
@@ -41,8 +41,8 @@ export const Navbar = () => {
 				</div>
 
 				<div className="right">
-					{/* <AccountMenu /> */}
-					 <DarkMode /> 
+					<AccountMenu />
+					{/*  <DarkMode />  */}
 				</div>
 			</div>
 		</nav>

@@ -8,37 +8,42 @@ import {
 	Cell,
 	ResponsiveContainer,
 } from "recharts";
-import "./pie.chart.scss";
+import "./disk.storage.scss";
 
 const data = [
-	{ name: "Instagram", value: 700 },
-	{ name: "Twitter", value: 300 },
-	{ name: "Facebook", value: 100 },
-	{ name: "WhatsApp", value: 600 },
-	{ name: "Gmail", value: 500 },
-	{ name: "LinkedIn", value: 200 },
+	{ name: "Videos", value: 70 },
+	{ name: "Photos", value: 30 },
+	{ name: "PDF", value: 10 },
+	{ name: "Audio", value: 60 },
+	{ name: "Free", value: 40 },
 ];
 const COLORS = [
 	"rgba(213, 56, 35, 0.797)",
 	"rgba(35, 136, 213, 0.797)",
 	"rgba(127, 35, 213, 0.797)",
 	"rgba(106, 213, 35, 0.797)",
-	"rgba(128, 128, 128, 0.904)",
-	"rgba(213, 35, 168, 0.797)",
+	"grey",
 ];
 
-const SummaryPieChart = () => {
+const requestedProducts = [
+	{ product: "Video", number: "6", size: "46 " },
+	{ product: "Photos", number: "68", size: "36 " },
+	{ product: "PDF", number: "34", size: "25 " },
+	{ product: "Audio", number: "2", size: "18 " },
+];
+
+const DiskStorage = () => {
 	return (
 		<div className="pie-chart">
 			<div className="pie-chart-title">
-				<h4>Platform Activity</h4>
+				<h4>Disk storage</h4>
 			</div>
 			<div className="pie-chart-container">
 				<ResponsiveContainer height="99%" width="99%">
 					<PieChart>
 						<Tooltip
 							contentStyle={{
-								background: "rgba(137, 138, 138, 0.803)",
+								background: "white",
 								borderRadius: "5px",
 								border: "none",
 								height: "30px",
@@ -74,46 +79,58 @@ const SummaryPieChart = () => {
 						className="key-color"
 						style={{ background: COLORS[0] }}
 					/>
-					<h6>Instagram</h6>
+					<h6>Videos</h6>
 				</div>
 				<div className="key-container">
 					<div
 						className="key-color"
 						style={{ background: COLORS[1] }}
 					/>
-					<h6>Twitter</h6>
+					<h6>Photos</h6>
 				</div>
 				<div className="key-container">
 					<div
 						className="key-color"
 						style={{ background: COLORS[2] }}
 					/>
-					<h6>Facebook</h6>
+					<h6>PDF</h6>
 				</div>
 				<div className="key-container">
 					<div
 						className="key-color"
 						style={{ background: COLORS[3] }}
 					/>
-					<h6>WhatsApp</h6>
+					<h6>Audio</h6>
 				</div>
 				<div className="key-container">
 					<div
 						className="key-color"
 						style={{ background: COLORS[4] }}
 					/>
-					<h6>Gmail</h6>
+					<h6>Free</h6>
 				</div>
-				<div className="key-container">
-					<div
-						className="key-color"
-						style={{ background: COLORS[5] }}
-					/>
-					<h6>LinkedIn</h6>
+			</div>
+
+			<div className="totals">
+				<h1>Free space 78mb / 200mb</h1>
+				<div className="table">
+					{requestedProducts.map((item, index) => (
+						<div className="table-container" key={index}>
+							<div className="item">
+								<p> {item.product}</p>
+							</div>
+							<div className="item">
+								<p>{item.number} files</p>
+							</div>
+							<div className="item">
+								<p className="requests"> {item.number} mb</p>
+							</div>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default SummaryPieChart;
+export default DiskStorage;

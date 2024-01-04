@@ -1,8 +1,9 @@
 "use client";
-import React, { PureComponent } from "react";
+import React from "react";
 import {
-	LineChart,
-	Line,
+	BarChart,
+	Bar,
+	Cell,
 	XAxis,
 	YAxis,
 	CartesianGrid,
@@ -58,6 +59,18 @@ const data = [
 		amt: 2100,
 	},
 	{
+		name: "Page A",
+		uv: 4000,
+		pv: 2400,
+		amt: 2400,
+	},
+	{
+		name: "Page B",
+		uv: 3000,
+		pv: 1398,
+		amt: 2210,
+	},
+	{
 		name: "Page C",
 		uv: 2000,
 		pv: 9800,
@@ -78,18 +91,18 @@ const data = [
 	{
 		name: "Page F",
 		uv: 2390,
-		pv: 2800,
+		pv: 3800,
 		amt: 2500,
 	},
 	{
 		name: "Page G",
 		uv: 3490,
-		pv: 1300,
+		pv: 4300,
 		amt: 2100,
 	},
 ];
 
-const SummaryChatTask = ({ title, number, percent, positive }) => {
+const SummaryChatCredits = ({ title, number, percent, positive }) => {
 	return (
 		<div className="summary-chat">
 			<div className="summary-chat-left">
@@ -108,30 +121,28 @@ const SummaryChatTask = ({ title, number, percent, positive }) => {
 			</div>
 			<div className="summary-chat-right">
 				<ResponsiveContainer width="100%" height="100%">
-					<LineChart width={300} height={100} data={data}>
+					<BarChart width={150} height={40} data={data}>
 						<Tooltip
 							contentStyle={{
 								background: "transparent",
 								border: "none",
 							}}
 							labelStyle={{ display: "none" }}
+							position={{ y: -20 }}
 						/>
-						<Line
-							type="monotone"
-							dataKey="uv"
-							stroke={
+						<Bar
+							dataKey="amt"
+							fill={
 								positive
-									? "rgba(64, 255, 0, 0.65)"
-									: "rgba(255, 0, 0, 0.65"
+									? " rgba(64, 255, 0, 0.65)"
+									: "rgba(255, 0, 0, 0.6)"
 							}
-							strokeWidth={2}
-							dot={false}
 						/>
-					</LineChart>
+					</BarChart>
 				</ResponsiveContainer>
 			</div>
 		</div>
 	);
 };
 
-export default SummaryChatTask;
+export default SummaryChatCredits;
