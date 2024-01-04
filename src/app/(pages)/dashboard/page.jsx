@@ -1,11 +1,7 @@
 import PageContainer from "@/components/styled components/containers/page container/page.container";
 
 const DashboardPage = () => {
-	return (
-		<PageContainer>
-			<Plugins />
-		</PageContainer>
-	);
+	return <PageContainer>page</PageContainer>;
 };
 
 export default DashboardPage;
