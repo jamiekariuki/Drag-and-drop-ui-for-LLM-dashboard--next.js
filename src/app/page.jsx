@@ -29,7 +29,7 @@ const Home = () => {
 
 	const tasks = {
 		title: "Tasks Completed",
-		number: "18",
+		number: "17",
 		percent: "+38%",
 		positive: true,
 	};
