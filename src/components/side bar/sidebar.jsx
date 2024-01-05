@@ -98,8 +98,6 @@ export const SideBar = () => {
 						size="small"
 						className="upgrade-btn "
 						disableElevation
-						/* onClick={() => {
-						setOpenPlugin(true);*/
 					>
 						<p>upgrade</p>
 					</Button>

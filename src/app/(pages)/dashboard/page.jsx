@@ -4,8 +4,7 @@ import PageContainer from "@/components/styled components/containers/page contai
 const DashboardPage = () => {
 	return (
 		<PageContainer>
-			{" "}
-			<Dashboard />{" "}
+			<Dashboard />
 		</PageContainer>
 	);
 };

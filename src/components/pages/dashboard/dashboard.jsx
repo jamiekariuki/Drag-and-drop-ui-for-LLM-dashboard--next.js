@@ -3,10 +3,10 @@ import "./dashboard.scss";
 import ChartContainer from "@/components/styled components/containers/chart container/chart.container";
 import TodaysSummaryTasks from "./todays summary/todays.summary.task";
 import TodaysSummaryTokens from "./todays summary/todays.summary.tokens";
-import SummaryChatTask from "./summary chart/summary.chat.task";
 import TotalCredits from "./total credits/total.credits";
 import DiskStorage from "./disk torage/disk.storage";
 import SummaryChatCredits from "./summary chart/summary.chat.credits";
+import SummaryChatTask from "./summary chart/summary.chat.task";
 
 const Dashboard = () => {
 	const customer = {

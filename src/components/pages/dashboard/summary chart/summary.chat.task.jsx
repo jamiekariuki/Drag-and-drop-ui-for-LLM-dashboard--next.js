@@ -1,12 +1,13 @@
 "use client";
 import React, { PureComponent } from "react";
 import {
-	AreaChart,
-	Area,
+	LineChart,
+	Line,
 	XAxis,
 	YAxis,
 	CartesianGrid,
 	Tooltip,
+	Legend,
 	ResponsiveContainer,
 } from "recharts";
 
@@ -77,18 +78,18 @@ const data = [
 	{
 		name: "Page F",
 		uv: 2390,
-		pv: 3800,
+		pv: 2800,
 		amt: 2500,
 	},
 	{
 		name: "Page G",
 		uv: 3490,
-		pv: 4300,
+		pv: 1300,
 		amt: 2100,
 	},
 ];
 
-const SummaryChatCustomer = ({ title, number, percent, positive }) => {
+const SummaryChatTask = ({ title, number, percent, positive }) => {
 	return (
 		<div className="summary-chat">
 			<div className="summary-chat-left">
@@ -107,7 +108,7 @@ const SummaryChatCustomer = ({ title, number, percent, positive }) => {
 			</div>
 			<div className="summary-chat-right">
 				<ResponsiveContainer width="100%" height="100%">
-					<AreaChart width={500} height={400} data={data}>
+					<LineChart width={300} height={100} data={data}>
 						<Tooltip
 							contentStyle={{
 								background: "transparent",
@@ -115,50 +116,22 @@ const SummaryChatCustomer = ({ title, number, percent, positive }) => {
 							}}
 							labelStyle={{ display: "none" }}
 						/>
-						<defs>
-							<linearGradient
-								id="colorUv"
-								x1="0"
-								y1="0"
-								x2="0"
-								y2="1"
-							>
-								<stop
-									offset="4%"
-									stopColor={
-										positive
-											? "rgba(64, 255, 0, 0.978)"
-											: "rgba(255, 0, 0, 0.748)"
-									}
-									stopOpacity={0.3}
-								/>
-								<stop
-									offset="95%"
-									stopColor={
-										positive
-											? "rgba(64, 255, 0, 0)"
-											: "rgba(255, 0, 0, 0)"
-									}
-									stopOpacity={0}
-								/>
-							</linearGradient>
-						</defs>
-						<Area
+						<Line
 							type="monotone"
-							dataKey="pv"
+							dataKey="uv"
 							stroke={
 								positive
-									? "rgba(64, 255, 0, 0.7)"
-									: "rgba(255, 0, 0, 0.7"
+									? "rgba(64, 255, 0, 0.65)"
+									: "rgba(255, 0, 0, 0.65"
 							}
-							fillOpacity={1}
-							fill="url(#colorUv)"
+							strokeWidth={2}
+							dot={false}
 						/>
-					</AreaChart>
+					</LineChart>
 				</ResponsiveContainer>
 			</div>
 		</div>
 	);
 };
 
-export default SummaryChatCustomer;
+export default SummaryChatTask;
