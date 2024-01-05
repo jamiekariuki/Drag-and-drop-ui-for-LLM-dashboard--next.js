@@ -23,6 +23,10 @@
 					margin: 10px 5px;
 				}
 
+				@media (max-width: 1000px) {
+					justify-content: center;
+				}
+
 				&.cb-tools2 {
 					justify-content: center;
 				}
