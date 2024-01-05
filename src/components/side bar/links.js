@@ -11,32 +11,32 @@ export const NavigationLinks = [
 	{
 		icon: <PieChartIcon className="nav-icons" />,
 		text: "Dashboard",
-		link: "/dashboard",
+		link: "/account/dashboard",
 	},
 	{
 		icon: <InventoryIcon className="nav-icons" />,
 		text: "Inventory",
-		link: "/inventory",
+		link: "/account/inventory",
 	},
 	{
 		icon: <ChatIcon className="nav-icons" />,
 		text: "Tools",
-		link: "/tools",
+		link: "/account/tools",
 	},
 	{
 		icon: <AppRegistrationSharpIcon className="nav-icons" />,
 		text: "Plugins",
-		link: "/plugins",
+		link: "/account/plugins",
 	},
 	{
 		icon: <MemoryIcon className="nav-icons" />,
 		text: "Agents",
-		link: "/agents",
+		link: "/account/agents",
 	},
 
 	{
 		icon: <ArticleIcon className="nav-icons" />,
 		text: "Docs",
-		link: "/docs",
+		link: "/account/docs",
 	},
 ];
