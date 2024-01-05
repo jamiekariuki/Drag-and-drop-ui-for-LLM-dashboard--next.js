@@ -4,8 +4,7 @@ import Agents from "@/components/pages/agents/agents/agents";
 
 const Agentspage = () => {
 	<PageContainer>
-		{" "}
-		<Agents />{" "}
+		<Agents />
 	</PageContainer>;
 };
 

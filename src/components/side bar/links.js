@@ -11,7 +11,7 @@ export const NavigationLinks = [
 	{
 		icon: <PieChartIcon className="nav-icons" />,
 		text: "Dashboard",
-		link: "/",
+		link: "/dashboard",
 	},
 	{
 		icon: <InventoryIcon className="nav-icons" />,
