@@ -1,6 +1,7 @@
 @import "./../theme/theme.scss";
 
-.dashboard-container {
+.home {
 	@include themify($themes) {
+		background-color: themed("background");
 	}
 }

@@ -12,7 +12,7 @@ import TagFour from "../components/landing pages/home/tag4/tag.four";
 
 const PageHome = () => {
 	return (
-		<div>
+		<div className="home">
 			<Hero />
 			<SubHeading />
 			<Tag />
