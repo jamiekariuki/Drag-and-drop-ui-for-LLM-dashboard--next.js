@@ -35,9 +35,6 @@ export const Navbar = () => {
 					>
 						<SlMenu className="menu-icon" />
 					</div>
-					<div className="logo">
-						<h1>turing 0.4</h1>
-					</div>
 				</div>
 
 				<div className="right">
