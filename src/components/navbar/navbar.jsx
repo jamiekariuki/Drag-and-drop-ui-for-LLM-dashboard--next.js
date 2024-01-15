@@ -14,7 +14,7 @@ export const Navbar = () => {
 	};
 
 	return (
-		<nav>
+		<nav className="account-nav">
 			<MobileSideBarNav
 				mobileSideBar={mobileSideBar}
 				handleMobileSidebarToggle={handleMobileSidebarToggle}

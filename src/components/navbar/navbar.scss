@@ -1,6 +1,6 @@
 @import "../../theme/theme.scss";
 
-nav {
+.account-nav {
 	@include themify($themes) {
 		background-color: transparent;
 		display: flex;
