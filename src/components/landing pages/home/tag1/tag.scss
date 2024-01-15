@@ -1,0 +1,97 @@
+@import "./../../../../theme/theme.scss";
+
+.tag {
+	@include themify($themes) {
+		margin-top: 20px;
+		padding: 10px;
+		background-color: themed("softBackground");
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		height: 400px;
+
+		@media (max-width: 600px) {
+			flex-direction: column;
+			height: auto;
+		}
+		.left {
+			flex: 1;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media (max-width: 600px) {
+				flex: none;
+				height: auto;
+				width: 100%;
+			}
+
+			.left-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 20px;
+				max-width: 500px;
+
+				h3 {
+					color: $main;
+					font-size: clamp(20px, 5vw, 30px);
+				}
+
+				button {
+					border: 0;
+					background-color: transparent;
+					display: flex;
+					align-items: center;
+					gap: 6px;
+					cursor: pointer;
+					transition: all 0.3s;
+
+					p {
+						color: $main;
+						font-size: 13px;
+					}
+
+					.upgrade-icon {
+						color: $main;
+					}
+
+					&:hover {
+						position: relative;
+						left: 5px;
+					}
+				}
+			}
+		}
+
+		.right {
+			flex: 1;
+			height: 100%;
+			position: relative;
+
+			@media (max-width: 600px) {
+				flex: none;
+				height: 50vh;
+				width: 100%;
+			}
+
+			.backdrop {
+				position: absolute;
+				inset: 0;
+				z-index: 10;
+				background: rgb(0, 0, 0);
+				background: radial-gradient(
+					circle,
+					rgba(0, 0, 0, 0) 0%,
+					themed("softBackground") 100%
+				);
+			}
+
+			.screenshot {
+				object-fit: cover;
+			}
+		}
+	}
+}

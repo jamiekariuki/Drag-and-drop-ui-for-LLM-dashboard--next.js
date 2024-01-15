@@ -19,6 +19,7 @@
 		"dayjs": "^1.11.10",
 		"eslint": "8.49.0",
 		"eslint-config-next": "^14.0.2",
+		"framer-motion": "^10.17.9",
 		"install": "^0.13.0",
 		"js-cookie": "^3.0.5",
 		"moment": "^2.29.4",
@@ -28,7 +29,6 @@
 		"react-flow-renderer": "^10.3.17",
 		"react-hook-form": "^7.48.2",
 		"react-icons": "^4.11.0",
-		"react-simple-maps": "^3.0.0",
 		"reactflow": "^11.10.1",
 		"recharts": "^2.8.0"
 	},

@@ -1,0 +1,120 @@
+@import "./../../../../theme/theme.scss";
+
+.social-tag {
+	@include themify($themes) {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 40px;
+		gap: 10px;
+		padding: 0 10px;
+		overflow: hidden;
+
+		h1 {
+			font-size: clamp(30px, 5vw, 40px);
+			color: $main;
+			text-align: center;
+		}
+
+		.text {
+			max-width: 450px;
+			p {
+				font-size: 12px;
+				text-align: center;
+			}
+		}
+
+		button {
+			background-color: $main;
+			background-color: transparent;
+			border: 1px solid $main;
+			padding: 10px 10px;
+			cursor: pointer;
+			border-radius: 5px;
+
+			p {
+				color: $main;
+				font-size: 12px;
+			}
+		}
+
+		.slider-container {
+			width: 99vw;
+			height: 250px;
+			background-color: rgba(125, 125, 125, 0.115);
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 7px;
+			position: relative;
+
+			.backdrop {
+				position: absolute;
+				inset: 0;
+				z-index: 10;
+				background: rgb(0, 0, 0);
+				background: radial-gradient(
+					circle,
+					rgba(0, 0, 0, 0) 0%,
+					themed("background") 60%
+				);
+			}
+
+			.backdrop2 {
+				position: absolute;
+				height: 120px;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 9;
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0) 0%,
+					themed("background") 80%
+				);
+			}
+
+			.backdrop3 {
+				position: absolute;
+				height: 120px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 9;
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0) 0%,
+					themed("background") 80%
+				);
+			}
+
+			.tag-icons {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 7px;
+				height: fit-content;
+
+				.icon-container {
+					width: 80px;
+					height: 80px;
+					position: relative;
+					background-color: themed("background");
+					border-radius: 4px;
+
+					.icons {
+						object-fit: contain;
+					}
+
+					@media (max-width: 500px) {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+}

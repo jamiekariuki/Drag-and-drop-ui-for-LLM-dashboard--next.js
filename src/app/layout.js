@@ -2,10 +2,9 @@ import "./globals.scss";
 import { Poppins } from "next/font/google";
 import { ThemeProvider2 } from "@/context/themeContext";
 import { cookies } from "next/headers";
-//import { SideBar } from "@/components/side bar/sidebar";
-//import { Navbar } from "@/components/navbar/navbar";
 import Toast from "@/components/styled components/toast/toast";
 import { ToastProvider } from "@/context/ToastContext";
+import LandingNavbar from "@/components/landing pages/navbar/landing.navbar";
 
 const poppins = Poppins({
 	weight: ["200", "300", "400", "500", "600"],
@@ -36,14 +35,8 @@ export default function RootLayout({ children }) {
 			<body>
 				<ThemeProvider2 serverDarkMode={darkMode}>
 					<ToastProvider>
-						{/* <div className="apps">
-							<SideBar />
-							<div className="app-container">
-								<Navbar />
-								<div className="all-apps">{children}</div>
-							</div>
-						</div> */}
-						<div>{children}</div>
+						<LandingNavbar />
+						<div className="pages">{children}</div>
 						<div id="portal">
 							<Toast />
 						</div>

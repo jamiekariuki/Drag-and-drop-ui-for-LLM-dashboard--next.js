@@ -94,7 +94,7 @@ const ToolCard = ({ item, index, handleToolChange, handleDeleteTool }) => {
 						/>
 					)}
 					<Link
-						href={`/tools/${item.title
+						href={`/account/tools/${item.title
 							.toLowerCase()
 							.split(" ")
 							.join("-")}`}

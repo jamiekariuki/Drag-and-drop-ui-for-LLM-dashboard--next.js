@@ -36,12 +36,11 @@ $darkText: rgb(181, 181, 181);
 
 .theme-light {
 	background-color: $softLightBackground;
-
 	color: black;
 
 	h1,
 	h2 {
-		font-size: clamp(17px, 3vw, 20px);
+		font-size: clamp(20px, 3vw, 28px);
 		color: rgb(32, 32, 32);
 	}
 	h2 {
@@ -65,13 +64,19 @@ $darkText: rgb(181, 181, 181);
 	}
 
 	h6,
-	p {
+	p,
+	li {
 		font-size: clamp(12px, 2vw, 14px);
 		font-weight: 500;
 		color: $lightText;
 	}
-	h6 {
+	h6,
+	li {
 		color: rgb(32, 32, 32);
+	}
+
+	.pages {
+		background-color: $lightBackround;
 	}
 }
 
@@ -81,7 +86,7 @@ $darkText: rgb(181, 181, 181);
 
 	h1,
 	h2 {
-		font-size: clamp(17px, 3vw, 20px);
+		font-size: clamp(20px, 3vw, 28px);
 		color: white;
 	}
 	h2 {
@@ -104,13 +109,19 @@ $darkText: rgb(181, 181, 181);
 	}
 
 	h6,
-	p {
+	p,
+	li {
 		font-size: clamp(12px, 2vw, 14px);
 		font-weight: 400;
 		color: $darkText;
 	}
-	h6 {
+	h6,
+	li {
 		color: white;
+	}
+
+	.pages {
+		background-color: $darkBackround;
 	}
 }
 
@@ -120,37 +131,11 @@ h3,
 h4,
 h5,
 h6,
+li,
 p {
 	font-family: var(--font-poppins);
 }
 
-.apps {
-	display: flex;
-	flex-direction: row;
-	width: 100vw;
-	overflow-x: hidden;
-
-	.app-container {
-		width: 100%;
-		height: 100vh;
-		overflow-y: scroll;
-		overflow-x: hidden;
-		padding: 5px 20px 20px 20px;
-
-		position: relative;
-
-		@media (max-width: 700px) {
-			padding: 2px 10px 1px 10px;
-		}
-	}
+.pages {
+	width: 100%;
 }
-
-/* .MuiSvgIcon-root {
-	font-size: 16px;
-} */
-
-/* .MuiTypography-root {
-	font-family: var(
-		--font-poppins
-	) !important; 
-} */

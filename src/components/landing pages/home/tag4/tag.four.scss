@@ -1,0 +1,69 @@
+@import "../../../../theme/theme.scss";
+
+.tag-4 {
+	@include themify($themes) {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5vw;
+		justify-content: center;
+		padding: 10px;
+
+		@media (max-width: 800px) {
+			gap: 3vw;
+		}
+
+		.tag-4-box-container {
+			width: 200px;
+			height: 200px;
+			position: relative;
+
+			@media (max-width: 500px) {
+				width: 150px;
+				height: 200px;
+			}
+
+			/* .icon-backdrop {
+				height: 100px;
+				width: 100px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 3;
+				border-radius: 50%;
+				filter: blur(60px);
+				background-color: $main;
+			} */
+
+			.tag-4-container {
+				/* backdrop-filter: blur(11px) saturate(171%);
+				-webkit-backdrop-filter: blur(11px) saturate(171%);
+				background-color: rgba(255, 255, 255, 0.61);
+				background-color: themed("glass"); */
+				border-radius: 15px;
+				//	border: 1px solid themed("glass");
+				position: absolute;
+				inset: 0;
+				padding: 10px;
+				z-index: 5;
+
+				.icon-container {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+
+					.tag-4-icon {
+						font-size: 40px;
+						z-index: 5;
+						color: $main;
+					}
+				}
+
+				h1 {
+					color: $main;
+				}
+			}
+		}
+	}
+}
