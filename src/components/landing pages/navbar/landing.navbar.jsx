@@ -61,6 +61,7 @@ const LandingNavbar = () => {
 	if (firstPathname !== "account") {
 		return (
 			<motion.nav
+				className="landing-nav"
 				style={{
 					position: nav ? "fixed" : "absolute",
 					backgroundColor: nav || "transparent",

@@ -1,6 +1,6 @@
 @import "./../../../theme/theme.scss";
 
-nav {
+.landing-nav {
 	@include themify($themes) {
 		z-index: 1000;
 		background-color: themed("background");
