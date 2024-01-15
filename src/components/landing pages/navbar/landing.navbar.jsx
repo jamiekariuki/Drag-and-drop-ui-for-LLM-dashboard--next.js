@@ -6,6 +6,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Button, IconButton } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { SlMenu } from "react-icons/sl";
+import { usePathname } from "next/navigation";
 
 const LandingNavbar = () => {
 	const [nav, setNav] = useState();
@@ -51,86 +52,105 @@ const LandingNavbar = () => {
 		document.body.style.overflow = sideBar ? "hidden" : "auto";
 	}, [sideBar]);
 
-	return (
-		<motion.nav
-			style={{
-				position: nav ? "fixed" : "absolute",
-				backgroundColor: nav || "transparent",
-			}}
-			variants={{
-				visible: { y: 0 },
-				hidden: { y: "-100%" },
-			}}
-			animate={hidden ? "hidden" : "visible"}
-			transition={{ duration: 0.3, ease: "easeInOut" }}
-		>
-			<div className="left">
-				<div className="side-bar-toggle" onClick={handleSidebarToggle}>
-					<SlMenu className="open-icon" />
-				</div>
+	const pathname = usePathname();
 
-				<div className="logo">
-					<Image
-						alt=" logo"
-						src="https://i.postimg.cc/kX4DsT09/logo-original.png"
-						fill={true}
-						className="logo-img"
-					/>
-				</div>
-			</div>
-			<div className="links">
-				<ul>
-					<li>Features</li>
-					<li>Use case</li>
-					<li>Resources</li>
-					<li>Pricing</li>
-					<li>FAQ</li>
-					<li>Blog</li>
-				</ul>
-			</div>
-			<div className="login-btns">
-				<Button size="small" className="login-btn " disableElevation>
-					<p>log in</p>
-				</Button>
+	const pathParts = pathname.split("/");
 
-				<Button
-					variant="contained"
-					size="small"
-					className="sign-btn "
-					disableElevation
-				>
-					<p>sign up</p>
-				</Button>
-			</div>
-			{sideBar && (
-				<div className="backdrop" onClick={handleSidebarToggle} />
-			)}
-			<div
-				className="side-bar"
+	const firstPathname = pathParts[1];
+
+	if (firstPathname !== "account") {
+		return (
+			<motion.nav
 				style={{
-					transform: !sideBar ? "translateX(-100%)" : "translateX(0)",
+					position: nav ? "fixed" : "absolute",
+					backgroundColor: nav || "transparent",
 				}}
+				variants={{
+					visible: { y: 0 },
+					hidden: { y: "-100%" },
+				}}
+				animate={hidden ? "hidden" : "visible"}
+				transition={{ duration: 0.3, ease: "easeInOut" }}
 			>
-				<div className="side-links">
-					<div className="close">
-						<IconButton
-							aria-label="close side bar"
-							size="small"
-							onClick={handleSidebarToggle}
-						>
-							<KeyboardBackspaceIcon className="close-icon" />
-						</IconButton>
+				<div className="left">
+					<div
+						className="side-bar-toggle"
+						onClick={handleSidebarToggle}
+					>
+						<SlMenu className="open-icon" />
 					</div>
+
+					<div className="logo">
+						<Image
+							alt=" logo"
+							src="https://i.postimg.cc/kX4DsT09/logo-original.png"
+							fill={true}
+							className="logo-img"
+						/>
+					</div>
+				</div>
+				<div className="links">
 					<ul>
-						<li onClick={handleSidebarToggle}>Features</li>
-						<li onClick={handleSidebarToggle}>Use case</li>
-						<li onClick={handleSidebarToggle}>Pricing</li>
-						<li onClick={handleSidebarToggle}>Blog</li>
+						<li>Features</li>
+						<li>Use case</li>
+						<li>Resources</li>
+						<li>Pricing</li>
+						<li>FAQ</li>
+						<li>Blog</li>
 					</ul>
 				</div>
-			</div>
-		</motion.nav>
-	);
+				<div className="login-btns">
+					<Button
+						size="small"
+						className="login-btn "
+						disableElevation
+					>
+						<p>log in</p>
+					</Button>
+
+					<Button
+						variant="contained"
+						size="small"
+						className="sign-btn "
+						disableElevation
+					>
+						<p>sign up</p>
+					</Button>
+				</div>
+				{sideBar && (
+					<div className="backdrop" onClick={handleSidebarToggle} />
+				)}
+				<div
+					className="side-bar"
+					style={{
+						transform: !sideBar
+							? "translateX(-100%)"
+							: "translateX(0)",
+					}}
+				>
+					<div className="side-links">
+						<div className="close">
+							<IconButton
+								aria-label="close side bar"
+								size="small"
+								onClick={handleSidebarToggle}
+							>
+								<KeyboardBackspaceIcon className="close-icon" />
+							</IconButton>
+						</div>
+						<ul>
+							<li onClick={handleSidebarToggle}>Features</li>
+							<li onClick={handleSidebarToggle}>Use case</li>
+							<li onClick={handleSidebarToggle}>Pricing</li>
+							<li onClick={handleSidebarToggle}>Blog</li>
+						</ul>
+					</div>
+				</div>
+			</motion.nav>
+		);
+	} else {
+		return null;
+	}
 };
 
 export default LandingNavbar;
