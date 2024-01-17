@@ -7,6 +7,7 @@ import { Button, IconButton } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { SlMenu } from "react-icons/sl";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const LandingNavbar = () => {
 	const [nav, setNav] = useState();
@@ -95,7 +96,9 @@ const LandingNavbar = () => {
 						<li>Features</li>
 						<li>Use case</li>
 						<li>Resources</li>
-						<li>Pricing</li>
+						<Link href="/pricing">
+							<li>Pricing</li>
+						</Link>
 						<li>FAQ</li>
 						<li>Blog</li>
 					</ul>

@@ -1,0 +1,145 @@
+@import "../../../../theme/theme.scss";
+
+.pricing-card {
+	@include themify($themes) {
+		background-color: themed("glass");
+		border-radius: 15px;
+		overflow: hidden;
+		border: 2px solid themed("hover");
+		padding: 10px;
+		transition: all 0.3s;
+
+		&:hover {
+			border-color: $main;
+
+			.price-card-header {
+				.price-title {
+					color: $main;
+				}
+			}
+		}
+
+		.price-card-header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+
+			h3 {
+				font-size: clamp(20px, 3vw, 25px);
+			}
+
+			p {
+				font-size: 13px;
+			}
+
+			.price-total {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				h6 {
+					font-size: 11px;
+				}
+
+				.bill-container {
+					padding-left: 20px;
+					width: 100%;
+					display: flex;
+					height: 100%;
+
+					h6 {
+						font-size: 18px;
+					}
+
+					h3 {
+						font-size: 55px;
+						line-height: 1;
+					}
+
+					.enteprise {
+						font-size: 45px;
+						margin-bottom: 10px;
+					}
+
+					.price-period {
+						padding: 10px;
+
+						display: flex;
+						align-items: flex-end;
+					}
+				}
+			}
+		}
+
+		.features-btn-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+
+			button {
+				padding: 8px 30px;
+				border: 0;
+				background: rgb(132, 108, 247);
+				background: linear-gradient(
+					112deg,
+					rgba(132, 108, 247, 1) 8%,
+					rgba(177, 47, 156, 1) 100%
+				);
+				border-radius: 7px;
+				cursor: pointer;
+
+				p {
+					color: white;
+				}
+
+				transition: all 3s;
+
+				&:hover {
+					background: rgb(132, 108, 247);
+					background: linear-gradient(
+						160deg,
+						rgba(132, 108, 247, 1) 8%,
+						rgba(177, 47, 156, 1) 100%
+					);
+				}
+			}
+		}
+
+		.price-features {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.price-features-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.features-container {
+					display: flex;
+					align-items: flex-start;
+					gap: 10px;
+
+					h6 {
+						font-size: 12px;
+						line-height: 1.2;
+					}
+
+					.features-icon {
+						font-size: 16px;
+						color: rgb(34, 186, 34);
+
+						&.close-icon {
+							color: red;
+						}
+					}
+				}
+			}
+		}
+	}
+}
