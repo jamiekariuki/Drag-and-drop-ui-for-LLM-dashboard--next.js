@@ -4,7 +4,8 @@ import { ThemeProvider2 } from "@/context/themeContext";
 import { cookies } from "next/headers";
 import Toast from "@/components/styled components/toast/toast";
 import { ToastProvider } from "@/context/ToastContext";
-//import LandingNavbar from "@/components/landing pages/navbar/landing.navbar";
+import Footer from "@/components/landing pages/footer/footer";
+import LandingNavbar from "@/components/landing pages/navbar/landing.navbar";
 
 const poppins = Poppins({
 	weight: ["200", "300", "400", "500", "600"],
@@ -35,8 +36,9 @@ export default function RootLayout({ children }) {
 			<body>
 				<ThemeProvider2 serverDarkMode={darkMode}>
 					<ToastProvider>
-						{/* <LandingNavbar /> */}
+						<LandingNavbar />
 						<div className="pages">{children}</div>
+						<Footer />
 						<div id="portal">
 							<Toast />
 						</div>

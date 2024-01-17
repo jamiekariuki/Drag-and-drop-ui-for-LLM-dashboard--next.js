@@ -1,0 +1,77 @@
+@import "../../../../theme/theme.scss";
+
+.footer-accordion {
+	@include themify($themes) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		.accordion-wrapper {
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+
+			.expand-icon {
+				color: themed("icon");
+			}
+
+			.accordion-title-wrapper {
+				display: flex;
+				gap: 20px;
+
+				.accordion-icons {
+					color: themed("icon");
+				}
+
+				.item-title {
+					color: themed("softTitleColor");
+				}
+			}
+
+			.open {
+				.accordion-title-wrapper {
+					.accordion-icons {
+						color: $main;
+					}
+
+					.item-title {
+						color: $main;
+					}
+				}
+			}
+
+			.accordionDetails {
+				border: none;
+
+				ul {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						transition: all 0.3s;
+						border-radius: 5px;
+
+						&:active {
+							background-color: themed("border");
+						}
+					}
+
+					.list-wrapper {
+						height: 23px;
+						padding: 2px 6px 4px 6px;
+						border-radius: 5px;
+						margin: 5px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+
+						p {
+							font-size: 16px;
+							color: themed("softParagraphColor");
+						}
+					}
+				}
+			}
+		}
+	}
+}
