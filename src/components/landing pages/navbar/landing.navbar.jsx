@@ -105,7 +105,7 @@ const LandingNavbar = () => {
 					</ul>
 				</div>
 				<div className="login-btns">
-					<Link href="/accouunt/dashboard">
+					<Link href="/account/dashboard">
 						<Button
 							size="small"
 							className="login-btn "
@@ -114,7 +114,7 @@ const LandingNavbar = () => {
 							<p>log in</p>
 						</Button>
 					</Link>
-					<Link href="/accouunt/dashboard">
+					<Link href="/account/dashboard">
 						<Button
 							variant="contained"
 							size="small"

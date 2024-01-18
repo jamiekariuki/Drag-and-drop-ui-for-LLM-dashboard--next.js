@@ -94,7 +94,7 @@ const AgentCard = ({ item, handleAgentChange, index, handleDeleteAgent }) => {
 			</div>
 
 			<div className="agent-box-buttons">
-				<Link href="/accouunt/agents/q">
+				<Link href="/account/agents/q">
 					<Button
 						variant="outlined"
 						startIcon={<GoWorkflow className="agent-box-icon" />}
