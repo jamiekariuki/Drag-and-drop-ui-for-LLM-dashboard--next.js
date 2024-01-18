@@ -1,0 +1,11 @@
+@import "../../../../../theme/theme.scss";
+
+.workflow-page {
+	@include themify($themes) {
+		position: fixed;
+		background-color: themed("workflow");
+		overflow: hidden;
+		inset: 0;
+		z-index: 500;
+	}
+}

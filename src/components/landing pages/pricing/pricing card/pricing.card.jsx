@@ -13,7 +13,7 @@ const PricingCard = ({ item }) => {
 				<div className="price-total">
 					<h6
 						style={{
-							color: item.title !== "Pro" && "transparent",
+							color: item.title !== "Basic" && "transparent",
 						}}
 					>
 						{item.priceInfo}{" "}

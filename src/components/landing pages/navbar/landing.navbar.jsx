@@ -81,15 +81,16 @@ const LandingNavbar = () => {
 					>
 						<SlMenu className="open-icon" />
 					</div>
-
-					<div className="logo">
-						<Image
-							alt=" logo"
-							src="https://i.postimg.cc/kX4DsT09/logo-original.png"
-							fill={true}
-							className="logo-img"
-						/>
-					</div>
+					<Link href="/">
+						<div className="logo">
+							<Image
+								alt=" logo"
+								src="https://i.postimg.cc/kX4DsT09/logo-original.png"
+								fill={true}
+								className="logo-img"
+							/>
+						</div>{" "}
+					</Link>
 				</div>
 				<div className="links">
 					<ul>
@@ -104,23 +105,29 @@ const LandingNavbar = () => {
 					</ul>
 				</div>
 				<div className="login-btns">
-					<Button
-						size="small"
-						className="login-btn "
-						disableElevation
-					>
-						<p>log in</p>
-					</Button>
-
-					<Button
-						variant="contained"
-						size="small"
-						className="sign-btn "
-						disableElevation
-					>
-						<p>sign up</p>
-					</Button>
+					<Link href="/accouunt/dashboard">
+						<Button
+							size="small"
+							className="login-btn "
+							disableElevation
+						>
+							<p>log in</p>
+						</Button>
+					</Link>
+					<Link href="/accouunt/dashboard">
+						<Button
+							variant="contained"
+							size="small"
+							className="sign-btn "
+							disableElevation
+						>
+							<p>sign up</p>
+						</Button>
+					</Link>
 				</div>
+
+				{/*--------------------------- side bar-------------------- */}
+
 				{sideBar && (
 					<div className="backdrop" onClick={handleSidebarToggle} />
 				)}

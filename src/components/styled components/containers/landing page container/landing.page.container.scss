@@ -1,6 +1,6 @@
-@import "./../theme/theme.scss";
+@import "../../../../theme/theme.scss";
 
-.home {
+.lpc {
 	@include themify($themes) {
 		background-color: themed("background");
 		padding-bottom: 30px;

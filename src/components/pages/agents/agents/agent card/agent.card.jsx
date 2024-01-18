@@ -6,6 +6,7 @@ import { MoreInfo } from "@/components/styled components/menu/more.info";
 import Switch from "@mui/material/Switch";
 import EditAgent from "../edit agent/edit.agent";
 import DeleteAgent from "../delete agent/delete.agent";
+import Link from "next/link";
 
 const AgentCard = ({ item, handleAgentChange, index, handleDeleteAgent }) => {
 	//more info
@@ -93,15 +94,17 @@ const AgentCard = ({ item, handleAgentChange, index, handleDeleteAgent }) => {
 			</div>
 
 			<div className="agent-box-buttons">
-				<Button
-					variant="outlined"
-					startIcon={<GoWorkflow className="agent-box-icon" />}
-					size="small"
-					className="agent-box-btn "
-					disableElevation
-				>
-					<p>work flow</p>
-				</Button>
+				<Link href="/accouunt/agents/q">
+					<Button
+						variant="outlined"
+						startIcon={<GoWorkflow className="agent-box-icon" />}
+						size="small"
+						className="agent-box-btn "
+						disableElevation
+					>
+						<p>work flow</p>
+					</Button>
+				</Link>
 
 				<div className="agent-switch">
 					<Switch
