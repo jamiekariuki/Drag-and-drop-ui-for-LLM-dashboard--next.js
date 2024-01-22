@@ -9,19 +9,75 @@ import TagTwo from "@/components/landing pages/home/tag2/tag.two";
 import TagThree from "@/components/landing pages/home/tag3/tag.three";
 import TagFour from "../components/landing pages/home/tag4/tag.four";
 import LandingPageContainer from "@/components/styled components/containers/landing page container/landing.page.container";
+import Cta from "@/components/landing pages/CTA/cta";
+import DoubleSPlit from "@/components/landing pages/double split/double.split";
 
 const PageHome = () => {
 	return (
 		<LandingPageContainer>
 			<Hero />
 			<SubHeading />
+			<DoubleSPlit
+				image={
+					"https://i.postimg.cc/rwpQzkZ3/medium-shot-people-working-office.jpg"
+				}
+				content={
+					<>
+						<h1>
+							Lorem, ipsum dolor consectetur{" "}
+							<span> adipisicing elit sit amet .</span>
+						</h1>
+						<div>
+							<button>
+								<p>click me</p>
+							</button>
+						</div>
+					</>
+				}
+				flexReverse={true}
+			/>
 			<Tag />
+			<DoubleSPlit
+				image={"https://i.postimg.cc/bvnBXVHs/6198268.jpg"}
+				content={
+					<>
+						<h1>
+							Lorem, ipsum dolor consectetur{" "}
+							<span> adipisicing elit sit amet .</span>
+						</h1>
+						<div>
+							<button>
+								<p>click me</p>
+							</button>
+						</div>
+					</>
+				}
+				contain={true}
+			/>
 			<SocialTag />
 			<TagTwo />
 			<TagThree />
 			<TagFour />
+			<DoubleSPlit
+				image={
+					"https://i.postimg.cc/vTrb19TY/businessmen-hands-white-table-with-documents-drafts.jpg"
+				}
+				content={
+					<>
+						<h1>
+							Lorem, ipsum dolor consectetur{" "}
+							<span> adipisicing elit sit amet .</span>
+						</h1>
+						<div>
+							<button>
+								<p>click me</p>
+							</button>
+						</div>
+					</>
+				}
+			/>
 			<TagFive />
-			{/* <Testimonies /> */}
+			<Cta />
 		</LandingPageContainer>
 	);
 };

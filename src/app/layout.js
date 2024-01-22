@@ -39,11 +39,12 @@ export default function RootLayout({ children }) {
 						<LandingNavbar />
 						<div className="pages">{children}</div>
 						<Footer />
-						<div id="portal">
-							<Toast />
-						</div>
+						<div id="portal" />
 					</ToastProvider>
 				</ThemeProvider2>
+				<div id="toast-portal">
+					<Toast />
+				</div>
 			</body>
 		</html>
 	);

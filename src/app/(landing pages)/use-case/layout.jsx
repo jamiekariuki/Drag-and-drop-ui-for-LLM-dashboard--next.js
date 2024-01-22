@@ -1,15 +1,17 @@
-import Pricing from "@/components/landing pages/pricing/pricing";
+import React from "react";
+import "./use.case.scss";
 import Cta from "@/components/landing pages/CTA/cta";
 import LandingPageContainer from "@/components/styled components/containers/landing page container/landing.page.container";
-import React from "react";
 
-const PricingPage = () => {
+const UseCaseLayout = ({ children }) => {
 	return (
 		<LandingPageContainer>
-		 <Pricing /> 
-			<Cta />
+			<div className="use-case">
+				{children}
+				<Cta />
+			</div>
 		</LandingPageContainer>
 	);
 };
 
-export default PricingPage;
+export default UseCaseLayout;

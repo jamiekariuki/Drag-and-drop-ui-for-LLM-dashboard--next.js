@@ -14,17 +14,21 @@ export const footerLinks = [
 	{
 		title: "Use case",
 		list: [
-			{ name: "Get started", url: "/escrow" },
-			{ name: "How it works", url: "/escrow/howitworks" },
-			{ name: "Payment platforms", url: "/escrow/payment" },
+			{ name: "Automations", url: "/use-case/automations" },
+			{ name: "Customer Support", url: "/use-case/customer-support" },
+			{ name: "Data Managment", url: "/use-case/data-managment" },
+			{ name: "Lead Managment", url: "/use-case/lead-managment" },
+			{ name: "Marketing", url: "/use-case/marketing" },
+			{ name: "Research", url: "/use-case/research" },
+			{ name: "Virtual Assistance", url: "/use-case/virtual-assistance" },
 		],
 	},
 
 	{
 		title: "Resources",
 		list: [
+			{ name: "Blog", url: "/escrow" },
 			{ name: "Help & support", url: "/escrow" },
-			{ name: "Blog", url: "/escrow/howitworks" },
 			{ name: "Community", url: "/escrow/payment" },
 			{ name: "API Refrence", url: "/escrow" },
 			{ name: "Documentation", url: "/escrow/howitworks" },

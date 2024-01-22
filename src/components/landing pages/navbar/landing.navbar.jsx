@@ -8,6 +8,8 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { SlMenu } from "react-icons/sl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { footerLinks } from "../footer/footer.links";
 
 const LandingNavbar = () => {
 	const [nav, setNav] = useState();
@@ -54,9 +56,7 @@ const LandingNavbar = () => {
 	}, [sideBar]);
 
 	const pathname = usePathname();
-
 	const pathParts = pathname.split("/");
-
 	const firstPathname = pathParts[1];
 
 	if (firstPathname !== "account") {
@@ -65,7 +65,7 @@ const LandingNavbar = () => {
 				className="landing-nav"
 				style={{
 					position: nav ? "fixed" : "absolute",
-					backgroundColor: nav || "transparent",
+					//	backgroundColor: nav || "transparent",
 				}}
 				variants={{
 					visible: { y: 0 },
@@ -95,13 +95,42 @@ const LandingNavbar = () => {
 				<div className="links">
 					<ul>
 						<li>Features</li>
-						<li>Use case</li>
-						<li>Resources</li>
+
+						<div className="link-container">
+							<li>Use case</li>
+							<KeyboardArrowDownIcon className="nav-link-icon" />
+							<div className="drop-down-container">
+								<ul className="list-ul">
+									{footerLinks[1].list.map((item, index) => (
+										<li key={index}>
+											<Link href={item.url}>
+												<h6>{item.name}</h6>
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+
+						<div className="link-container">
+							<li>Resources</li>
+							<KeyboardArrowDownIcon className="nav-link-icon" />
+							<div className="drop-down-container">
+								<ul className="list-ul">
+									{footerLinks[2].list.map((item, index) => (
+										<li key={index}>
+											<Link href={item.url}>
+												<h6>{item.name}</h6>
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
 						<Link href="/pricing">
 							<li>Pricing</li>
 						</Link>
 						<li>FAQ</li>
-						<li>Blog</li>
 					</ul>
 				</div>
 				<div className="login-btns">
