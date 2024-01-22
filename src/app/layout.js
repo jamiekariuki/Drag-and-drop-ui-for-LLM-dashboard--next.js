@@ -34,17 +34,17 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={`${poppins.variable} `}>
 			<body>
-				<ThemeProvider2 serverDarkMode={darkMode}>
-					<ToastProvider>
+				<ToastProvider>
+					<ThemeProvider2 serverDarkMode={darkMode}>
 						<LandingNavbar />
 						<div className="pages">{children}</div>
 						<Footer />
 						<div id="portal" />
-					</ToastProvider>
-				</ThemeProvider2>
-				<div id="toast-portal">
-					<Toast />
-				</div>
+					</ThemeProvider2>
+					<div id="toast-portal">
+						<Toast />
+					</div>
+				</ToastProvider>
 			</body>
 		</html>
 	);
