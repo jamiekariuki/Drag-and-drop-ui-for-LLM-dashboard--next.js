@@ -33,9 +33,11 @@ const Footer = () => {
 	const firstPathname = pathParts[1];
 
 	if (
-		firstPathname !== "account" ||
-		firstPathname !== "login" ||
-		firstPathname !== "sign-up"
+		!(
+			firstPathname === "account" ||
+			firstPathname === "login" ||
+			firstPathname === "sign-up"
+		)
 	) {
 		return (
 			<div className="footer">
