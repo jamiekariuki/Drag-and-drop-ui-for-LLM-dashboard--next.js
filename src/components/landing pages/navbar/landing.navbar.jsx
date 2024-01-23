@@ -59,7 +59,11 @@ const LandingNavbar = () => {
 	const pathParts = pathname.split("/");
 	const firstPathname = pathParts[1];
 
-	if (firstPathname !== "account") {
+	if (
+		firstPathname !== "account" ||
+		firstPathname !== "login" ||
+		firstPathname !== "sign-up"
+	) {
 		return (
 			<motion.nav
 				className="landing-nav"
@@ -134,7 +138,7 @@ const LandingNavbar = () => {
 					</ul>
 				</div>
 				<div className="login-btns">
-					<Link href="/account/dashboard">
+					<Link href="/login">
 						<Button
 							size="small"
 							className="login-btn "
@@ -143,7 +147,7 @@ const LandingNavbar = () => {
 							<p>log in</p>
 						</Button>
 					</Link>
-					<Link href="/account/dashboard">
+					<Link href="/sign-up">
 						<Button
 							variant="contained"
 							size="small"

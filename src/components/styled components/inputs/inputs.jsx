@@ -13,6 +13,7 @@ const Inputs = ({
 	error,
 	inputHeight,
 	value,
+	softBg,
 }) => {
 	const [defaultValue, setDefaultValue] = useState(value ? value : "");
 
@@ -40,7 +41,7 @@ const Inputs = ({
 	///----
 	if (type === "text" || type === "email" || type === "password") {
 		return (
-			<div className="inputs">
+			<div className={softBg ? "inputs softbg" : "inputs"}>
 				<input
 					id={id}
 					disabled={disabled}
@@ -90,6 +91,8 @@ const Inputs = ({
 	}
 };
 
+//------------------------------------
+
 const Inputs2 = ({
 	changeValue,
 	value,
@@ -99,9 +102,13 @@ const Inputs2 = ({
 	type,
 	label,
 	node,
+	softBg,
 }) => {
 	return (
-		<div className="inputs" style={{ height: node && "27px" }}>
+		<div
+			className={softBg ? "inputs softbg" : "inputs"}
+			style={{ height: node && "27px" }}
+		>
 			<input
 				id={id}
 				disabled={disabled}

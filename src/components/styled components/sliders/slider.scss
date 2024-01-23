@@ -1,0 +1,68 @@
+@import "./../../../theme/theme.scss";
+
+.slider-wrapper {
+	@include themify($themes) {
+		/* width: 100%;
+		height: 100%; */
+	}
+}
+
+/* .slick-slide > div {
+	//margin: 20px 20px;
+
+	 	@media (max-width: 1000px) {
+		margin: 20px 10px;
+	}
+
+	@media (max-width: 400px) {
+		margin: 20px 15%;
+	}
+
+	@media (max-width: 310px) {
+		margin: 20px 5%;
+	} 
+} */
+
+.arrow {
+	@include themify($themes) {
+		cursor: pointer;
+		z-index: 10;
+
+		.arrow-icon {
+			font-size: 35px;
+			color: themed("icon");
+			transition: all 0.2s;
+			z-index: 10;
+
+			&:hover {
+				color: themed("shadow");
+				font-size: 38px;
+			}
+
+			@media (max-width: 500px) {
+				font-size: 30px;
+			}
+		}
+
+		.icon-right {
+			transform: rotate(270deg);
+			position: absolute;
+			top: 45%;
+			right: -45px;
+
+			@media (max-width: 500px) {
+				right: 0;
+			}
+		}
+		.icon-left {
+			transform: rotate(90deg);
+			position: absolute;
+			top: 45%;
+			left: -45px;
+
+			@media (max-width: 500px) {
+				left: 0;
+			}
+		}
+	}
+}

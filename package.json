@@ -29,8 +29,10 @@
 		"react-flow-renderer": "^10.3.17",
 		"react-hook-form": "^7.48.2",
 		"react-icons": "^4.11.0",
+		"react-slick": "^0.29.0",
 		"reactflow": "^11.10.1",
-		"recharts": "^2.8.0"
+		"recharts": "^2.8.0",
+		"slick-carousel": "^1.8.1"
 	},
 	"devDependencies": {
 		"sass": "^1.67.0"

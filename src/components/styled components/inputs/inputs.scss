@@ -6,6 +6,16 @@
 		height: 35px;
 		position: relative;
 
+		&.softbg {
+			label {
+				background-color: themed("softBackground");
+			}
+
+			input {
+				background-color: themed("softBackground");
+			}
+		}
+
 		label {
 			position: absolute;
 			background-color: themed("background");

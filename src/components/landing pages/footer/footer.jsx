@@ -32,7 +32,11 @@ const Footer = () => {
 	const pathParts = pathname.split("/");
 	const firstPathname = pathParts[1];
 
-	if (firstPathname !== "account") {
+	if (
+		firstPathname !== "account" ||
+		firstPathname !== "login" ||
+		firstPathname !== "sign-up"
+	) {
 		return (
 			<div className="footer">
 				<div className="footer-links">
